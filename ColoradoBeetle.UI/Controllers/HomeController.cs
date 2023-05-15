@@ -4,13 +4,15 @@ using System.Diagnostics;
 
 namespace ColoradoBeetle.UI.Controllers {
     public class HomeController : Controller {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger _logger;
 
         public HomeController(ILogger<HomeController> logger) {
             _logger = logger;
         }
+        public async Task<IActionResult> Index() {
 
-        public IActionResult Index() {
+            _logger.LogInformation("LogInformation");
+            _logger.LogError(new Exception("LogError"), null);
             return View();
         }
 

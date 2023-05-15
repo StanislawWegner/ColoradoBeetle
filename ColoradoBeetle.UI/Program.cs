@@ -1,7 +1,12 @@
 using ColoradoBeetle.Application;
 using ColoradoBeetle.Infrastructure;
+using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+builder.Logging.SetMinimumLevel(LogLevel.Information);
+builder.Logging.AddNLogWeb();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();

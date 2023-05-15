@@ -37,3 +37,7 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\Col
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\ColoradoBeetle.Infrastructure.pdb
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\ColoradoBeetle.Application.pdb
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\ColoradoBeetle.UI.csproj.CopyComplete
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\nlog.config
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
