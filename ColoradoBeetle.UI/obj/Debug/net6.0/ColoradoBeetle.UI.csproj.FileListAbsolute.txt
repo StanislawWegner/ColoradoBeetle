@@ -21,7 +21,6 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\sta
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\bundle\ColoradoBeetle.UI.styles.css
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\projectbundle\ColoradoBeetle.UI.bundle.scp.css
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\ColoradoBeetle.UI.dll
@@ -41,3 +40,4 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\nlo
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Extensions.Logging.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\Views\Basic\Shared\_Layout.cshtml.rz.scp.css
