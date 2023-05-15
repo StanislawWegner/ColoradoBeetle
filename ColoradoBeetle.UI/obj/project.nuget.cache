@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7t8xErheDTB2ih0ynw/3p9z752aTBtBppHM+LS4nzKezqS+ravRuE/x9LSKOMnOCuWcYk9TZEwwf8ylS9rHkWg==",
+  "dgSpecHash": "aHgF7C8ftovz/rbmFzYAgxMw24iVu6HSRjTc67UWruxX1f4N8r8rXQq88D707xidI5fHlZ3pKt61M6+Ueow01Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\ColoradoBeetle.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",

@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\bin\Debug\net6.0\ColoradoBeetle.Application.deps.json
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\bin\Debug\net6.0\ColoradoBeetle.Application.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\bin\Debug\net6.0\ColoradoBeetle.Application.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.AssemblyInfo.cs
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\refint\ColoradoBeetle.Application.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ref\ColoradoBeetle.Application.dll

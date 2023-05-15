@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Infrastructure.deps.json
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Infrastructure.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Infrastructure.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Application.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Application.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.AssemblyInfo.cs
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.csproj.CopyComplete
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\refint\ColoradoBeetle.Infrastructure.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ref\ColoradoBeetle.Infrastructure.dll
