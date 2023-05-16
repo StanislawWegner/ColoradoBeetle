@@ -11,7 +11,6 @@ namespace ColoradoBeetle.UI.Controllers {
         }
         public async Task<IActionResult> Index() {
 
-            throw new Exception("Nieobsłużony błąd xyz");
 
             return View();
         }
