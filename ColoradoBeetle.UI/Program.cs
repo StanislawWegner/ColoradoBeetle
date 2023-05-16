@@ -1,6 +1,7 @@
 using ColoradoBeetle.Application;
 using ColoradoBeetle.Infrastructure;
 using ColoradoBeetle.UI.Extensions;
+using GymManager2.UI.Middlewares;
 using Microsoft.AspNetCore.Mvc.Razor;
 using NLog.Web;
 
@@ -24,6 +25,17 @@ app.UseInfrstructure();
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
+}
+
+app.UseMiddleware<ExceptionHandlerMiddleware>();
+
+var logger = app.Services.GetService<ILogger<Program>>();
+
+if (app.Environment.IsDevelopment()) {
+    logger.LogInformation("DEVELOPMENT MODE!!!");
+}
+else {
+    logger.LogInformation("PRODUCTION MODE!!!");
 }
 
 app.UseHttpsRedirection();

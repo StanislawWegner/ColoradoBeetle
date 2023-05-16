@@ -41,3 +41,4 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLo
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Extensions.Logging.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\Views\Basic\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -11,8 +11,8 @@ namespace ColoradoBeetle.UI.Controllers {
         }
         public async Task<IActionResult> Index() {
 
-            _logger.LogInformation("LogInformation");
-            _logger.LogError(new Exception("LogError"), null);
+            throw new Exception("Nieobsłużony błąd xyz");
+
             return View();
         }
 
