@@ -10,3 +10,6 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\n
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\refint\ColoradoBeetle.Application.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.pdb
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ref\ColoradoBeetle.Application.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\bin\Debug\net6.0\ColoradoBeetle.Domain.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\bin\Debug\net6.0\ColoradoBeetle.Domain.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Application\obj\Debug\net6.0\ColoradoBeetle.Application.csproj.CopyComplete

@@ -830,6 +830,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ColoradoBeetle.Domain": "1.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.EntityFrameworkCore": "6.0.16",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
@@ -839,6 +840,16 @@
         },
         "runtime": {
           "bin/placeholder/ColoradoBeetle.Application.dll": {}
+        }
+      },
+      "ColoradoBeetle.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ColoradoBeetle.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ColoradoBeetle.Domain.dll": {}
         }
       }
     }
@@ -2098,6 +2109,11 @@
       "type": "project",
       "path": "../ColoradoBeetle.Application/ColoradoBeetle.Application.csproj",
       "msbuildProject": "../ColoradoBeetle.Application/ColoradoBeetle.Application.csproj"
+    },
+    "ColoradoBeetle.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ColoradoBeetle.Domain/ColoradoBeetle.Domain.csproj",
+      "msbuildProject": "../ColoradoBeetle.Domain/ColoradoBeetle.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -1,0 +1,160 @@
+2023-05-17 21:24:47.1220 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-05-17 21:24:48.0980 INFO Entity Framework Core 6.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: SensitiveDataLoggingEnabled 
+2023-05-17 21:24:49.4740 INFO Executed DbCommand (437ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [ColoradoBeetle];
+2023-05-17 21:24:49.5977 INFO Executed DbCommand (115ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ColoradoBeetle] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-05-17 21:24:49.6424 INFO Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2023-05-17 21:24:49.9214 INFO Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2023-05-17 21:24:49.9214 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2023-05-17 21:24:49.9838 INFO Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-05-17 21:24:49.9978 INFO Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-05-17 21:24:50.0261 INFO No migrations were applied. The database is already up to date.
+2023-05-17 21:28:19.7741 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-05-17 21:28:20.3289 INFO Entity Framework Core 6.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: SensitiveDataLoggingEnabled 
+2023-05-17 21:28:41.1536 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-05-17 21:28:41.8250 INFO Entity Framework Core 6.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: SensitiveDataLoggingEnabled 
+2023-05-17 21:28:42.5858 INFO Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2023-05-17 21:28:42.6667 INFO Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-05-17 21:28:42.6761 INFO Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2023-05-17 21:28:42.6761 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-05-17 21:28:42.7203 INFO Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-05-17 21:28:42.7588 INFO Applying migration '20230517192821_Init'.
+2023-05-17 21:28:42.9961 INFO Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [ApplicationUser] (
+    [Id] nvarchar(450) NOT NULL,
+    [FirstName] nvarchar(100) NULL,
+    [LastName] nvarchar(100) NULL,
+    [RegisterDateTime] datetime2 NOT NULL,
+    [IsDeleted] bit NOT NULL,
+    CONSTRAINT [PK_ApplicationUser] PRIMARY KEY ([Id])
+);
+2023-05-17 21:28:42.9961 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Files] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(300) NOT NULL,
+    [Bytes] bigint NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Files] PRIMARY KEY ([Id])
+);
+2023-05-17 21:28:42.9961 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Languages] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(20) NOT NULL,
+    [Key] nvarchar(5) NOT NULL,
+    CONSTRAINT [PK_Languages] PRIMARY KEY ([Id])
+);
+2023-05-17 21:28:42.9961 INFO Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Settings] (
+    [Id] int NOT NULL IDENTITY,
+    [Description] nvarchar(200) NOT NULL,
+    [Order] int NOT NULL,
+    CONSTRAINT [PK_Settings] PRIMARY KEY ([Id])
+);
+2023-05-17 21:28:42.9961 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Addresses] (
+    [Id] int NOT NULL IDENTITY,
+    [Country] nvarchar(100) NOT NULL,
+    [City] nvarchar(200) NOT NULL,
+    [Street] nvarchar(200) NOT NULL,
+    [StreetNumber] nvarchar(100) NOT NULL,
+    [ZipCode] nvarchar(10) NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_Addresses] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Addresses_ApplicationUser_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUser] ([Id]) ON DELETE NO ACTION
+);
+2023-05-17 21:28:42.9961 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Clients] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_Clients] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Clients_ApplicationUser_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUser] ([Id]) ON DELETE NO ACTION
+);
+2023-05-17 21:28:43.0143 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] nvarchar(450) NOT NULL,
+    [CreatedDate] datetime2 NOT NULL,
+    [Quantity] int NOT NULL,
+    [Volume] int NOT NULL,
+    [VolumeUnit] int NOT NULL,
+    [Weight] int NOT NULL,
+    [WeightUnit] int NOT NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Products_ApplicationUser_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUser] ([Id]) ON DELETE NO ACTION
+);
+2023-05-17 21:28:43.0143 INFO Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [SettingsPositions] (
+    [Id] int NOT NULL IDENTITY,
+    [Key] nvarchar(50) NOT NULL,
+    [Value] nvarchar(1000) NULL,
+    [Description] nvarchar(200) NOT NULL,
+    [Type] int NOT NULL,
+    [Order] int NOT NULL,
+    [SettingsId] int NOT NULL,
+    CONSTRAINT [PK_SettingsPositions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_SettingsPositions_Settings_SettingsId] FOREIGN KEY ([SettingsId]) REFERENCES [Settings] ([Id]) ON DELETE NO ACTION
+);
+2023-05-17 21:28:43.0569 INFO Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Key', N'Name') AND [object_id] = OBJECT_ID(N'[Languages]'))
+    SET IDENTITY_INSERT [Languages] ON;
+INSERT INTO [Languages] ([Id], [Key], [Name])
+VALUES (1, N'pl', N'Polski'),
+(2, N'en', N'Angielski');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Key', N'Name') AND [object_id] = OBJECT_ID(N'[Languages]'))
+    SET IDENTITY_INSERT [Languages] OFF;
+2023-05-17 21:28:43.0752 INFO Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Order') AND [object_id] = OBJECT_ID(N'[Settings]'))
+    SET IDENTITY_INSERT [Settings] ON;
+INSERT INTO [Settings] ([Id], [Description], [Order])
+VALUES (1, N'E-mail', 2),
+(2, N'Ogólne', 1);
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Order') AND [object_id] = OBJECT_ID(N'[Settings]'))
+    SET IDENTITY_INSERT [Settings] OFF;
+2023-05-17 21:28:43.1069 INFO Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Key', N'Order', N'SettingsId', N'Type', N'Value') AND [object_id] = OBJECT_ID(N'[SettingsPositions]'))
+    SET IDENTITY_INSERT [SettingsPositions] ON;
+INSERT INTO [SettingsPositions] ([Id], [Description], [Key], [Order], [SettingsId], [Type], [Value])
+VALUES (1, N'Host', N'HostSmtp', 1, 1, 0, N'smtp.gmail.com'),
+(2, N'Port', N'Port', 2, 1, 2, N'587'),
+(3, N'Adres e-mail nadawcy', N'SenderEmail', 3, 1, 0, N''),
+(4, N'Hasło', N'SenderEmailPassword', 4, 1, 4, N''),
+(5, N'Nazwa nadawcy', N'SenderName', 5, 1, 0, N'Stanisław Wegner'),
+(6, N'Login nadawcy', N'SenderLogin', 6, 1, 0, N''),
+(7, N'Czy wyświetlać banner na stronie głównej?', N'BannerVisible', 1, 2, 1, N'True'),
+(8, N'Folor footera strona głównej', N'FooterColor', 2, 2, 5, N'#dc3545'),
+(9, N'Główny adres e-mail administratora', N'AdminEmail', 3, 2, 0, N's.wegner@onet.eu');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Description', N'Key', N'Order', N'SettingsId', N'Type', N'Value') AND [object_id] = OBJECT_ID(N'[SettingsPositions]'))
+    SET IDENTITY_INSERT [SettingsPositions] OFF;
+2023-05-17 21:28:43.1069 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Addresses_UserId] ON [Addresses] ([UserId]);
+2023-05-17 21:28:43.1069 INFO Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Clients_UserId] ON [Clients] ([UserId]);
+2023-05-17 21:28:43.1069 INFO Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Products_UserId] ON [Products] ([UserId]);
+2023-05-17 21:28:43.1069 INFO Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_SettingsPositions_SettingsId] ON [SettingsPositions] ([SettingsId]);
+2023-05-17 21:28:43.1227 INFO Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230517192821_Init', N'6.0.16');

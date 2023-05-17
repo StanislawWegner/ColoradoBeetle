@@ -197,6 +197,98 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\calendarData.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\calendarData.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\currencyData.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\currencyData.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\likelySubtags.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\likelySubtags.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\numberingSystems.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\numberingSystems.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\ordinals.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\ordinals.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\plurals.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\plurals.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\timeData.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\timeData.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-core\\supplemental\\weekData.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-core\\supplemental\\weekData.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-dates-modern\\main\\en\\ca-gregorian.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-dates-modern\\main\\en\\ca-gregorian.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-dates-modern\\main\\en\\timeZoneNames.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-dates-modern\\main\\en\\timeZoneNames.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-dates-modern\\main\\pl\\ca-gregorian.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-dates-modern\\main\\pl\\ca-gregorian.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-dates-modern\\main\\pl\\timeZoneNames.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-dates-modern\\main\\pl\\timeZoneNames.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-numbers-modern\\main\\en\\currencies.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-numbers-modern\\main\\en\\currencies.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-numbers-modern\\main\\en\\numbers.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-numbers-modern\\main\\en\\numbers.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-numbers-modern\\main\\pl\\currencies.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-numbers-modern\\main\\pl\\currencies.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldr-numbers-modern\\main\\pl\\numbers.json",
+      "PackagePath": "staticwebassets\\lib\\cldr-numbers-modern\\main\\pl\\numbers.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldrjs\\dist\\cldr.js",
+      "PackagePath": "staticwebassets\\lib\\cldrjs\\dist\\cldr.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldrjs\\dist\\cldr\\event.js",
+      "PackagePath": "staticwebassets\\lib\\cldrjs\\dist\\cldr\\event.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\cldrjs\\dist\\cldr\\supplemental.js",
+      "PackagePath": "staticwebassets\\lib\\cldrjs\\dist\\cldr\\supplemental.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\globalize\\globalize.js",
+      "PackagePath": "staticwebassets\\lib\\globalize\\globalize.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\globalize\\globalize\\date.js",
+      "PackagePath": "staticwebassets\\lib\\globalize\\globalize\\date.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\globalize\\globalize\\number.js",
+      "PackagePath": "staticwebassets\\lib\\globalize\\globalize\\number.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\jquery-validation-globalize-fix\\jquery.validate.globalize.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-globalize-fix\\jquery.validate.globalize.js"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },

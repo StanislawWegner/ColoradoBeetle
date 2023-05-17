@@ -2,7 +2,6 @@ using ColoradoBeetle.Application;
 using ColoradoBeetle.Infrastructure;
 using ColoradoBeetle.UI.Extensions;
 using GymManager2.UI.Middlewares;
-using Microsoft.AspNetCore.Mvc.Razor;
 using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +13,7 @@ builder.Logging.AddNLogWeb();
 builder.Services.AddCulture();
 
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.DefineViewLocation(builder.Configuration);
 

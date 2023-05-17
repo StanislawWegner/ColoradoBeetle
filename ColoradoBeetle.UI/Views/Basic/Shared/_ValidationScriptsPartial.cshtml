@@ -16,7 +16,7 @@
 <script type="text/javascript">
 
     var locale = "@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName";
-    
+
     $.when(
         $.getJSON("/lib/cldr-core/supplemental/likelySubtags.json"),
         $.getJSON("/lib/cldr-core/supplemental/numberingSystems.json"),
@@ -37,5 +37,5 @@
         Globalize.locale(locale);
         $(document).trigger("globalizeHasBeenLoadedEvent");
     });
-    
+
 </script>

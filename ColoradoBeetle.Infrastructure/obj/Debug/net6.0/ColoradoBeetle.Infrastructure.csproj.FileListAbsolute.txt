@@ -13,3 +13,5 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debu
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\refint\ColoradoBeetle.Infrastructure.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ColoradoBeetle.Infrastructure.pdb
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\obj\Debug\net6.0\ref\ColoradoBeetle.Infrastructure.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Domain.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.Infrastructure\bin\Debug\net6.0\ColoradoBeetle.Domain.pdb
