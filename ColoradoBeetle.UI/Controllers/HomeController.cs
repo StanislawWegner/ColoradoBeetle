@@ -1,9 +1,10 @@
-﻿using ColoradoBeetle.UI.Models;
+﻿using ColoradoBeetle.Application.Products.Commands.AddProduct;
+using ColoradoBeetle.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace ColoradoBeetle.UI.Controllers {
-    public class HomeController : Controller {
+    public class HomeController : BaseController {
         private readonly ILogger _logger;
 
         public HomeController(ILogger<HomeController> logger) {
@@ -11,7 +12,7 @@ namespace ColoradoBeetle.UI.Controllers {
         }
         public async Task<IActionResult> Index() {
 
-
+            await Mediator.Send(new AddProductCommand { Name = "testiong coloradobeetle logging behaviour"});
             return View();
         }
 
