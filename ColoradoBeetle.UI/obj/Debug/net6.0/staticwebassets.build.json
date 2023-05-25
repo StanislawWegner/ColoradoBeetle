@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ps/4T4qV5nKsf2xgsjxZBJfEe5c+YEeW7SJnAbEcBFw=",
+  "Hash": "ibfx/D2mi9vUMIv2Ck65zG6RLOE+AHJFZKALyN5S3Ng=",
   "Source": "ColoradoBeetle.UI",
   "BasePath": "_content/ColoradoBeetle.UI",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\Colorado_Beetle_Logo.png",
+      "SourceId": "ColoradoBeetle.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\",
+      "BasePath": "_content/ColoradoBeetle.UI",
+      "RelativePath": "Images/Colorado_Beetle_Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Colorado_Beetle_Logo.png"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\js\\site.js",

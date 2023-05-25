@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ColoradoBeetle.UI.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\Colorado_Beetle_Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Colorado_Beetle_Logo.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

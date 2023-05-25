@@ -3,13 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ColoradoBeetle.UI</title>
+    <title>@ViewData["Title"] - ColoradoBeetle</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ColoradoBeetle.UI.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
+
+        <div class="container">
+                <div class="row">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                        <img src="~/images/Colorado_Beetle_Logo.png" width="270" />
+                </a>
+                </div>
+        </div>
+
+
+
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ColoradoBeetle.UI</a>

@@ -40,7 +40,6 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\nlo
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Extensions.Logging.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
-C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\Views\Basic\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\libman.json
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\Humanizer.dll
@@ -81,3 +80,4 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\run
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\ColoradoBeetle.Domain.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\ColoradoBeetle.Domain.pdb
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\Views\Basic\Shared\_LayoutMain.cshtml.rz.scp.css

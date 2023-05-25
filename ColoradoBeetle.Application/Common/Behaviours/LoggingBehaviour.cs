@@ -16,7 +16,7 @@ public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest,
 
         _logger.LogInformation($"Handling {requestName}");
 
-        _logger.LogInformation("GymManager2 Request: {@Name} {@Request}", requestName, request);
+        _logger.LogInformation("ColoradoBeetle Request: {@Name} {@Request}", requestName, request);
 
         var response = await next();
 
