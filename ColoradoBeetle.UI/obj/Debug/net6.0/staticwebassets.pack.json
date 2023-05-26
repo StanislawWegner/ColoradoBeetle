@@ -9,6 +9,70 @@
       "PackagePath": "staticwebassets\\Images\\Colorado_Beetle_Logo.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\Przelewy24_logo.png",
+      "PackagePath": "staticwebassets\\Images\\Przelewy24_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\card-crossfit.png",
+      "PackagePath": "staticwebassets\\Images\\card-crossfit.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\card-fitness.png",
+      "PackagePath": "staticwebassets\\Images\\card-fitness.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\card-gym.png",
+      "PackagePath": "staticwebassets\\Images\\card-gym.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\card-massage.png",
+      "PackagePath": "staticwebassets\\Images\\card-massage.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\card-pool.png",
+      "PackagePath": "staticwebassets\\Images\\card-pool.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\card-trainer.png",
+      "PackagePath": "staticwebassets\\Images\\card-trainer.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\carousel-interval.png",
+      "PackagePath": "staticwebassets\\Images\\carousel-interval.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\carousel-ladybird-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\carousel-ladybird-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\carousel-ladybird-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\carousel-ladybird-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\carousel-ladybird-3.jpg",
+      "PackagePath": "staticwebassets\\Images\\carousel-ladybird-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\carousel-personal.png",
+      "PackagePath": "staticwebassets\\Images\\carousel-personal.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\carousel-strength.png",
+      "PackagePath": "staticwebassets\\Images\\carousel-strength.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\en.png",
+      "PackagePath": "staticwebassets\\Images\\en.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\gym-logo.jpg",
+      "PackagePath": "staticwebassets\\Images\\gym-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\Images\\pl.png",
+      "PackagePath": "staticwebassets\\Images\\pl.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
