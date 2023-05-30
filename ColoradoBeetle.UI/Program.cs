@@ -1,4 +1,5 @@
 using ColoradoBeetle.Application;
+using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Infrastructure;
 using ColoradoBeetle.UI.Extensions;
 using GymManager2.UI.Middlewares;
@@ -21,7 +22,12 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-app.UseInfrstructure();
+using (var scope = app.Services.CreateScope()) {
+
+    app.UseInfrastructure(
+        scope.ServiceProvider.GetRequiredService<IApplicationDbContext>(),
+        app.Services.GetService<IAppSettingsService>());
+}
 
 if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Home/Error");
