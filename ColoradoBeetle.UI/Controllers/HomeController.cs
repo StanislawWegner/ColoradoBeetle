@@ -1,4 +1,5 @@
-﻿using ColoradoBeetle.Application.Products.Commands.AddProduct;
+﻿using ColoradoBeetle.Application.Contacts.Commands.SendContactEmail;
+using ColoradoBeetle.Application.Products.Commands.AddProduct;
 using ColoradoBeetle.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -20,7 +21,16 @@ namespace ColoradoBeetle.UI.Controllers {
         }
 
         public IActionResult Contact() {
-            return View();
+            return View(new SendContactEmailCommand());
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public async Task<IActionResult> Contact(SendContactEmailCommand command) {
+
+            await Mediator.Send(command);
+
+            return RedirectToAction("Index");
         }
 
 
