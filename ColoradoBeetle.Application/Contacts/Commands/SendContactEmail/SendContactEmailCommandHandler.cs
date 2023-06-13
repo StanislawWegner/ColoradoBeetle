@@ -18,9 +18,9 @@ public class SendContactEmailCommandHandler : IRequestHandler<SendContactEmailCo
 
         var body = $"Nazwa: {request.Name}.<br/></br>E-mail nadawcy: {request.Email}.<br/></br>" +
             $"Tytuł wiadomości: {request.Title}.<br/></br>Wiadomość: {request.Message}.<br/></br>" +
-            $"Wysłao z: GymManager2.";
+            $"Wysłao z: ColoradoBeetle.";
 
-        await _email.SendAsync($"Wiadomość z GymManager2: {request.Title}",
+        await _email.SendAsync($"Wiadomość z ColoradoBeetle: {request.Title}",
             body, 
             await _appSettings.Get(SettingsDict.AdminEmail));
 

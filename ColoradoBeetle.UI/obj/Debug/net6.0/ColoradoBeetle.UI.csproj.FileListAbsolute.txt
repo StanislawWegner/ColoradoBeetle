@@ -286,3 +286,5 @@ C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\run
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\MailKit.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\MimeKit.dll
 C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

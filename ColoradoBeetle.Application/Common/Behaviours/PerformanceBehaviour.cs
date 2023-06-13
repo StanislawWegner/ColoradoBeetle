@@ -31,8 +31,5 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
         }
 
         return response;
-
-
-
     }
 }

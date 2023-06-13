@@ -1,8 +1,6 @@
-﻿using ColoradoBeetle.Application.Contacts.Commands.SendContactEmail;
-using ColoradoBeetle.Application.Products.Commands.AddProduct;
-using ColoradoBeetle.UI.Models;
+﻿using ColoradoBeetle.Application.Common.Exceptions;
+using ColoradoBeetle.Application.Contacts.Commands.SendContactEmail;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace ColoradoBeetle.UI.Controllers {
     public class HomeController : BaseController {
@@ -28,7 +26,11 @@ namespace ColoradoBeetle.UI.Controllers {
         [HttpPost]
         public async Task<IActionResult> Contact(SendContactEmailCommand command) {
 
-            await Mediator.Send(command);
+            var result = await MediatorSendValidate(command);
+
+            if (!result.IsValid) {
+                return View(command);
+            }
 
             return RedirectToAction("Index");
         }

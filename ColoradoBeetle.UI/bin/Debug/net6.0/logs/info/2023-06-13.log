@@ -1,0 +1,230 @@
+2023-06-13 21:59:32.6653 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-06-13 21:59:35.7272 INFO Entity Framework Core 6.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: SensitiveDataLoggingEnabled 
+2023-06-13 21:59:38.5389 INFO Executed DbCommand (190ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Description], [s].[Key], [s].[Order], [s].[SettingsId], [s].[Type], [s].[Value]
+FROM [SettingsPositions] AS [s]
+2023-06-13 21:59:38.7099 INFO DEVELOPMENT MODE!!!
+2023-06-13 21:59:39.0470 INFO User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-13 21:59:39.4691 INFO Now listening on: https://localhost:7080
+2023-06-13 21:59:39.4691 INFO Now listening on: http://localhost:5116
+2023-06-13 21:59:39.4691 INFO Application started. Press Ctrl+C to shut down.
+2023-06-13 21:59:39.4691 INFO Hosting environment: Development
+2023-06-13 21:59:39.4691 INFO Content root path: C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\
+2023-06-13 21:59:42.3439 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-13 21:59:42.5699 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 21:59:42.6033 INFO Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 21:59:42.6307 INFO Executing ViewResult, running view Index.
+2023-06-13 21:59:43.1932 INFO Executed ViewResult - view Index executed in 566.3965ms.
+2023-06-13 21:59:43.2026 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 598.8078ms
+2023-06-13 21:59:43.2026 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 21:59:43.3207 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 984.6139ms
+2023-06-13 21:59:43.3915 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - -
+2023-06-13 21:59:43.3915 INFO Request starting HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-06-13 21:59:43.3915 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery/dist/jquery.min.js - -
+2023-06-13 21:59:43.3915 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery.cookie/jquery.cookie.min.js - -
+2023-06-13 21:59:43.3915 INFO Request starting HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2023-06-13 21:59:43.4427 INFO Request starting HTTP/2 GET https://localhost:7080/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-06-13 21:59:43.4705 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 21:59:43.4705 INFO Request starting HTTP/2 GET https://localhost:7080/ColoradoBeetle.UI.styles.css?v=S2mmYHR23Y_xziC5xU2sPPGSE_TQ0QimX-PIvU4rTqE - -
+2023-06-13 21:59:43.4706 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-1.jpg - -
+2023-06-13 21:59:43.4705 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-2.jpg - -
+2023-06-13 21:59:43.4706 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 21:59:43.4749 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-3.jpg - -
+2023-06-13 21:59:43.4749 INFO Request starting HTTP/2 GET https://localhost:7080/images/Colorado_Beetle_Logo.png - -
+2023-06-13 21:59:43.5547 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 84.0379ms
+2023-06-13 21:59:43.5547 INFO Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\js\site.js'
+2023-06-13 21:59:43.5547 INFO Sending file. Request path: '/lib/jquery.cookie/jquery.cookie.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery.cookie\jquery.cookie.min.js'
+2023-06-13 21:59:43.5547 INFO Sending file. Request path: '/ColoradoBeetle.UI.styles.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\bundle\ColoradoBeetle.UI.styles.css'
+2023-06-13 21:59:43.5547 INFO Sending file. Request path: '/images/Colorado_Beetle_Logo.png'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\Colorado_Beetle_Logo.png'
+2023-06-13 21:59:43.5547 INFO Request finished HTTP/2 GET https://localhost:7080/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 119.0684ms
+2023-06-13 21:59:43.5547 INFO Request finished HTTP/2 GET https://localhost:7080/images/Colorado_Beetle_Logo.png - - - 200 29710 image/png 78.1536ms
+2023-06-13 21:59:43.5547 INFO Request finished HTTP/2 GET https://localhost:7080/ColoradoBeetle.UI.styles.css?v=S2mmYHR23Y_xziC5xU2sPPGSE_TQ0QimX-PIvU4rTqE - - - 200 1107 text/css 91.3220ms
+2023-06-13 21:59:43.5547 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery.cookie/jquery.cookie.min.js - - - 200 1565 application/javascript 170.2451ms
+2023-06-13 21:59:43.5547 INFO Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\css\site.css'
+2023-06-13 21:59:43.5547 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - - - 200 765 text/css 170.7676ms
+2023-06-13 21:59:43.5730 INFO Sending file. Request path: '/Images/carousel-ladybird-1.jpg'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\carousel-ladybird-1.jpg'
+2023-06-13 21:59:43.5730 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-1.jpg - - - 200 48921 image/jpeg 102.5447ms
+2023-06-13 21:59:43.5730 INFO Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2023-06-13 21:59:43.5730 INFO Request finished HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 179.8582ms
+2023-06-13 21:59:43.5730 INFO Sending file. Request path: '/Images/carousel-ladybird-3.jpg'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\carousel-ladybird-3.jpg'
+2023-06-13 21:59:43.5730 INFO Sending file. Request path: '/Images/carousel-ladybird-2.jpg'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\carousel-ladybird-2.jpg'
+2023-06-13 21:59:43.5730 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-2.jpg - - - 200 55458 image/jpeg 106.5271ms
+2023-06-13 21:59:43.5971 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-3.jpg - - - 200 64366 image/jpeg 122.1854ms
+2023-06-13 21:59:43.5971 INFO Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2023-06-13 21:59:43.5971 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 206.6612ms
+2023-06-13 21:59:43.5971 INFO Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-06-13 21:59:43.5971 INFO Request finished HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 207.2311ms
+2023-06-13 21:59:43.9519 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 481.3113ms
+2023-06-13 21:59:44.0799 INFO Request starting HTTP/2 GET https://localhost:7080/favicon.ico - -
+2023-06-13 21:59:44.0852 INFO Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\favicon.ico'
+2023-06-13 21:59:44.0852 INFO Request finished HTTP/2 GET https://localhost:7080/favicon.ico - - - 200 5430 image/x-icon 5.7027ms
+2023-06-13 21:59:47.7948 INFO Request starting HTTP/2 GET https://localhost:7080/Home/Contact - -
+2023-06-13 21:59:47.8026 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 21:59:47.8026 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Contact() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 21:59:47.8026 INFO Executing ViewResult, running view Contact.
+2023-06-13 21:59:48.0260 INFO Executed ViewResult - view Contact executed in 218.0939ms.
+2023-06-13 21:59:48.0260 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 219.806ms
+2023-06-13 21:59:48.0260 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 21:59:48.0260 INFO Request finished HTTP/2 GET https://localhost:7080/Home/Contact - - - 200 - text/html;+charset=utf-8 238.2304ms
+2023-06-13 21:59:48.0807 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - -
+2023-06-13 21:59:48.0807 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 21:59:48.0861 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 21:59:48.0861 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.3745ms
+2023-06-13 21:59:48.1034 INFO The file /css/site.css was not modified
+2023-06-13 21:59:48.1034 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - - - 304 - text/css 23.2761ms
+2023-06-13 21:59:48.2256 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 144.8219ms
+2023-06-13 21:59:57.4764 INFO Request starting HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 217
+2023-06-13 21:59:57.4764 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 21:59:57.5253 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Contact(ColoradoBeetle.Application.Contacts.Commands.SendContactEmail.SendContactEmailCommand) on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 21:59:57.6547 INFO Handling SendContactEmailCommand
+2023-06-13 21:59:57.6547 INFO ColoradoBeetle Request: "SendContactEmailCommand" {"Email":"fd", "Message":"vdfd"}
+2023-06-13 21:59:58.1022 INFO Executing ViewResult, running view Contact.
+2023-06-13 21:59:58.1151 INFO Executed ViewResult - view Contact executed in 12.8425ms.
+2023-06-13 21:59:58.1151 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 589.8655ms
+2023-06-13 21:59:58.1151 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 21:59:58.1151 INFO Request finished HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 217 - 200 - text/html;+charset=utf-8 647.1147ms
+2023-06-13 21:59:58.1594 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 21:59:58.1594 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - -
+2023-06-13 21:59:58.1594 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.1015ms
+2023-06-13 21:59:58.1594 INFO The file /css/site.css was not modified
+2023-06-13 21:59:58.1594 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - - - 304 - text/css 2.5254ms
+2023-06-13 21:59:58.1672 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 21:59:58.2946 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 127.6828ms
+2023-06-13 22:21:43.2803 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-06-13 22:21:43.8758 INFO Entity Framework Core 6.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: SensitiveDataLoggingEnabled 
+2023-06-13 22:21:48.6314 INFO Executed DbCommand (145ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Description], [s].[Key], [s].[Order], [s].[SettingsId], [s].[Type], [s].[Value]
+FROM [SettingsPositions] AS [s]
+2023-06-13 22:21:48.8372 INFO DEVELOPMENT MODE!!!
+2023-06-13 22:21:49.3624 INFO User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-13 22:21:50.0042 INFO Now listening on: https://localhost:7080
+2023-06-13 22:21:50.0132 INFO Now listening on: http://localhost:5116
+2023-06-13 22:21:50.0132 INFO Application started. Press Ctrl+C to shut down.
+2023-06-13 22:21:50.0132 INFO Hosting environment: Development
+2023-06-13 22:21:50.0132 INFO Content root path: C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\
+2023-06-13 22:21:52.4188 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-13 22:21:52.6650 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:21:52.7128 INFO Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:21:52.7780 INFO Executing ViewResult, running view Index.
+2023-06-13 22:21:53.3253 INFO Executed ViewResult - view Index executed in 583.5006ms.
+2023-06-13 22:21:53.3397 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 626.307ms
+2023-06-13 22:21:53.3397 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:21:53.4680 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 1055.6306ms
+2023-06-13 22:21:53.5704 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:21:53.5704 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - -
+2023-06-13 22:21:53.5704 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 12.0790ms
+2023-06-13 22:21:53.5935 INFO The file /css/site.css was not modified
+2023-06-13 22:21:53.5935 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - - - 304 - text/css 22.5251ms
+2023-06-13 22:21:53.6025 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:21:53.8218 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 219.5140ms
+2023-06-13 22:21:56.9590 INFO Request starting HTTP/2 GET https://localhost:7080/Home/Contact - -
+2023-06-13 22:21:56.9755 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:21:56.9755 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Contact() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:21:56.9755 INFO Executing ViewResult, running view Contact.
+2023-06-13 22:21:57.2226 INFO Executed ViewResult - view Contact executed in 243.0818ms.
+2023-06-13 22:21:57.2226 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 244.5172ms
+2023-06-13 22:21:57.2226 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:21:57.2321 INFO Request finished HTTP/2 GET https://localhost:7080/Home/Contact - - - 200 - text/html;+charset=utf-8 273.1019ms
+2023-06-13 22:21:57.2771 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:21:57.2771 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.9494ms
+2023-06-13 22:21:57.2771 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:21:57.3841 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 97.9336ms
+2023-06-13 22:22:03.2034 INFO Request starting HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 211
+2023-06-13 22:22:03.2133 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:22:03.2454 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Contact(ColoradoBeetle.Application.Contacts.Commands.SendContactEmail.SendContactEmailCommand) on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:22:03.3898 INFO Handling SendContactEmailCommand
+2023-06-13 22:22:03.3898 INFO ColoradoBeetle Request: "SendContactEmailCommand" {}
+2023-06-13 22:22:03.8462 INFO Executing ViewResult, running view Contact.
+2023-06-13 22:22:03.8590 INFO Executed ViewResult - view Contact executed in 12.7712ms.
+2023-06-13 22:22:03.8590 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 613.6807ms
+2023-06-13 22:22:03.8590 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:22:03.8678 INFO Request finished HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 211 - 200 - text/html;+charset=utf-8 664.4679ms
+2023-06-13 22:22:03.8981 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:22:03.8981 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.8491ms
+2023-06-13 22:22:03.8981 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:22:03.9981 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 98.9293ms
+2023-06-13 22:22:16.9589 INFO Request starting HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 227
+2023-06-13 22:22:16.9718 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:22:16.9751 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Contact(ColoradoBeetle.Application.Contacts.Commands.SendContactEmail.SendContactEmailCommand) on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:22:16.9751 INFO Handling SendContactEmailCommand
+2023-06-13 22:22:16.9751 INFO ColoradoBeetle Request: "SendContactEmailCommand" {"Name":"Jaś Dua", "Message":"dddd"}
+2023-06-13 22:22:24.9125 INFO ColoradoBeetle Long Running Request: "SendContactEmailCommand" (7871 miliseconds) {"Name":"Jaś Dua", "Message":"dddd"}
+2023-06-13 22:22:24.9125 INFO Handled Unit
+2023-06-13 22:22:24.9459 INFO Executing RedirectResult, redirecting to /.
+2023-06-13 22:22:24.9459 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 7968.1642ms
+2023-06-13 22:22:24.9459 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:22:24.9459 INFO Request finished HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 227 - 302 0 - 7987.7582ms
+2023-06-13 22:22:24.9459 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-13 22:22:24.9459 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:22:24.9459 INFO Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:22:24.9459 INFO Executing ViewResult, running view Index.
+2023-06-13 22:22:24.9664 INFO Executed ViewResult - view Index executed in 10.5864ms.
+2023-06-13 22:22:24.9664 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 10.9414ms
+2023-06-13 22:22:24.9664 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:22:24.9664 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 20.9695ms
+2023-06-13 22:22:25.0089 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:22:25.0089 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.9812ms
+2023-06-13 22:22:25.0089 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:22:25.1608 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 149.5321ms
+2023-06-13 22:26:37.9407 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-06-13 22:26:39.3190 INFO Entity Framework Core 6.0.16 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.16' with options: SensitiveDataLoggingEnabled 
+2023-06-13 22:26:42.1539 INFO Executed DbCommand (214ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Description], [s].[Key], [s].[Order], [s].[SettingsId], [s].[Type], [s].[Value]
+FROM [SettingsPositions] AS [s]
+2023-06-13 22:26:42.3405 INFO DEVELOPMENT MODE!!!
+2023-06-13 22:26:42.7523 INFO User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-13 22:26:43.1716 INFO Now listening on: https://localhost:7080
+2023-06-13 22:26:43.1716 INFO Now listening on: http://localhost:5116
+2023-06-13 22:26:43.1716 INFO Application started. Press Ctrl+C to shut down.
+2023-06-13 22:26:43.1716 INFO Hosting environment: Development
+2023-06-13 22:26:43.1716 INFO Content root path: C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\
+2023-06-13 22:26:44.4544 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-13 22:26:44.6463 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:26:44.6848 INFO Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:26:44.7161 INFO Executing ViewResult, running view Index.
+2023-06-13 22:26:45.1924 INFO Executed ViewResult - view Index executed in 475.1087ms.
+2023-06-13 22:26:45.2099 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 524.2647ms
+2023-06-13 22:26:45.2099 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:26:45.3503 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 900.4167ms
+2023-06-13 22:26:45.4142 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:26:45.4142 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - -
+2023-06-13 22:26:45.4142 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:26:45.4142 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 10.2307ms
+2023-06-13 22:26:45.4392 INFO The file /css/site.css was not modified
+2023-06-13 22:26:45.4392 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=EH-VDcnxnPhaNjPwksOPnd56AjgwbRnlvyZE2z1h6GY - - - 304 - text/css 26.1434ms
+2023-06-13 22:26:45.5639 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 149.5603ms
+2023-06-13 22:26:47.9925 INFO Request starting HTTP/2 GET https://localhost:7080/Home/Contact - -
+2023-06-13 22:26:47.9925 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:26:47.9925 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Contact() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:26:48.0076 INFO Executing ViewResult, running view Contact.
+2023-06-13 22:26:48.2782 INFO Executed ViewResult - view Contact executed in 273.5168ms.
+2023-06-13 22:26:48.2782 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 274.9882ms
+2023-06-13 22:26:48.2782 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:26:48.2869 INFO Request finished HTTP/2 GET https://localhost:7080/Home/Contact - - - 200 - text/html;+charset=utf-8 294.3223ms
+2023-06-13 22:26:48.3305 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:26:48.3305 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:26:48.3305 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.9645ms
+2023-06-13 22:26:48.4268 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 95.7830ms
+2023-06-13 22:27:01.4369 INFO Request starting HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 219
+2023-06-13 22:27:01.4429 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:27:01.4745 INFO Route matched with {action = "Contact", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Contact(ColoradoBeetle.Application.Contacts.Commands.SendContactEmail.SendContactEmailCommand) on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:27:01.6158 INFO Handling SendContactEmailCommand
+2023-06-13 22:27:01.6158 INFO ColoradoBeetle Request: "SendContactEmailCommand" {"Name":"znowu", "Email":"owi"}
+2023-06-13 22:27:05.6199 INFO ColoradoBeetle Long Running Request: "SendContactEmailCommand" (3899 miliseconds) {"Name":"znowu", "Email":"owi"}
+2023-06-13 22:27:05.6350 INFO Handled Unit
+2023-06-13 22:27:05.6529 INFO Executing RedirectResult, redirecting to /.
+2023-06-13 22:27:05.6529 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI) in 4178.2966ms
+2023-06-13 22:27:05.6529 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Contact (ColoradoBeetle.UI)'
+2023-06-13 22:27:05.6529 INFO Request finished HTTP/2 POST https://localhost:7080/Home/Contact application/x-www-form-urlencoded 219 - 302 0 - 4216.7152ms
+2023-06-13 22:27:05.6529 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-13 22:27:05.6529 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:27:05.6529 INFO Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-13 22:27:05.6529 INFO Executing ViewResult, running view Index.
+2023-06-13 22:27:05.6699 INFO Executed ViewResult - view Index executed in 8.6593ms.
+2023-06-13 22:27:05.6699 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 8.9126ms
+2023-06-13 22:27:05.6699 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-13 22:27:05.6699 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 17.1437ms
+2023-06-13 22:27:05.7127 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-13 22:27:05.7127 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-13 22:27:05.7127 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.9646ms
+2023-06-13 22:27:05.8768 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 162.9774ms
