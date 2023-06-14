@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kVRP7VX9SaizdAj4cFumnRZe9/kqQCgapexi+Se1UvY=",
+  "Hash": "W0JDXSBKNEAaYkSLmCP2c7nWeDdcwD7sL1fdlmNqp3U=",
   "Source": "ColoradoBeetle.UI",
   "BasePath": "_content/ColoradoBeetle.UI",
   "Mode": "Default",
@@ -1579,6 +1579,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\toastr.js\\toastr.min.css",
+      "SourceId": "ColoradoBeetle.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\",
+      "BasePath": "_content/ColoradoBeetle.UI",
+      "RelativePath": "lib/toastr.js/toastr.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\toastr.js\\toastr.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\toastr.js\\toastr.min.js",
+      "SourceId": "ColoradoBeetle.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\",
+      "BasePath": "_content/ColoradoBeetle.UI",
+      "RelativePath": "lib/toastr.js/toastr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\toastr.js\\toastr.min.js"
     }
   ]
 }

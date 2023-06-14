@@ -43,7 +43,9 @@ namespace ColoradoBeetle.UI.Controllers {
 
             await Mediator.Send(command);
 
-            return RedirectToAction("Index");
+            TempData["Success"] = "Wiadomość została wysłana do administratora.";
+
+            return RedirectToAction("Contact");
         }
 
 
