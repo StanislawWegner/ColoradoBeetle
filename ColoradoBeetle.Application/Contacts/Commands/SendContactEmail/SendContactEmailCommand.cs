@@ -17,4 +17,6 @@ public class SendContactEmailCommand : IRequest{
 
     [Required(ErrorMessage = "Pole 'Wiadomość' jest wymagane")]
     public string Message { get; set; }
+
+    public string AntySpamResult { get; set; }
 }

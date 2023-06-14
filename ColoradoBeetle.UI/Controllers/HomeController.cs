@@ -1,4 +1,5 @@
-﻿using ColoradoBeetle.Application.Common.Exceptions;
+﻿using AspNetCore.ReCaptcha;
+using ColoradoBeetle.Application.Common.Exceptions;
 using ColoradoBeetle.Application.Contacts.Commands.SendContactEmail;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +23,7 @@ namespace ColoradoBeetle.UI.Controllers {
             return View(new SendContactEmailCommand());
         }
 
+        [ValidateReCaptcha]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public async Task<IActionResult> Contact(SendContactEmailCommand command) {
@@ -34,6 +36,8 @@ namespace ColoradoBeetle.UI.Controllers {
 
             if (!ModelState.IsValid) {
 
+                ModelState.AddModelError("AntySpamResult", "Wypełnij pole ReCaptcha (zabezpieczenie" +
+                    "przed spamem)");
                 return View(command);
             }
 

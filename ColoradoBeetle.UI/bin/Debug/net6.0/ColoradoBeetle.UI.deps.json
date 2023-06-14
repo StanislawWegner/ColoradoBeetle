@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ColoradoBeetle.UI/1.0.0": {
         "dependencies": {
+          "AspNetCore.ReCaptcha": "1.7.0",
           "ColoradoBeetle.Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.16",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.16",
@@ -19,6 +20,22 @@
         },
         "runtime": {
           "ColoradoBeetle.UI.dll": {}
+        }
+      },
+      "AspNetCore.ReCaptcha/1.7.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/AspNetCore.ReCaptcha.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
+          }
+        },
+        "resources": {
+          "lib/net6.0/nl/AspNetCore.ReCaptcha.resources.dll": {
+            "locale": "nl"
+          }
         }
       },
       "FluentValidation/11.5.2": {
@@ -2420,6 +2437,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNetCore.ReCaptcha/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lDuXXZUIB2kNh3c3MYxB2nXlAw2ixJdZagZvkrpZhhKXEdcmIMMWLpH3FZY28ls0An/U+vBbebTpI+kBx/z3YA==",
+      "path": "aspnetcore.recaptcha/1.7.0",
+      "hashPath": "aspnetcore.recaptcha.1.7.0.nupkg.sha512"
     },
     "FluentValidation/11.5.2": {
       "type": "package",

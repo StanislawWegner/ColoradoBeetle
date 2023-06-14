@@ -1,3 +1,4 @@
+using AspNetCore.ReCaptcha;
 using ColoradoBeetle.Application;
 using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Infrastructure;
@@ -12,6 +13,8 @@ builder.Logging.SetMinimumLevel(LogLevel.Information);
 builder.Logging.AddNLogWeb();
 
 builder.Services.AddCulture();
+
+builder.Services.AddReCaptcha(builder.Configuration.GetSection("ReCaptcha"));
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
