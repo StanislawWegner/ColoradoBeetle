@@ -26,11 +26,18 @@ namespace ColoradoBeetle.UI.Controllers {
         [HttpPost]
         public async Task<IActionResult> Contact(SendContactEmailCommand command) {
 
-            var result = await MediatorSendValidate(command);
+            //var result = await MediatorSendValidate(command);
 
-            if (!result.IsValid) {
+            //if (!result.IsValid) {
+            //    return View(command);
+            //}
+
+            if (!ModelState.IsValid) {
+
                 return View(command);
             }
+
+            await Mediator.Send(command);
 
             return RedirectToAction("Index");
         }
