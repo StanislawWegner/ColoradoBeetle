@@ -74,3 +74,17 @@ i.fas{
     }
 }
 
+ul.client-panel {
+    width: 100%;
+}
+
+ul.client-panel li.nav-item {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+ul.client-panel li.nav-item.active {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
