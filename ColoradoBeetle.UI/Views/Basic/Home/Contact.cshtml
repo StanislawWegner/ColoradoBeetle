@@ -95,12 +95,7 @@
 @section Scripts{
     <script src="~/lib/toastr.js/toastr.min.js"></script>
     <partial name="_ValidationScriptsPartial"/>
-
-    <script>
-        if ('@TempData["Success"]'){
-            toastr.success('@TempData["Success"]')
-        }
-    </script>
+    <partial name="_NotificationPartial"/>
 }
 
 
