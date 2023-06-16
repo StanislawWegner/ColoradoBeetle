@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Client/Client.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcQ2xpZW50XENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Client/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcQ2xpZW50XERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
