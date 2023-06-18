@@ -1,12 +1,13 @@
 ﻿using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Domain.Entities;
 using ColoradoBeetle.Infrastructure.Persistence.Extensions;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using File = ColoradoBeetle.Domain.Entities.File;
 
 namespace ColoradoBeetle.Infrastructure.Persistence;
-public class ApplicationDbContext : DbContext,IApplicationDbContext {
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,IApplicationDbContext {
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {
 

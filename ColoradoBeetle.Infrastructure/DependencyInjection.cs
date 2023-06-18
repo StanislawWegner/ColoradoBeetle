@@ -1,7 +1,10 @@
 ﻿using ColoradoBeetle.Application.Common.Interfaces;
+using ColoradoBeetle.Domain.Entities;
 using ColoradoBeetle.Infrastructure.Persistence;
 using ColoradoBeetle.Infrastructure.Services;
+using GymManager2.Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +20,21 @@ public static class DependencyInjection {
 
         services.AddDbContext<ApplicationDbContext>(options => 
         options.UseSqlServer(connectionString).EnableSensitiveDataLogging());
+
+        services.AddIdentity<ApplicationUser, IdentityRole>(options => {
+            options.SignIn.RequireConfirmedAccount = true;
+            options.Password = new PasswordOptions {
+                RequireDigit = true,
+                RequiredLength = 8,
+                RequireLowercase = true,
+                RequireUppercase = true,
+                RequireNonAlphanumeric = true
+            };
+        }).AddErrorDescriber<LocalizedIdentityErrorDescriber>()
+          .AddRoleManager<RoleManager<IdentityRole>>()
+          .AddEntityFrameworkStores<ApplicationDbContext>()
+          .AddDefaultUI()
+          .AddDefaultTokenProviders();
 
         services.AddSingleton<IAppSettingsService, AppSettingsService>();
         services.AddSingleton<IEmail, Email>();
