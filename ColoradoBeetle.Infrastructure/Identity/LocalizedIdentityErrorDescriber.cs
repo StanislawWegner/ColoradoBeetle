@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace GymManager2.Infrastructure.Identity;
+namespace ColoradoBeetle.Infrastructure.Identity;
 public class LocalizedIdentityErrorDescriber : IdentityErrorDescriber {
     private const string Password = "Password";
     private const string Email = "Email";

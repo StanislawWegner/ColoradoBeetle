@@ -2,7 +2,7 @@
 using ColoradoBeetle.Domain.Entities;
 using ColoradoBeetle.Infrastructure.Persistence;
 using ColoradoBeetle.Infrastructure.Services;
-using GymManager2.Infrastructure.Identity;
+using ColoradoBeetle.Infrastructure.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

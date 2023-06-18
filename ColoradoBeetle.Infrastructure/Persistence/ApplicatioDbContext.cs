@@ -27,6 +27,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,IApplicat
         modelBuilder.SeedLanguage();
         modelBuilder.SeedSettings();
         modelBuilder.SeedSettingsPosition();
+        modelBuilder.SeedRoles();
 
         base.OnModelCreating(modelBuilder);
     }

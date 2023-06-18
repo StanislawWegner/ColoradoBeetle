@@ -103,11 +103,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/6.0.16": {
+      "Microsoft.EntityFrameworkCore/6.0.18": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.16",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.16",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.18",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.18",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
           "Microsoft.Extensions.Logging": "6.0.0",
@@ -128,7 +128,7 @@
           "buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/6.0.16": {
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.18": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
@@ -141,7 +141,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.16": {
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.18": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -521,10 +521,10 @@
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore/6.0.16": {
-      "sha512": "Phfd0D0ew5VHGtM/j7o5HYapbt4R7d9Tkm4z+L4nmkhcEzWZjeuBCUBTOgJI7U4gI916QHliDCcp53FF7NBHIA==",
+    "Microsoft.EntityFrameworkCore/6.0.18": {
+      "sha512": "klzF+50q5HzYX7Jjl+L6FUR+IxgNY3vLjC3LlKCmGCW5vQRHdnu6AXsJKEdGN0oyDyCGq7D6nEleqoAx1VsJGQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/6.0.16",
+      "path": "microsoft.entityframeworkcore/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -532,35 +532,35 @@
         "buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props",
         "lib/net6.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.6.0.16.nupkg.sha512",
+        "microsoft.entityframeworkcore.6.0.18.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/6.0.16": {
-      "sha512": "ubRazZ/5BbOI4B11HcNAr0v4qE9MDcAAZtEFPqkGrnz4ClciA8qsM1Rd8IB25EoxfLnOv/Lnz7aW+/3G+D1MCg==",
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.18": {
+      "sha512": "XzdebCtEqLJMiegLYzfSI6Te9nyO5vnKv0qWo+zavl+LtcG1CPa4RMe1PL2QfrT00NUjN7YoBakRCBIVIPZKaA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/6.0.16",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.6.0.16.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.6.0.18.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.16": {
-      "sha512": "gN2yqqz2R6jj80SUTc036cPPM6xv3e/T1qpQI8ZfWJG3hXjcISI93uZtnyLVpn1712SklQR1WMIZ/bGYUurjcA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.18": {
+      "sha512": "XWCVI7KXaf+3FR3bKezmUm/kuY/5HPVdkuc4PTtT4HBTLbAX1oxH5N/aBmdqJM1j9jIszM/ZsjBlg/nVeqE1Lw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.16",
+      "path": "microsoft.entityframeworkcore.analyzers/6.0.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.6.0.16.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.6.0.18.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -893,7 +893,7 @@
       "ColoradoBeetle.Domain >= 1.0.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.5.2",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.1",
-      "Microsoft.EntityFrameworkCore >= 6.0.16",
+      "Microsoft.EntityFrameworkCore >= 6.0.18",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0"
     ]
   },
@@ -956,7 +956,7 @@
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[6.0.16, )"
+            "version": "[6.0.18, )"
           },
           "Microsoft.Extensions.DependencyInjection.Abstractions": {
             "target": "Package",
