@@ -22,19 +22,22 @@ namespace ColoradoBeetle.UI.Areas.Identity.Pages.Account {
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmail _email;
+        private readonly IDateTimeService _dateTimeService;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmail email) {
+            IEmail email,
+            IDateTimeService dateTimeService) {
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
             _email = email;
+            _dateTimeService = dateTimeService;
         }
 
         /// <summary>
@@ -102,7 +105,7 @@ namespace ColoradoBeetle.UI.Areas.Identity.Pages.Account {
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid) {
                 var user = CreateUser();
-                user.RegisterDateTime = DateTime.UtcNow;
+                user.RegisterDateTime = _dateTimeService.Now;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);

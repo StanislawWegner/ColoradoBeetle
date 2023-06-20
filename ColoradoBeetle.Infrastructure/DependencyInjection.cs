@@ -36,6 +36,7 @@ public static class DependencyInjection {
           .AddDefaultUI()
           .AddDefaultTokenProviders();
 
+        services.AddScoped<IDateTimeService, DateTimeService>();
         services.AddSingleton<IAppSettingsService, AppSettingsService>();
         services.AddSingleton<IEmail, Email>();
 
