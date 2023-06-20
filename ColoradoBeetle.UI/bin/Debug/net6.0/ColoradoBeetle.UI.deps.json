@@ -10,7 +10,10 @@
         "dependencies": {
           "AspNetCore.ReCaptcha": "1.7.0",
           "ColoradoBeetle.Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.18",
+          "Microsoft.AspNetCore.Identity.UI": "6.0.18",
           "Microsoft.EntityFrameworkCore.Design": "6.0.18",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.18",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.18",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.14",
           "NLog": "5.1.4",
