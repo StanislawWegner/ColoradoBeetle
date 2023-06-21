@@ -68,12 +68,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Role/Roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcUm9sZVxSb2xlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/Components/MainCarousel/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXENvbXBvbmVudHNcTWFpbkNhcm91c2VsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/Scripts/_DataTablesScripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXFNjcmlwdHNcX0RhdGFUYWJsZXNTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/Scripts/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXFNjcmlwdHNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/Styles/_DataTablesStyles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXFN0eWxlc1xfRGF0YVRhYmxlc1N0eWxlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/_Layout.cshtml]
@@ -90,10 +106,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/_NotificationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/_ViewImports.cshtml]

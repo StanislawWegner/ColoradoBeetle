@@ -297,6 +297,62 @@
       "PackagePath": "staticwebassets\\lib\\cldrjs\\dist\\cldr\\supplemental.js"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables-buttons\\js\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables-buttons\\js\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables-buttons\\js\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables-buttons\\js\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables-buttons\\js\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables-buttons\\js\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables-buttons\\js\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables-buttons\\js\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables-responsive\\dataTables.responsive.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables-responsive\\dataTables.responsive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.css",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\datatables\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables\\lang\\en.json",
+      "PackagePath": "staticwebassets\\lib\\datatables\\lang\\en.json"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables\\lang\\pl.json",
+      "PackagePath": "staticwebassets\\lib\\datatables\\lang\\pl.json"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\font-awesome\\css\\all.min.css",
       "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\all.min.css"
     },
