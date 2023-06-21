@@ -36,7 +36,7 @@ namespace ColoradoBeetle.UI.Controllers {
 
             if (!ModelState.IsValid) {
 
-                ModelState.AddModelError("AntySpamResult", "Wypełnij pole ReCaptcha (zabezpieczenie" +
+                ModelState.AddModelError("AntySpamResult", "Wypełnij pole ReCaptcha (zabezpieczenie " +
                     "przed spamem)");
                 return View(command);
             }
