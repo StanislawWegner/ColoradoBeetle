@@ -1,4 +1,6 @@
 ﻿using ColoradoBeetle.Application.Roles.Commands.AddRole;
+using ColoradoBeetle.Application.Roles.Commands.EditRole;
+using ColoradoBeetle.Application.Roles.Queries.GetEditRole;
 using ColoradoBeetle.Application.Roles.Queries.GetRoles;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +18,24 @@ public class RoleController : BaseController {
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> AddRole(AddRoleCommand command) {
+
+        var result = await MediatorSendValidate(command);
+
+        if (!result.IsValid)
+            return View(command);
+
+        TempData["Success"] = "Role zostały zaktualizowane";
+
+        return RedirectToAction("Roles");
+    }
+    public async Task<IActionResult> EditRole(string id) {
+
+        return View(await Mediator.Send(new GetEditRoleQuery { Id = id }));
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> EditRole(EditRoleCommand command) {
 
         var result = await MediatorSendValidate(command);
 
