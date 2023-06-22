@@ -28,22 +28,16 @@ namespace ColoradoBeetle.UI.Controllers {
         [HttpPost]
         public async Task<IActionResult> Contact(SendContactEmailCommand command) {
 
-            //var result = await MediatorSendValidate(command);
+            var result = await MediatorSendValidate(command);
 
-            //if (!result.IsValid) {
-            //    return View(command);
-            //}
+            if (!result.IsValid) {
 
-            if (!ModelState.IsValid) {
-
-                ModelState.AddModelError("AntySpamResult", "Wypełnij pole ReCaptcha (zabezpieczenie " +
+                ModelState.AddModelError("AntySpamResult", "Wypełnij pole ReCaptcha (zabezpieczenie" +
                     "przed spamem)");
                 return View(command);
             }
 
-            await Mediator.Send(command);
-
-            TempData["Success"] = "Wiadomość została wysłana do administratora.";
+            TempData["Success"] = "Widomość została wysłana do administratora.";
 
             return RedirectToAction("Contact");
         }

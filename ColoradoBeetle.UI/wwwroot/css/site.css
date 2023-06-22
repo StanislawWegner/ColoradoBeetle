@@ -104,3 +104,8 @@ ul.client-panel li.nav-item.active {
     font-size: 28px;
 }
 
+.card-body label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+

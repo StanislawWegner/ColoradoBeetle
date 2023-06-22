@@ -1,31 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ColoradoBeetle.UI.Extensions; 
+namespace ColoradoBeetle.UI.Extensions;
 public static class IUrlHelperExtensions {
     public static string MakeActiveClass(this IUrlHelper urlHelper, string controller, string action) {
 
-		try {
+        try {
 
-			var result = "active";
-			var controllerName = urlHelper.ActionContext.RouteData.Values["controller"].ToString();
-			var actionName = urlHelper.ActionContext.RouteData.Values["action"].ToString();
+            var result = "active";
+            var controllerName = urlHelper.ActionContext.RouteData.Values["controller"].ToString();
+            var methodName = urlHelper.ActionContext.RouteData.Values["action"].ToString();
 
-			if (string.IsNullOrEmpty(controllerName) || string.IsNullOrEmpty(controller))
-				return null;
+            if (string.IsNullOrEmpty(controllerName))
+                return null;
 
-			var actions = action.Split(", ")?.ToList().Select(x => x.ToUpper());
+            var actions = action.Split(',')?.ToList().Select(x => x.ToUpper());
 
-			if (controller.Equals(controllerName, StringComparison.OrdinalIgnoreCase)) {
+            if (action == null || !action.Any())
+                return null;
 
-				if (actions.Contains(actionName.ToUpper()))
-					return result;
-			}
+            if (controllerName.Equals(controller, StringComparison.OrdinalIgnoreCase)) {
 
-			return null;
-		}
-		catch (Exception) {
+                if (actions.Contains(methodName.ToUpper()))
+                    return result;
+            }
 
-			return null;
-		}
-    } 
+            return null;
+        }
+        catch (Exception) {
+
+            return null;
+        }
+    }
+
 }
