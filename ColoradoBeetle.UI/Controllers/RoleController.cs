@@ -1,4 +1,6 @@
-﻿using ColoradoBeetle.Application.Roles.Commands.AddRole;
+﻿using ColoradoBeetle.Application.Common.Exceptions;
+using ColoradoBeetle.Application.Roles.Commands.AddRole;
+using ColoradoBeetle.Application.Roles.Commands.DeleteRole;
 using ColoradoBeetle.Application.Roles.Commands.EditRole;
 using ColoradoBeetle.Application.Roles.Queries.GetEditRole;
 using ColoradoBeetle.Application.Roles.Queries.GetRoles;
@@ -6,6 +8,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ColoradoBeetle.UI.Controllers; 
 public class RoleController : BaseController {
+
+    private readonly ILogger<RoleController> _logger;
+
+    public RoleController(ILogger<RoleController> logger) {
+        _logger = logger;
+    }
+
     public async Task<IActionResult> Roles() {
         return View(await Mediator.Send(new GetRolesQuery()));
     }
@@ -45,5 +54,29 @@ public class RoleController : BaseController {
         TempData["Success"] = "Role zostały zaktualizowane";
 
         return RedirectToAction("Roles");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteRole(string id) {
+
+        try {
+            await Mediator.Send(new DeleteRoleCommand { Id = id });
+
+            return Json(new { success = true });
+        }
+        catch (ValidationException exception) {
+
+            return Json(new {
+                success = false,
+                message = string.Join(". "
+                , exception.Errors.Select(x => string.Join(". ", x.Value.Select(y => y))))
+            });
+
+        }
+        catch (Exception exception) {
+
+            _logger.LogError(exception, null);
+            return Json(new { success = false });
+        }
     }
 }

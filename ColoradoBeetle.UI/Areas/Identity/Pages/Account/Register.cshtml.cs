@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
 using ColoradoBeetle.Application.Common.Interfaces;
-using ColoradoBeetle.Domain.Entities;
 using ColoradoBeetle.Application.Dictionaries;
+using ColoradoBeetle.Domain.Entities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -68,7 +68,7 @@ namespace ColoradoBeetle.UI.Areas.Identity.Pages.Account {
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Pole 'adres e-mail' jest wymagane")]
+            [Required(ErrorMessage = "Pole adres e-mail jest wymagane")]
             [EmailAddress(ErrorMessage = "Nieprawidłowy adres e-mail")]
             [Display(Name = "Email")]
             public string Email { get; set; }
