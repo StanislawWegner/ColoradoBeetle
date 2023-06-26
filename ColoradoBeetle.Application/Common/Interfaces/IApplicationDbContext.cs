@@ -11,6 +11,7 @@ public interface IApplicationDbContext : IDisposable {
     DbSet<Settings> Settings { get; set; }
     DbSet<File> Files { get; set; }
     DbSet<Language> Languages { get; set; }
+    DbSet<ApplicationUser> Users { get; set; }
 
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);

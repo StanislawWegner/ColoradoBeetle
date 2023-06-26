@@ -16,4 +16,8 @@
     <ProjectReference Include="..\ColoradoBeetle.Domain\ColoradoBeetle.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Clients\Commands\" />
+  </ItemGroup>
+
 </Project>

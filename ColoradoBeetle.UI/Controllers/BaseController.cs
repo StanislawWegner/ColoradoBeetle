@@ -2,12 +2,17 @@
 using ColoradoBeetle.UI.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace ColoradoBeetle.UI.Controllers; 
 public abstract class BaseController : Controller{
 
     private ISender _mediator;
-    protected ISender Mediator => _mediator ??= HttpContext.RequestServices.GetService<ISender>();
+    protected ISender Mediator => _mediator ??= 
+        HttpContext.RequestServices.GetService<ISender>();
+
+    protected string UserId => User.FindFirstValue(ClaimTypes.NameIdentifier);
+
     protected async Task<MediatorValidateResponse<T>> MediatorSendValidate<T>(IRequest<T> request) {
 
         var response = new MediatorValidateResponse<T> { IsValid = false };

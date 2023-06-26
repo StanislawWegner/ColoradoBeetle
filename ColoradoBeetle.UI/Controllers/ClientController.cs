@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using ColoradoBeetle.Application.Clients.Queries.GetClient;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ColoradoBeetle.UI.Controllers {
@@ -9,8 +10,8 @@ namespace ColoradoBeetle.UI.Controllers {
             return View();
         }
 
-        public IActionResult Client() {
-            return View();
+        public async Task<IActionResult> Client() {
+            return View(await Mediator.Send(new GetClientQuery { UserId = UserId}));
         }
     }
 }
