@@ -401,6 +401,10 @@
       "PackagePath": "staticwebassets\\lib\\globalize\\globalize\\number.js"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\inputmask\\jquery.inputmask.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\inputmask\\jquery.inputmask.bundle.min.js"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\jquery-validation-globalize-fix\\jquery.validate.globalize.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-globalize-fix\\jquery.validate.globalize.js"
     },

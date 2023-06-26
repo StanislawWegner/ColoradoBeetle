@@ -78,5 +78,14 @@
 
     <partial name="Scripts/_ValidationScriptsPartial" />
 
-    
+    <script src="~/lib/inputmask/jquery.inputmask.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#ZipCode").inputmask("99-999", { "clearIncomplete": true, showMaskOnHover: false });
+
+    });
+</script>
 }
+                
