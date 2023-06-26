@@ -1,0 +1,483 @@
+2023-06-26 10:02:37.2337 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-06-26 10:02:38.6040 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:02:41.4078 INFO Executed DbCommand (123ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Description], [s].[Key], [s].[Order], [s].[SettingsId], [s].[Type], [s].[Value]
+FROM [SettingsPositions] AS [s]
+2023-06-26 10:02:41.5537 INFO DEVELOPMENT MODE!!!
+2023-06-26 10:02:41.7667 INFO User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-26 10:02:42.3755 INFO Now listening on: https://localhost:7080
+2023-06-26 10:02:42.3755 INFO Now listening on: http://localhost:5116
+2023-06-26 10:02:42.3755 INFO Application started. Press Ctrl+C to shut down.
+2023-06-26 10:02:42.3755 INFO Hosting environment: Development
+2023-06-26 10:02:42.3755 INFO Content root path: C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\
+2023-06-26 10:02:44.3101 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-26 10:02:44.4685 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:02:44.4728 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:02:44.4998 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-26 10:02:44.5234 INFO Executing ViewResult, running view Index.
+2023-06-26 10:02:45.0644 INFO Executed ViewResult - view Index executed in 544.1365ms.
+2023-06-26 10:02:45.0644 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 575.2653ms
+2023-06-26 10:02:45.0644 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:02:45.2162 INFO Request starting HTTP/2 GET https://localhost:7080/lib/font-awesome/css/all.min.css - -
+2023-06-26 10:02:45.2162 INFO Request starting HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-06-26 10:02:45.2162 INFO Request starting HTTP/2 GET https://localhost:7080/ColoradoBeetle.UI.styles.css?v=S2mmYHR23Y_xziC5xU2sPPGSE_TQ0QimX-PIvU4rTqE - -
+2023-06-26 10:02:45.2223 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery.cookie/jquery.cookie.min.js - -
+2023-06-26 10:02:45.2223 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 893.9457ms
+2023-06-26 10:02:45.2223 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:02:45.2223 INFO The file /lib/font-awesome/css/all.min.css was not modified
+2023-06-26 10:02:45.2223 INFO The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2023-06-26 10:02:45.2223 INFO The file /ColoradoBeetle.UI.styles.css was not modified
+2023-06-26 10:02:45.2415 INFO The file /lib/jquery.cookie/jquery.cookie.min.js was not modified
+2023-06-26 10:02:45.2415 INFO Request finished HTTP/2 GET https://localhost:7080/lib/font-awesome/css/all.min.css - - - 304 - text/css 26.5851ms
+2023-06-26 10:02:45.2415 INFO Request finished HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/css/bootstrap.min.css - - - 304 - text/css 26.5841ms
+2023-06-26 10:02:45.2415 INFO Request finished HTTP/2 GET https://localhost:7080/ColoradoBeetle.UI.styles.css?v=S2mmYHR23Y_xziC5xU2sPPGSE_TQ0QimX-PIvU4rTqE - - - 304 - text/css 23.6367ms
+2023-06-26 10:02:45.2415 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=_gzROTSAUmm372bq8VTsa80IZ6BqCD26pdCVcd9vBBI - -
+2023-06-26 10:02:45.2415 INFO The file /css/site.css was not modified
+2023-06-26 10:02:45.2415 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=_gzROTSAUmm372bq8VTsa80IZ6BqCD26pdCVcd9vBBI - - - 304 - text/css 0.7849ms
+2023-06-26 10:02:45.2415 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery.cookie/jquery.cookie.min.js - - - 304 - application/javascript 21.9891ms
+2023-06-26 10:02:45.2415 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 23.0540ms
+2023-06-26 10:02:45.2820 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-2.jpg - -
+2023-06-26 10:02:45.2820 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-1.jpg - -
+2023-06-26 10:02:45.2820 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-3.jpg - -
+2023-06-26 10:02:45.2820 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:02:45.2820 INFO The file /Images/carousel-ladybird-1.jpg was not modified
+2023-06-26 10:02:45.2820 INFO The file /Images/carousel-ladybird-2.jpg was not modified
+2023-06-26 10:02:45.2820 INFO Request starting HTTP/2 GET https://localhost:7080/images/Colorado_Beetle_Logo.png - -
+2023-06-26 10:02:45.2820 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-1.jpg - - - 304 - image/jpeg 1.1647ms
+2023-06-26 10:02:45.2820 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-2.jpg - - - 304 - image/jpeg 1.3047ms
+2023-06-26 10:02:45.2820 INFO The file /images/Colorado_Beetle_Logo.png was not modified
+2023-06-26 10:02:45.2820 INFO Request finished HTTP/2 GET https://localhost:7080/images/Colorado_Beetle_Logo.png - - - 304 - image/png 1.2714ms
+2023-06-26 10:02:45.3039 INFO The file /Images/carousel-ladybird-3.jpg was not modified
+2023-06-26 10:02:45.3039 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-3.jpg - - - 304 - image/jpeg 22.3904ms
+2023-06-26 10:02:45.5822 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 299.6002ms
+2023-06-26 10:02:49.4406 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-06-26 10:02:49.4584 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:02:49.4584 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:02:49.4949 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:02:49.5351 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:02:49.5351 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:02:49.5480 INFO Executed handler method OnGetAsync, returned result .
+2023-06-26 10:02:49.5480 INFO Executing an implicit handler method - ModelState is Valid
+2023-06-26 10:02:49.5480 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:02:49.7198 INFO Executed page /Account/Login in 224.5753ms
+2023-06-26 10:02:49.7198 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:02:49.7198 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 285.9221ms
+2023-06-26 10:02:49.7687 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:02:49.7687 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:02:49.7687 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.6029ms
+2023-06-26 10:02:49.7687 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:02:49.7892 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:02:49.7892 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 14.6729ms
+2023-06-26 10:02:49.8748 INFO Request starting HTTP/2 GET https://localhost:7080/lib/font-awesome/webfonts/fa-solid-900.woff2 - -
+2023-06-26 10:02:49.8748 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 106.6438ms
+2023-06-26 10:02:49.8760 INFO The file /lib/font-awesome/webfonts/fa-solid-900.woff2 was not modified
+2023-06-26 10:02:49.8760 INFO Request finished HTTP/2 GET https://localhost:7080/lib/font-awesome/webfonts/fa-solid-900.woff2 - - - 304 - font/woff2 1.3825ms
+2023-06-26 10:02:52.7822 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:02:52.7881 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 6.0116ms
+2023-06-26 10:02:54.2691 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Register - -
+2023-06-26 10:02:54.2691 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:02:54.2691 INFO Executing endpoint '/Account/Register'
+2023-06-26 10:02:54.2898 INFO Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2023-06-26 10:02:54.3029 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:02:54.3029 INFO Executed handler method OnGetAsync, returned result .
+2023-06-26 10:02:54.3029 INFO Executing an implicit handler method - ModelState is Valid
+2023-06-26 10:02:54.3029 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:02:54.3554 INFO Executed page /Account/Register in 65.5023ms
+2023-06-26 10:02:54.3554 INFO Executed endpoint '/Account/Register'
+2023-06-26 10:02:54.3607 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Register - - - 200 - text/html;+charset=utf-8 91.5654ms
+2023-06-26 10:02:54.3878 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:02:54.3878 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:02:54.3878 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager.UI.styles.css - -
+2023-06-26 10:02:54.3878 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.5019ms
+2023-06-26 10:02:54.3878 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:02:54.3878 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager.UI.styles.css - - - 404 0 - 1.8783ms
+2023-06-26 10:02:54.5219 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.7267ms
+2023-06-26 10:03:04.9027 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Register application/x-www-form-urlencoded 272
+2023-06-26 10:03:04.9073 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:04.9073 INFO Executing endpoint '/Account/Register'
+2023-06-26 10:03:04.9073 INFO Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2023-06-26 10:03:04.9716 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.RegisterModel.OnPostAsync - ModelState is Valid
+2023-06-26 10:03:05.1027 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:03:05.5589 INFO Executed DbCommand (76ms) [Parameters=[@__normalizedUserName_0='S.WEGNER@ONET.EU' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-06-26 10:03:06.0717 INFO Executed DbCommand (10ms) [Parameters=[@p0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Nullable = false) (Size = 450), @p1='0', @p2='df056c8e-ccf8-4958-a1b1-016f8f3ce2e2' (Size = 4000), @p3='s.wegner@onet.eu' (Size = 256), @p4='False', @p5=NULL (Size = 100), @p6='False', @p7=NULL (Size = 100), @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='S.WEGNER@ONET.EU' (Size = 256), @p11='S.WEGNER@ONET.EU' (Size = 256), @p12='AQAAAAEAACcQAAAAELUX8YHo+pI4SPRBeRJodcVN331WuRHU2ycdO3oJ2aWaiXN6KlAE+kFynyESVs/reA==' (Size = 4000), @p13=NULL (Size = 4000), @p14='False', @p15='2023-06-26T08:03:04.9801503Z', @p16='UHQLU7ZNJVTW66XSNULS3C5OUV2KQWLZ' (Size = 4000), @p17='False', @p18='s.wegner@onet.eu' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [IsDeleted], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RegisterDateTime], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2023-06-26 10:03:06.1672 INFO User created a new account with password.
+2023-06-26 10:03:06.2032 INFO Executed DbCommand (5ms) [Parameters=[@__normalizedRoleName_0='KLIENT' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-06-26 10:03:06.2865 INFO Executed DbCommand (3ms) [Parameters=[@__p_0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Size = 450), @__p_1='3cf43b6f-4510-4703-aadb-d63afc732d20' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE ([a].[UserId] = @__p_0) AND ([a].[RoleId] = @__p_1)
+2023-06-26 10:03:06.3083 INFO Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='KLIENT' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-06-26 10:03:06.3422 INFO Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='S.WEGNER@ONET.EU' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-06-26 10:03:06.3882 INFO Executed DbCommand (7ms) [Parameters=[@p0='3cf43b6f-4510-4703-aadb-d63afc732d20' (Nullable = false) (Size = 450), @p1='da342f9f-ef7c-48a3-9440-a2d766f12166' (Nullable = false) (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+2023-06-26 10:03:06.4068 INFO Executed DbCommand (10ms) [Parameters=[@p18='da342f9f-ef7c-48a3-9440-a2d766f12166' (Nullable = false) (Size = 450), @p0='0', @p1='0c70c083-5574-47a1-8ea9-b3298f066125' (Size = 4000), @p19='df056c8e-ccf8-4958-a1b1-016f8f3ce2e2' (Size = 4000), @p2='s.wegner@onet.eu' (Size = 256), @p3='False', @p4=NULL (Size = 100), @p5='False', @p6=NULL (Size = 100), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='S.WEGNER@ONET.EU' (Size = 256), @p10='S.WEGNER@ONET.EU' (Size = 256), @p11='AQAAAAEAACcQAAAAELUX8YHo+pI4SPRBeRJodcVN331WuRHU2ycdO3oJ2aWaiXN6KlAE+kFynyESVs/reA==' (Size = 4000), @p12=NULL (Size = 4000), @p13='False', @p14='2023-06-26T08:03:04.9801503Z', @p15='UHQLU7ZNJVTW66XSNULS3C5OUV2KQWLZ' (Size = 4000), @p16='False', @p17='s.wegner@onet.eu' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsDeleted] = @p5, [LastName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [RegisterDateTime] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2023-06-26 10:03:10.2808 INFO Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2023-06-26 10:03:10.2900 INFO Executing RedirectToPageResult, redirecting to RegisterConfirmation.
+2023-06-26 10:03:10.2900 INFO Executed page /Account/Register in 5382.5572ms
+2023-06-26 10:03:10.2900 INFO Executed endpoint '/Account/Register'
+2023-06-26 10:03:10.2900 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/RegisterConfirmation?email=s.wegner@onet.eu&returnUrl=%2F - -
+2023-06-26 10:03:10.2900 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Register application/x-www-form-urlencoded 272 - 302 0 - 5394.6620ms
+2023-06-26 10:03:10.2990 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:10.2990 INFO Executing endpoint '/Account/RegisterConfirmation'
+2023-06-26 10:03:10.2990 INFO Route matched with {page = "/Account/RegisterConfirmation", area = "Identity", action = "", controller = ""}. Executing page /Account/RegisterConfirmation
+2023-06-26 10:03:10.3156 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.RegisterConfirmationModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:03:10.3156 INFO Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:03:10.3402 INFO Executed page /Account/RegisterConfirmation in 35.7658ms
+2023-06-26 10:03:10.3402 INFO Executed endpoint '/Account/RegisterConfirmation'
+2023-06-26 10:03:10.3449 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/RegisterConfirmation?email=s.wegner@onet.eu&returnUrl=%2F - - - 200 - text/html;+charset=utf-8 48.2807ms
+2023-06-26 10:03:10.3776 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager.UI.styles.css - -
+2023-06-26 10:03:10.3776 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:03:10.3776 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.0658ms
+2023-06-26 10:03:10.4007 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:03:10.4007 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:10.4007 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager.UI.styles.css - - - 404 0 - 23.9169ms
+2023-06-26 10:03:10.4984 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.7681ms
+2023-06-26 10:03:33.7416 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/ConfirmEmail?userId=da342f9f-ef7c-48a3-9440-a2d766f12166&code=Q2ZESjhLMk5hb1FvYitGT3NydS9DdlNnN3hoeElhUGVrYnd1K1BwN3pVN2NjNklnMU9tRDhsakhmUkE3b0N3QXkwYmlnbUJoU2pnU3NrcDZnd1VnK1JxMllLQU95MjdXZllQUmE2UkRhTFc0Yzl6OEZkRkF1dFVpcjBNQndGYTdYVm94ZVQxaDNJdVhHaGNHOUFMWUo2OElEbzFBTzkvbWthczRkN1lJOExsL0pWeFd3ajRpdEwySGUxKytUb3lKSGR0TXNJZWk4Nnlmb210dDZjUTVsMHF4TGRLemc5STIzTWlKME5Ub0NJaWllL3lZU3FYemJvMHgrQVlFRzZOL0U5ajZCUT09&returnUrl=%2F - -
+2023-06-26 10:03:33.7918 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:33.7918 INFO Executing endpoint '/Account/ConfirmEmail'
+2023-06-26 10:03:33.7988 INFO Route matched with {page = "/Account/ConfirmEmail", area = "Identity", action = "", controller = ""}. Executing page /Account/ConfirmEmail
+2023-06-26 10:03:33.7988 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.ConfirmEmailModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:03:34.0090 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:03:34.3799 INFO Executed DbCommand (356ms) [Parameters=[@__p_0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2023-06-26 10:03:34.4245 INFO Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='S.WEGNER@ONET.EU' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-06-26 10:03:34.4475 INFO Executed DbCommand (21ms) [Parameters=[@p18='da342f9f-ef7c-48a3-9440-a2d766f12166' (Nullable = false) (Size = 450), @p0='0', @p1='9fd9fd47-7c4c-4622-9300-5ddbed2a3cff' (Size = 4000), @p19='0c70c083-5574-47a1-8ea9-b3298f066125' (Size = 4000), @p2='s.wegner@onet.eu' (Size = 256), @p3='True', @p4=NULL (Size = 100), @p5='False', @p6=NULL (Size = 100), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='S.WEGNER@ONET.EU' (Size = 256), @p10='S.WEGNER@ONET.EU' (Size = 256), @p11='AQAAAAEAACcQAAAAELUX8YHo+pI4SPRBeRJodcVN331WuRHU2ycdO3oJ2aWaiXN6KlAE+kFynyESVs/reA==' (Size = 4000), @p12=NULL (Size = 4000), @p13='False', @p14='2023-06-26T08:03:04.9801503', @p15='UHQLU7ZNJVTW66XSNULS3C5OUV2KQWLZ' (Size = 4000), @p16='False', @p17='s.wegner@onet.eu' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsDeleted] = @p5, [LastName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [RegisterDateTime] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+SELECT @@ROWCOUNT;
+2023-06-26 10:03:34.4541 INFO Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RedirectResult.
+2023-06-26 10:03:34.4541 INFO Executing RedirectResult, redirecting to /Identity/Account/Login.
+2023-06-26 10:03:34.4541 INFO Executed page /Account/ConfirmEmail in 663.6044ms
+2023-06-26 10:03:34.4541 INFO Executed endpoint '/Account/ConfirmEmail'
+2023-06-26 10:03:34.4541 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/ConfirmEmail?userId=da342f9f-ef7c-48a3-9440-a2d766f12166&code=Q2ZESjhLMk5hb1FvYitGT3NydS9DdlNnN3hoeElhUGVrYnd1K1BwN3pVN2NjNklnMU9tRDhsakhmUkE3b0N3QXkwYmlnbUJoU2pnU3NrcDZnd1VnK1JxMllLQU95MjdXZllQUmE2UkRhTFc0Yzl6OEZkRkF1dFVpcjBNQndGYTdYVm94ZVQxaDNJdVhHaGNHOUFMWUo2OElEbzFBTzkvbWthczRkN1lJOExsL0pWeFd3ajRpdEwySGUxKytUb3lKSGR0TXNJZWk4Nnlmb210dDZjUTVsMHF4TGRLemc5STIzTWlKME5Ub0NJaWllL3lZU3FYemJvMHgrQVlFRzZOL0U5ajZCUT09&returnUrl=%2F - - - 302 0 - 721.7844ms
+2023-06-26 10:03:34.4899 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-06-26 10:03:34.5083 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:34.5083 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:03:34.5083 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:03:34.5083 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:03:34.5083 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:03:34.5083 INFO Executed handler method OnGetAsync, returned result .
+2023-06-26 10:03:34.5083 INFO Executing an implicit handler method - ModelState is Valid
+2023-06-26 10:03:34.5083 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:03:34.5374 INFO Executed page /Account/Login in 27.4211ms
+2023-06-26 10:03:34.5374 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:03:34.5547 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 64.8038ms
+2023-06-26 10:03:34.6091 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:03:34.6145 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:03:34.6145 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 5.8330ms
+2023-06-26 10:03:34.6145 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:03:34.6145 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:34.6260 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 5.3580ms
+2023-06-26 10:03:34.7558 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 141.3126ms
+2023-06-26 10:03:42.1165 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 239
+2023-06-26 10:03:42.1165 INFO Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2023-06-26 10:03:42.1165 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:03:42.1165 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:03:42.1165 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is Valid
+2023-06-26 10:03:42.1285 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:03:42.1285 INFO Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='S.WEGNER@ONET.EU' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-06-26 10:03:42.3725 INFO Executed DbCommand (8ms) [Parameters=[@__user_Id_0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-06-26 10:03:42.4655 INFO Executed DbCommand (4ms) [Parameters=[@__userId_0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-06-26 10:03:42.4794 INFO Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='KLIENT' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-26 10:03:42.5052 INFO Executed DbCommand (3ms) [Parameters=[@__role_Id_0='3cf43b6f-4510-4703-aadb-d63afc732d20' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-06-26 10:03:42.5248 INFO AuthenticationScheme: Identity.Application signed in.
+2023-06-26 10:03:42.5248 INFO User logged in.
+2023-06-26 10:03:42.5248 INFO Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-26 10:03:42.5324 INFO Executing LocalRedirectResult, redirecting to /.
+2023-06-26 10:03:42.5324 INFO Executed page /Account/Login in 410.6394ms
+2023-06-26 10:03:42.5324 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:03:42.5324 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 239 - 302 0 - 416.6582ms
+2023-06-26 10:03:42.5324 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-26 10:03:42.5483 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:03:42.5483 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-26 10:03:42.5483 INFO Executing ViewResult, running view Index.
+2023-06-26 10:03:42.5483 INFO Executed ViewResult - view Index executed in 13.528ms.
+2023-06-26 10:03:42.5483 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 14.3799ms
+2023-06-26 10:03:42.5483 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:03:42.5710 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 31.8323ms
+2023-06-26 10:03:42.6406 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:03:42.6406 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 2.8358ms
+2023-06-26 10:03:42.6447 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:03:42.7786 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 135.5262ms
+2023-06-26 10:03:44.6673 INFO Request starting HTTP/2 GET https://localhost:7080/Client/Dashboard - -
+2023-06-26 10:03:44.6862 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-06-26 10:03:44.6898 INFO Route matched with {action = "Dashboard", controller = "Client", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Dashboard() on controller ColoradoBeetle.UI.Controllers.ClientController (ColoradoBeetle.UI).
+2023-06-26 10:03:44.6898 INFO Executing ViewResult, running view Dashboard.
+2023-06-26 10:03:44.7555 INFO Executed ViewResult - view Dashboard executed in 64.9737ms.
+2023-06-26 10:03:44.7555 INFO Executed action ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI) in 65.8545ms
+2023-06-26 10:03:44.7555 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-06-26 10:03:44.7555 INFO Request finished HTTP/2 GET https://localhost:7080/Client/Dashboard - - - 200 - text/html;+charset=utf-8 97.1053ms
+2023-06-26 10:03:44.8007 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:03:44.8007 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:03:44.8007 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.2296ms
+2023-06-26 10:03:44.8007 INFO Request starting HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.css - -
+2023-06-26 10:03:44.8007 INFO The file /lib/toastr.js/toastr.min.css was not modified
+2023-06-26 10:03:44.8007 INFO Request finished HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.css - - - 304 - text/css 1.3840ms
+2023-06-26 10:03:44.8007 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 7.8114ms
+2023-06-26 10:03:44.8007 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:03:44.8187 INFO Request starting HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.js - -
+2023-06-26 10:03:44.8187 INFO The file /lib/toastr.js/toastr.min.js was not modified
+2023-06-26 10:03:44.8187 INFO Request finished HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.js - - - 304 - application/javascript 1.1118ms
+2023-06-26 10:03:44.9336 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 130.1878ms
+2023-06-26 10:03:50.1056 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Logout?returnUrl=%2FIdentity%2FAccount%2FLogin application/x-www-form-urlencoded 225
+2023-06-26 10:03:50.1056 INFO Executing endpoint '/Account/Logout'
+2023-06-26 10:03:50.1167 INFO Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2023-06-26 10:03:50.1167 INFO Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LogoutModel.OnPost - ModelState is Valid
+2023-06-26 10:03:50.1167 INFO AuthenticationScheme: Identity.Application signed out.
+2023-06-26 10:03:50.1167 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:03:50.1167 INFO AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2023-06-26 10:03:50.1167 INFO User logged out.
+2023-06-26 10:03:50.1167 INFO Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-26 10:03:50.1167 INFO Executing LocalRedirectResult, redirecting to /Identity/Account/Login.
+2023-06-26 10:03:50.1167 INFO Executed page /Account/Logout in 9.0656ms
+2023-06-26 10:03:50.1167 INFO Executed endpoint '/Account/Logout'
+2023-06-26 10:03:50.1261 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Logout?returnUrl=%2FIdentity%2FAccount%2FLogin application/x-www-form-urlencoded 225 - 302 0 - 20.4963ms
+2023-06-26 10:03:50.1261 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-06-26 10:03:50.1261 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:03:50.1261 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:03:50.1261 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:03:50.1261 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:03:50.1261 INFO Executed handler method OnGetAsync, returned result .
+2023-06-26 10:03:50.1261 INFO Executing an implicit handler method - ModelState is Valid
+2023-06-26 10:03:50.1261 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:03:50.1432 INFO Executed page /Account/Login in 9.9592ms
+2023-06-26 10:03:50.1432 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:03:50.1432 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 17.7875ms
+2023-06-26 10:03:50.1779 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:03:50.1779 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:03:50.1779 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:03:50.1779 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 2.2493ms
+2023-06-26 10:03:50.1884 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 10.6857ms
+2023-06-26 10:03:50.3046 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 125.5588ms
+2023-06-26 10:05:35.9936 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-06-26 10:05:36.5463 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:05:38.0857 INFO Executed DbCommand (103ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Description], [s].[Key], [s].[Order], [s].[SettingsId], [s].[Type], [s].[Value]
+FROM [SettingsPositions] AS [s]
+2023-06-26 10:05:38.1881 INFO DEVELOPMENT MODE!!!
+2023-06-26 10:05:38.3787 INFO User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-26 10:05:38.9850 INFO Now listening on: https://localhost:7080
+2023-06-26 10:05:38.9850 INFO Now listening on: http://localhost:5116
+2023-06-26 10:05:38.9850 INFO Application started. Press Ctrl+C to shut down.
+2023-06-26 10:05:38.9850 INFO Hosting environment: Development
+2023-06-26 10:05:38.9850 INFO Content root path: C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\
+2023-06-26 10:05:40.4075 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-26 10:05:40.5378 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:05:40.5582 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-26 10:05:40.5757 INFO Executing ViewResult, running view Index.
+2023-06-26 10:05:41.0312 INFO Executed ViewResult - view Index executed in 453.2679ms.
+2023-06-26 10:05:41.0431 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 484.2819ms
+2023-06-26 10:05:41.0431 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:05:41.1423 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 738.4142ms
+2023-06-26 10:05:41.2134 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:05:41.2134 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:05:41.2218 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 8.3684ms
+2023-06-26 10:05:41.3451 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 131.7486ms
+2023-06-26 10:05:44.8817 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-06-26 10:05:44.8950 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:05:44.9349 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:05:44.9689 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:05:44.9809 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:05:44.9809 INFO Executed handler method OnGetAsync, returned result .
+2023-06-26 10:05:44.9873 INFO Executing an implicit handler method - ModelState is Valid
+2023-06-26 10:05:44.9873 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:05:45.1683 INFO Executed page /Account/Login in 233.0667ms
+2023-06-26 10:05:45.1683 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:05:45.1737 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 292.0608ms
+2023-06-26 10:05:45.2025 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:05:45.2025 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:05:45.2055 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.5033ms
+2023-06-26 10:05:45.2055 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:05:45.2055 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 6.5083ms
+2023-06-26 10:05:45.3188 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 113.0885ms
+2023-06-26 10:05:51.4086 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 239
+2023-06-26 10:05:51.4086 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:05:51.4086 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:05:51.4770 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is Valid
+2023-06-26 10:05:51.4925 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:05:51.9276 INFO Executed DbCommand (65ms) [Parameters=[@__normalizedUserName_0='S.WEGNER@ONET.EU' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-06-26 10:05:52.3044 INFO Executed DbCommand (3ms) [Parameters=[@__user_Id_0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-06-26 10:05:52.3880 INFO Executed DbCommand (4ms) [Parameters=[@__userId_0='da342f9f-ef7c-48a3-9440-a2d766f12166' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-06-26 10:05:52.4056 INFO Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='ADMINISTRATOR' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-26 10:05:52.4371 INFO Executed DbCommand (3ms) [Parameters=[@__role_Id_0='9edfc112-1002-48d1-9483-1c36bfb476bc' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-06-26 10:05:52.4510 INFO AuthenticationScheme: Identity.Application signed in.
+2023-06-26 10:05:52.4550 INFO User logged in.
+2023-06-26 10:05:52.4550 INFO Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-26 10:05:52.4550 INFO Executing LocalRedirectResult, redirecting to /.
+2023-06-26 10:05:52.4550 INFO Executed page /Account/Login in 1046.8977ms
+2023-06-26 10:05:52.4550 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:05:52.4726 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-26 10:05:52.4726 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 239 - 302 0 - 1065.1815ms
+2023-06-26 10:05:52.4726 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:05:52.4726 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-26 10:05:52.4726 INFO Executing ViewResult, running view Index.
+2023-06-26 10:05:52.4972 INFO Executed ViewResult - view Index executed in 12.9239ms.
+2023-06-26 10:05:52.4972 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 13.6166ms
+2023-06-26 10:05:52.4972 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:05:52.5035 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 30.8254ms
+2023-06-26 10:05:52.5303 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:05:52.5303 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.4920ms
+2023-06-26 10:05:52.5303 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:05:52.6538 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 122.6473ms
+2023-06-26 10:05:54.3988 INFO Request starting HTTP/2 GET https://localhost:7080/Client/Dashboard - -
+2023-06-26 10:05:54.4266 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-06-26 10:05:54.4266 INFO Route matched with {action = "Dashboard", controller = "Client", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Dashboard() on controller ColoradoBeetle.UI.Controllers.ClientController (ColoradoBeetle.UI).
+2023-06-26 10:05:54.4266 INFO Executing ViewResult, running view Dashboard.
+2023-06-26 10:05:54.5145 INFO Executed ViewResult - view Dashboard executed in 84.418ms.
+2023-06-26 10:05:54.5145 INFO Executed action ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI) in 85.7552ms
+2023-06-26 10:05:54.5145 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-06-26 10:05:54.5299 INFO Request finished HTTP/2 GET https://localhost:7080/Client/Dashboard - - - 200 - text/html;+charset=utf-8 131.0999ms
+2023-06-26 10:05:54.5699 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:05:54.5699 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:05:54.5699 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:05:54.5699 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.9761ms
+2023-06-26 10:05:54.5699 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 5.9658ms
+2023-06-26 10:05:54.6844 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 112.5294ms
+2023-06-26 10:06:01.7425 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Logout?returnUrl=%2FIdentity%2FAccount%2FLogin application/x-www-form-urlencoded 225
+2023-06-26 10:06:01.7425 INFO Executing endpoint '/Account/Logout'
+2023-06-26 10:06:01.7572 INFO Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2023-06-26 10:06:01.7727 INFO Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LogoutModel.OnPost - ModelState is Valid
+2023-06-26 10:06:01.7727 INFO AuthenticationScheme: Identity.Application signed out.
+2023-06-26 10:06:01.7727 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:06:01.7727 INFO AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2023-06-26 10:06:01.7835 INFO User logged out.
+2023-06-26 10:06:01.7835 INFO Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-26 10:06:01.7835 INFO Executing LocalRedirectResult, redirecting to /Identity/Account/Login.
+2023-06-26 10:06:01.7835 INFO Executed page /Account/Logout in 26.8449ms
+2023-06-26 10:06:01.7835 INFO Executed endpoint '/Account/Logout'
+2023-06-26 10:06:01.7835 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Logout?returnUrl=%2FIdentity%2FAccount%2FLogin application/x-www-form-urlencoded 225 - 302 0 - 42.0274ms
+2023-06-26 10:06:01.7835 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-06-26 10:06:01.7835 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:06:01.7835 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:06:01.7835 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-06-26 10:06:01.7835 INFO AuthenticationScheme: Identity.External signed out.
+2023-06-26 10:06:01.7835 INFO Executed handler method OnGetAsync, returned result .
+2023-06-26 10:06:01.7835 INFO Executing an implicit handler method - ModelState is Valid
+2023-06-26 10:06:01.7835 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-26 10:06:01.8072 INFO Executed page /Account/Login in 13.9796ms
+2023-06-26 10:06:01.8072 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:06:01.8137 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 23.7143ms
+2023-06-26 10:06:01.8489 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:06:01.8489 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:06:01.8489 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.6819ms
+2023-06-26 10:06:01.8489 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:06:01.8489 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 2.1453ms
+2023-06-26 10:06:01.9780 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 127.3394ms
+2023-06-26 10:06:08.6067 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 249
+2023-06-26 10:06:08.6067 INFO Executing endpoint '/Account/Login'
+2023-06-26 10:06:08.6067 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-26 10:06:08.6067 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is Valid
+2023-06-26 10:06:08.6855 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-06-26 10:06:08.6996 INFO Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='STANIALAW.WEGNER@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-06-26 10:06:08.7173 INFO Executed DbCommand (3ms) [Parameters=[@__user_Id_0='f9967bf4-cc0e-4dea-a1f2-97600e64adc6' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-06-26 10:06:08.7235 INFO Executed DbCommand (4ms) [Parameters=[@__userId_0='f9967bf4-cc0e-4dea-a1f2-97600e64adc6' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-06-26 10:06:08.7235 INFO Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='KLIENT' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-26 10:06:08.7235 INFO Executed DbCommand (3ms) [Parameters=[@__role_Id_0='3cf43b6f-4510-4703-aadb-d63afc732d20' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-06-26 10:06:08.7235 INFO AuthenticationScheme: Identity.Application signed in.
+2023-06-26 10:06:08.7235 INFO User logged in.
+2023-06-26 10:06:08.7235 INFO Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-26 10:06:08.7235 INFO Executing LocalRedirectResult, redirecting to /.
+2023-06-26 10:06:08.7235 INFO Executed page /Account/Login in 121.7488ms
+2023-06-26 10:06:08.7235 INFO Executed endpoint '/Account/Login'
+2023-06-26 10:06:08.7235 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 249 - 302 0 - 124.4777ms
+2023-06-26 10:06:08.7359 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-06-26 10:06:08.7359 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:06:08.7359 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-06-26 10:06:08.7359 INFO Executing ViewResult, running view Index.
+2023-06-26 10:06:08.7359 INFO Executed ViewResult - view Index executed in 8.8305ms.
+2023-06-26 10:06:08.7359 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 9.184ms
+2023-06-26 10:06:08.7359 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-06-26 10:06:08.7539 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 18.0991ms
+2023-06-26 10:06:08.8006 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:06:08.8006 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.5009ms
+2023-06-26 10:06:08.8006 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:06:08.9204 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 118.7556ms
+2023-06-26 10:06:10.5655 INFO Request starting HTTP/2 GET https://localhost:7080/Client/Dashboard - -
+2023-06-26 10:06:10.5655 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-06-26 10:06:10.5655 INFO Route matched with {action = "Dashboard", controller = "Client", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Dashboard() on controller ColoradoBeetle.UI.Controllers.ClientController (ColoradoBeetle.UI).
+2023-06-26 10:06:10.5655 INFO Executing ViewResult, running view Dashboard.
+2023-06-26 10:06:10.5858 INFO Executed ViewResult - view Dashboard executed in 10.7214ms.
+2023-06-26 10:06:10.5858 INFO Executed action ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI) in 11.0402ms
+2023-06-26 10:06:10.5858 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-06-26 10:06:10.5858 INFO Request finished HTTP/2 GET https://localhost:7080/Client/Dashboard - - - 200 - text/html;+charset=utf-8 26.1299ms
+2023-06-26 10:06:10.6258 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-06-26 10:06:10.6258 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-06-26 10:06:10.6258 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-06-26 10:06:10.6258 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.5540ms
+2023-06-26 10:06:10.6258 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 5.7880ms
+2023-06-26 10:06:10.7312 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.3050ms

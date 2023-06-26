@@ -1,12 +1,16 @@
 ﻿using ColoradoBeetle.Application.Common.Exceptions;
+using ColoradoBeetle.Application.Dictionaries;
 using ColoradoBeetle.Application.Roles.Commands.AddRole;
 using ColoradoBeetle.Application.Roles.Commands.DeleteRole;
 using ColoradoBeetle.Application.Roles.Commands.EditRole;
 using ColoradoBeetle.Application.Roles.Queries.GetEditRole;
 using ColoradoBeetle.Application.Roles.Queries.GetRoles;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ColoradoBeetle.UI.Controllers; 
+namespace ColoradoBeetle.UI.Controllers;
+
+[Authorize(Roles = RolesDict.Administrator)]
 public class RoleController : BaseController {
 
     private readonly ILogger<RoleController> _logger;
