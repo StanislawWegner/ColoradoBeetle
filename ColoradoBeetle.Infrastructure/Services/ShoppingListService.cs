@@ -10,10 +10,10 @@ public class ShoppingListService : IShoppingListService{
     {
         _context = context;
     }
-    public IEnumerable<ShoppingListDto> GetShoppingLists(string currentUser) {
+    public IEnumerable<ShoppingListDto> GetShoppingLists(string currentUserId) {
 
-        var shoppingLists = _context.ShoppingLists.Where(x => x.UserId == currentUser);
-
-        return shoppingLists.Select(x => new ShoppingListDto { Id = x.Id, Name = x.Name });
+        return _context.ShoppingLists
+            .Where(x => x.UserId == currentUserId)
+            .Select(x => new ShoppingListDto { Id = x.Id, Name = x.Name });
     }
 }
