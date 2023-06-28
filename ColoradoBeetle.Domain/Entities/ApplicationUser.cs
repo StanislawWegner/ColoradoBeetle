@@ -7,8 +7,9 @@ public class ApplicationUser : IdentityUser{
     public DateTime RegisterDateTime { get; set; }
     public bool IsDeleted { get; set; }
 
+
     public Address Address { get; set; }
     public Client Client { get; set; }
-    public ICollection<Product> Products { get; set; } = new HashSet<Product>();
+    public ICollection<ShoppingList> ShoppingLists { get; set; } = new HashSet<ShoppingList>();
     
 }

@@ -10,7 +10,7 @@ public class Product {
     public int Weight { get; set; }
     public WeightUnit WeightUnit { get; set; }
 
-    public string UserId { get; set; }
-    public ApplicationUser User { get; set; }
+    public int ShoppingListId { get; set; }
+    public ShoppingList ShoppingList { get; set; }
 
 }

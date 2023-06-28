@@ -8,13 +8,13 @@ class ProductConfiguration : IEntityTypeConfiguration<Product> {
     public void Configure(EntityTypeBuilder<Product> builder) {
         builder.ToTable("Products");
 
-        builder.Property(x => x.UserId)
+        builder.Property(x => x.ShoppingListId)
             .IsRequired();
 
         builder
-            .HasOne(x => x.User)
+            .HasOne(x => x.ShoppingList)
             .WithMany(x => x.Products)
-            .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .HasForeignKey(x => x.ShoppingListId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

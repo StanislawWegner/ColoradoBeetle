@@ -1,0 +1,61 @@
+﻿@using ColoradoBeetle.Application.Roles.Queries.GetRoles;
+@using System.Globalization;
+@using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingLists;
+@model IEnumerable<ShoppingListDto>
+
+@{
+    ViewData["Title"] = "Listy zakupów";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles {
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+<div class="card card-primary card-border-top">
+    
+    <div class="card-body">
+
+        <table id="shoppingLists" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nazwa listy</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach(var shoppingList in Model) {
+                    <tr>
+                        <td>@shoppingList.Name</td>
+                        <td></td>
+                        
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+        $(document).ready(function () {
+            $('#shoppingLists').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                autoWidth: false,
+                lengthChange: true,
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "asc"]]
+            });
+        });
+    </script>
+}

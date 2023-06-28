@@ -1,4 +1,4 @@
-﻿using ColoradoBeetle.Application.Common.Interfaces;
+﻿  using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Domain.Entities;
 using ColoradoBeetle.Infrastructure.Persistence;
 using ColoradoBeetle.Infrastructure.Services;
@@ -43,6 +43,7 @@ public static class DependencyInjection {
         services.AddSingleton<IEmail, Email>();
         services.AddHttpContextAccessor();
         services.AddSingleton<ICurrentUserService, CurrentUserService>();
+        services.AddScoped<IShoppingListService, ShoppingListService>();
 
         return services;
     }

@@ -124,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hhcmVkXF9Ob3RpZmljYXRpb25QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/ShoppingList/ShoppingLists.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcU2hvcHBpbmdMaXN0XFNob3BwaW5nTGlzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/ColoradoBeetle/ColoradoBeetle.UI/Views/Basic/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

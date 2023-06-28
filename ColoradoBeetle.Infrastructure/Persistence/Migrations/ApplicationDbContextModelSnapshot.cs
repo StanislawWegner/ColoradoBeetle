@@ -239,9 +239,8 @@ namespace ColoradoBeetle.Infrastructure.Persistence.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ShoppingListId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Volume")
                         .HasColumnType("int");
@@ -257,7 +256,7 @@ namespace ColoradoBeetle.Infrastructure.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("ShoppingListId");
 
                     b.ToTable("Products", (string)null);
                 });
@@ -424,6 +423,54 @@ namespace ColoradoBeetle.Infrastructure.Persistence.Migrations
                             SettingsId = 2,
                             Type = 0,
                             Value = "s.wegner@onet.eu"
+                        });
+                });
+
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ShoppingList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ShoppingLists", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2023, 6, 28, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Lista zakupów nr: 1",
+                            UserId = "f9967bf4-cc0e-4dea-a1f2-97600e64adc6"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedDate = new DateTime(2023, 6, 28, 16, 0, 5, 0, DateTimeKind.Unspecified),
+                            Name = "Lista zakupów nr: 2",
+                            UserId = "f9967bf4-cc0e-4dea-a1f2-97600e64adc6"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedDate = new DateTime(2023, 6, 28, 16, 0, 10, 0, DateTimeKind.Unspecified),
+                            Name = "Lista zakupów nr: 3",
+                            UserId = "f9967bf4-cc0e-4dea-a1f2-97600e64adc6"
                         });
                 });
 
@@ -600,13 +647,13 @@ namespace ColoradoBeetle.Infrastructure.Persistence.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Product", b =>
                 {
-                    b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "User")
+                    b.HasOne("ColoradoBeetle.Domain.Entities.ShoppingList", "ShoppingList")
                         .WithMany("Products")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .HasForeignKey("ShoppingListId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("ShoppingList");
                 });
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.SettingsPosition", b =>
@@ -618,6 +665,17 @@ namespace ColoradoBeetle.Infrastructure.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Settings");
+                });
+
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ShoppingList", b =>
+                {
+                    b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "User")
+                        .WithMany("ShoppingLists")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -677,12 +735,17 @@ namespace ColoradoBeetle.Infrastructure.Persistence.Migrations
 
                     b.Navigation("Client");
 
-                    b.Navigation("Products");
+                    b.Navigation("ShoppingLists");
                 });
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Settings", b =>
                 {
                     b.Navigation("Positions");
+                });
+
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ShoppingList", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

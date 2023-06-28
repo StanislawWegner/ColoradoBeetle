@@ -20,6 +20,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,IApplicat
     public DbSet<Settings> Settings { get; set; }
     public DbSet<File> Files { get; set; }
     public DbSet<Language> Languages { get; set; }
+    public DbSet<ShoppingList> ShoppingLists { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
@@ -28,6 +29,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,IApplicat
         modelBuilder.SeedSettings();
         modelBuilder.SeedSettingsPosition();
         modelBuilder.SeedRoles();
+        modelBuilder.SeedShoppingLists();
 
         base.OnModelCreating(modelBuilder);
     }
