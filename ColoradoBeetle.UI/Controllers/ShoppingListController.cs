@@ -17,14 +17,17 @@ namespace ColoradoBeetle.UI.Controllers {
 
         public IActionResult AddShoppingList() {
 
-            return View(new AddShoppingListCommand { UserId = UserId });
+            return View(new AddShoppingListCommand());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddShoppingList(AddShoppingListCommand command) {
 
-            var result = await MediatorSendValidate(command);
+            var result = await MediatorSendValidate(new AddShoppingListCommand {
+                Name = command.Name,
+                UserId = UserId
+            });
 
             if (!result.IsValid) {
                 return View(command);
