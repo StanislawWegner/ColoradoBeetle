@@ -16,6 +16,10 @@
     
     <div class="card-body">
 
+        <a href='/ShoppingList/AddShoppingList' class="btn btn-primary mb-3" role="button">
+            <i class="fas fa-solid fa-circle-plus"></i>Dodaj nową listę 
+        </a>
+
         <table id="shoppingLists" class="table table-bordered">
             <thead>
                 <tr>
@@ -49,6 +53,7 @@
                 paging: true,
                 ordering: true,
                 info: true,
+                responsive: true,
                 autoWidth: false,
                 lengthChange: true,
                 language: {
