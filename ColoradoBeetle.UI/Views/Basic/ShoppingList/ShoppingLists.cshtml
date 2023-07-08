@@ -32,7 +32,13 @@
                 @foreach(var shoppingList in Model) {
                     <tr>
                         <td>@shoppingList.Name</td>
-                        <td></td>
+                        <td>
+                            <a class="btn btn-success btn-sm" role="button" 
+                                href='/ShoppingList/EditShoppingList?id=@shoppingList.Id'>
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                            </a>
+
+                        </td>
                         
                     </tr>
                 }

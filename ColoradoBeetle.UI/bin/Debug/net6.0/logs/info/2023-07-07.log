@@ -1,0 +1,307 @@
+2023-07-07 17:52:42.2864 WARN Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-07-07 17:52:44.4477 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-07-07 17:52:55.1485 INFO Executed DbCommand (487ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Description], [s].[Key], [s].[Order], [s].[SettingsId], [s].[Type], [s].[Value]
+FROM [SettingsPositions] AS [s]
+2023-07-07 17:52:55.7290 INFO DEVELOPMENT MODE!!!
+2023-07-07 17:52:56.3872 INFO User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-07 17:52:58.0543 INFO Now listening on: https://localhost:7080
+2023-07-07 17:52:58.0543 INFO Now listening on: http://localhost:5116
+2023-07-07 17:52:58.0543 INFO Application started. Press Ctrl+C to shut down.
+2023-07-07 17:52:58.0543 INFO Hosting environment: Development
+2023-07-07 17:52:58.0543 INFO Content root path: C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\
+2023-07-07 17:53:02.2137 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-07-07 17:53:02.5217 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-07-07 17:53:02.5776 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-07-07 17:53:02.6291 INFO Executing ViewResult, running view Index.
+2023-07-07 17:53:03.6432 INFO Executed ViewResult - view Index executed in 1025.7377ms.
+2023-07-07 17:53:03.6672 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 1088.8509ms
+2023-07-07 17:53:03.6672 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-07-07 17:53:03.9604 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 1752.7912ms
+2023-07-07 17:53:04.0115 INFO Request starting HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-07-07 17:53:04.0296 INFO Request starting HTTP/2 GET https://localhost:7080/lib/font-awesome/css/all.min.css - -
+2023-07-07 17:53:04.0438 INFO Request starting HTTP/2 GET https://localhost:7080/css/site.css?v=NtJJR8Syub8N0wd9Y09vsF0pS-Fmk2Ba9p1tfKzdHMo - -
+2023-07-07 17:53:04.0438 INFO Request starting HTTP/2 GET https://localhost:7080/ColoradoBeetle.UI.styles.css?v=S2mmYHR23Y_xziC5xU2sPPGSE_TQ0QimX-PIvU4rTqE - -
+2023-07-07 17:53:04.0438 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery/dist/jquery.min.js - -
+2023-07-07 17:53:04.1022 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery.cookie/jquery.cookie.min.js - -
+2023-07-07 17:53:04.1022 INFO Request starting HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2023-07-07 17:53:04.1022 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:04.1360 INFO Sending file. Request path: '/ColoradoBeetle.UI.styles.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\obj\Debug\net6.0\scopedcss\bundle\ColoradoBeetle.UI.styles.css'
+2023-07-07 17:53:04.1360 INFO Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\css\site.css'
+2023-07-07 17:53:04.1649 INFO Request starting HTTP/2 GET https://localhost:7080/images/Colorado_Beetle_Logo.png - -
+2023-07-07 17:53:04.1649 INFO Request starting HTTP/2 GET https://localhost:7080/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-07-07 17:53:04.1649 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-1.jpg - -
+2023-07-07 17:53:04.1649 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-2.jpg - -
+2023-07-07 17:53:04.1649 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:04.1649 INFO Request starting HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-3.jpg - -
+2023-07-07 17:53:04.2200 INFO Request finished HTTP/2 GET https://localhost:7080/css/site.css?v=NtJJR8Syub8N0wd9Y09vsF0pS-Fmk2Ba9p1tfKzdHMo - - - 200 1771 text/css 176.2332ms
+2023-07-07 17:53:04.2200 INFO Request finished HTTP/2 GET https://localhost:7080/ColoradoBeetle.UI.styles.css?v=S2mmYHR23Y_xziC5xU2sPPGSE_TQ0QimX-PIvU4rTqE - - - 200 1107 text/css 175.3977ms
+2023-07-07 17:53:04.2200 INFO Sending file. Request path: '/lib/jquery.cookie/jquery.cookie.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery.cookie\jquery.cookie.min.js'
+2023-07-07 17:53:04.2200 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery.cookie/jquery.cookie.min.js - - - 200 1565 application/javascript 119.0373ms
+2023-07-07 17:53:04.2272 INFO Sending file. Request path: '/images/Colorado_Beetle_Logo.png'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\Colorado_Beetle_Logo.png'
+2023-07-07 17:53:04.2272 INFO Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\js\site.js'
+2023-07-07 17:53:04.2610 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 147.2265ms
+2023-07-07 17:53:04.2610 INFO Request finished HTTP/2 GET https://localhost:7080/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 92.0387ms
+2023-07-07 17:53:04.2610 INFO Request finished HTTP/2 GET https://localhost:7080/images/Colorado_Beetle_Logo.png - - - 200 29710 image/png 96.6141ms
+2023-07-07 17:53:04.2610 INFO Sending file. Request path: '/Images/carousel-ladybird-2.jpg'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\carousel-ladybird-2.jpg'
+2023-07-07 17:53:04.2610 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-2.jpg - - - 200 55458 image/jpeg 91.8158ms
+2023-07-07 17:53:04.2610 INFO Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery\dist\jquery.min.js'
+2023-07-07 17:53:04.2610 INFO Sending file. Request path: '/Images/carousel-ladybird-1.jpg'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\carousel-ladybird-1.jpg'
+2023-07-07 17:53:04.2610 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-1.jpg - - - 200 48921 image/jpeg 96.1895ms
+2023-07-07 17:53:04.2610 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery/dist/jquery.min.js - - - 200 89476 application/javascript 220.8525ms
+2023-07-07 17:53:04.2845 INFO Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2023-07-07 17:53:04.2845 INFO Request finished HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78468 application/javascript 182.4016ms
+2023-07-07 17:53:04.2995 INFO Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-07-07 17:53:04.2995 INFO Request finished HTTP/2 GET https://localhost:7080/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162720 text/css 288.6260ms
+2023-07-07 17:53:04.2995 INFO Sending file. Request path: '/Images/carousel-ladybird-3.jpg'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\Images\carousel-ladybird-3.jpg'
+2023-07-07 17:53:04.3025 INFO Request finished HTTP/2 GET https://localhost:7080/Images/carousel-ladybird-3.jpg - - - 200 64366 image/jpeg 128.4956ms
+2023-07-07 17:53:04.3025 INFO Sending file. Request path: '/lib/font-awesome/css/all.min.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\font-awesome\css\all.min.css'
+2023-07-07 17:53:04.3025 INFO Request finished HTTP/2 GET https://localhost:7080/lib/font-awesome/css/all.min.css - - - 200 102025 text/css 278.6650ms
+2023-07-07 17:53:04.4844 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 310.3349ms
+2023-07-07 17:53:04.7851 INFO Request starting HTTP/2 GET https://localhost:7080/favicon.ico - -
+2023-07-07 17:53:04.7940 INFO Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\favicon.ico'
+2023-07-07 17:53:04.7940 INFO Request finished HTTP/2 GET https://localhost:7080/favicon.ico - - - 200 5430 image/x-icon 9.1760ms
+2023-07-07 17:53:06.6872 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-07-07 17:53:06.6982 INFO Executing endpoint '/Account/Login'
+2023-07-07 17:53:06.7639 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-07-07 17:53:06.8201 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-07-07 17:53:06.8521 INFO AuthenticationScheme: Identity.External signed out.
+2023-07-07 17:53:06.8521 INFO Executed handler method OnGetAsync, returned result .
+2023-07-07 17:53:06.8641 INFO Executing an implicit handler method - ModelState is Valid
+2023-07-07 17:53:06.8641 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-07-07 17:53:07.3011 INFO Executed page /Account/Login in 536.7429ms
+2023-07-07 17:53:07.3011 INFO Executed endpoint '/Account/Login'
+2023-07-07 17:53:07.3109 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 623.6722ms
+2023-07-07 17:53:07.3604 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-07-07 17:53:07.3636 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:07.3636 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.3876ms
+2023-07-07 17:53:07.3636 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:07.3817 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 21.2205ms
+2023-07-07 17:53:07.5026 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 138.4019ms
+2023-07-07 17:53:08.6761 INFO Request starting HTTP/2 GET https://localhost:7080/lib/font-awesome/webfonts/fa-solid-900.woff2 - -
+2023-07-07 17:53:08.7024 INFO Sending file. Request path: '/lib/font-awesome/webfonts/fa-solid-900.woff2'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\font-awesome\webfonts\fa-solid-900.woff2'
+2023-07-07 17:53:08.7024 INFO Request finished HTTP/2 GET https://localhost:7080/lib/font-awesome/webfonts/fa-solid-900.woff2 - - - 200 150124 font/woff2 26.5069ms
+2023-07-07 17:53:14.9889 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 249
+2023-07-07 17:53:14.9889 INFO Executing endpoint '/Account/Login'
+2023-07-07 17:53:14.9889 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-07-07 17:53:15.0697 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is Valid
+2023-07-07 17:53:15.0897 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-07-07 17:53:15.6445 INFO Executed DbCommand (74ms) [Parameters=[@__normalizedUserName_0='STANIALAW.WEGNER@GMAIL.COM' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsDeleted], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RegisterDateTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-07 17:53:16.0446 INFO Executed DbCommand (3ms) [Parameters=[@__user_Id_0='f9967bf4-cc0e-4dea-a1f2-97600e64adc6' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-07 17:53:16.1522 INFO Executed DbCommand (6ms) [Parameters=[@__userId_0='f9967bf4-cc0e-4dea-a1f2-97600e64adc6' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-07 17:53:16.1697 INFO Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='KLIENT' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-07 17:53:16.2007 INFO Executed DbCommand (3ms) [Parameters=[@__role_Id_0='3cf43b6f-4510-4703-aadb-d63afc732d20' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-07 17:53:16.2172 INFO AuthenticationScheme: Identity.Application signed in.
+2023-07-07 17:53:16.2268 INFO User logged in.
+2023-07-07 17:53:16.2268 INFO Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-07-07 17:53:16.2489 INFO Executing LocalRedirectResult, redirecting to /.
+2023-07-07 17:53:16.2489 INFO Executed page /Account/Login in 1247.4284ms
+2023-07-07 17:53:16.2489 INFO Executed endpoint '/Account/Login'
+2023-07-07 17:53:16.2567 INFO Request starting HTTP/2 GET https://localhost:7080/ - -
+2023-07-07 17:53:16.2567 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Login application/x-www-form-urlencoded 249 - 302 0 - 1270.1172ms
+2023-07-07 17:53:16.2567 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-07-07 17:53:16.2567 INFO Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ColoradoBeetle.UI.Controllers.HomeController (ColoradoBeetle.UI).
+2023-07-07 17:53:16.2710 INFO Executing ViewResult, running view Index.
+2023-07-07 17:53:16.2710 INFO Executed ViewResult - view Index executed in 14.1035ms.
+2023-07-07 17:53:16.2710 INFO Executed action ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI) in 15.0134ms
+2023-07-07 17:53:16.2710 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.HomeController.Index (ColoradoBeetle.UI)'
+2023-07-07 17:53:16.2955 INFO Request finished HTTP/2 GET https://localhost:7080/ - - - 200 - text/html;+charset=utf-8 38.9795ms
+2023-07-07 17:53:16.3555 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:16.3555 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 1.8141ms
+2023-07-07 17:53:16.3555 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:16.5258 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 167.4237ms
+2023-07-07 17:53:18.3886 INFO Request starting HTTP/2 GET https://localhost:7080/Client/Dashboard - -
+2023-07-07 17:53:18.4067 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-07-07 17:53:18.4067 INFO Route matched with {action = "Dashboard", controller = "Client", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Dashboard() on controller ColoradoBeetle.UI.Controllers.ClientController (ColoradoBeetle.UI).
+2023-07-07 17:53:18.4112 INFO Executing ViewResult, running view Dashboard.
+2023-07-07 17:53:18.4986 INFO Executed ViewResult - view Dashboard executed in 88.6641ms.
+2023-07-07 17:53:18.4986 INFO Executed action ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI) in 89.7468ms
+2023-07-07 17:53:18.4986 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.ClientController.Dashboard (ColoradoBeetle.UI)'
+2023-07-07 17:53:18.5087 INFO Request finished HTTP/2 GET https://localhost:7080/Client/Dashboard - - - 200 - text/html;+charset=utf-8 120.1135ms
+2023-07-07 17:53:18.5471 INFO Request starting HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.css - -
+2023-07-07 17:53:18.5471 INFO Request starting HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.js - -
+2023-07-07 17:53:18.5471 INFO Sending file. Request path: '/lib/toastr.js/toastr.min.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\toastr.js\toastr.min.css'
+2023-07-07 17:53:18.5471 INFO Request finished HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.css - - - 200 6454 text/css 3.7756ms
+2023-07-07 17:53:18.5528 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-07-07 17:53:18.5528 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:18.5528 INFO Sending file. Request path: '/lib/toastr.js/toastr.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\toastr.js\toastr.min.js'
+2023-07-07 17:53:18.5528 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.7625ms
+2023-07-07 17:53:18.5528 INFO Request finished HTTP/2 GET https://localhost:7080/lib/toastr.js/toastr.min.js - - - 200 5251 application/javascript 5.5356ms
+2023-07-07 17:53:18.5528 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:18.5691 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 16.7519ms
+2023-07-07 17:53:18.6870 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 124.6129ms
+2023-07-07 17:53:20.6754 INFO Request starting HTTP/2 GET https://localhost:7080/ShoppingList/ShoppingLists - -
+2023-07-07 17:53:20.6901 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.ShoppingListController.ShoppingLists (ColoradoBeetle.UI)'
+2023-07-07 17:53:20.6987 INFO Route matched with {action = "ShoppingLists", controller = "ShoppingList", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ShoppingLists() on controller ColoradoBeetle.UI.Controllers.ShoppingListController (ColoradoBeetle.UI).
+2023-07-07 17:53:20.7421 INFO Handling GetShoppingListsQuery
+2023-07-07 17:53:20.7421 INFO ColoradoBeetle Request: "GetShoppingListsQuery" "f9967bf4-cc0e-4dea-a1f2-97600e64adc6" "stanialaw.wegner@gmail.com" {"UserId":"f9967bf4-cc0e-4dea-a1f2-97600e64adc6"}
+2023-07-07 17:53:20.9347 INFO Entity Framework Core 6.0.18 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.18' with options: SensitiveDataLoggingEnabled 
+2023-07-07 17:53:20.9347 INFO Handled IEnumerable`1
+2023-07-07 17:53:20.9347 INFO Executing ViewResult, running view ShoppingLists.
+2023-07-07 17:53:20.9927 INFO Executed DbCommand (7ms) [Parameters=[@__currentUserId_0='f9967bf4-cc0e-4dea-a1f2-97600e64adc6' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name]
+FROM [ShoppingLists] AS [s]
+WHERE [s].[UserId] = @__currentUserId_0
+2023-07-07 17:53:21.4570 INFO Executed ViewResult - view ShoppingLists executed in 518.2655ms.
+2023-07-07 17:53:21.4570 INFO Executed action ColoradoBeetle.UI.Controllers.ShoppingListController.ShoppingLists (ColoradoBeetle.UI) in 758.5466ms
+2023-07-07 17:53:21.4575 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.ShoppingListController.ShoppingLists (ColoradoBeetle.UI)'
+2023-07-07 17:53:21.4575 INFO Request finished HTTP/2 GET https://localhost:7080/ShoppingList/ShoppingLists - - - 200 - text/html;+charset=utf-8 793.8377ms
+2023-07-07 17:53:21.5311 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables.net-bs5/dataTables.bootstrap5.min.css - -
+2023-07-07 17:53:21.5311 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables.net-responsive-bs5/responsive.bootstrap5.min.css - -
+2023-07-07 17:53:21.5311 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables/js/jquery.dataTables.min.js - -
+2023-07-07 17:53:21.5374 INFO Sending file. Request path: '/lib/datatables.net-bs5/dataTables.bootstrap5.min.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables.net-bs5\dataTables.bootstrap5.min.css'
+2023-07-07 17:53:21.5374 INFO Sending file. Request path: '/lib/datatables.net-responsive-bs5/responsive.bootstrap5.min.css'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables.net-responsive-bs5\responsive.bootstrap5.min.css'
+2023-07-07 17:53:21.5374 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables.net-responsive-bs5/responsive.bootstrap5.min.css - - - 200 4441 text/css 6.2650ms
+2023-07-07 17:53:21.5374 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables.net-bs5/dataTables.bootstrap5.min.css - - - 200 11730 text/css 6.4951ms
+2023-07-07 17:53:21.5374 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables.net-responsive-bs5/responsive.bootstrap5.min.js - -
+2023-07-07 17:53:21.5374 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables-responsive/dataTables.responsive.min.js - -
+2023-07-07 17:53:21.5374 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables.net-bs5/dataTables.bootstrap5.min.js - -
+2023-07-07 17:53:21.5374 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:21.5374 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.8472ms
+2023-07-07 17:53:21.5374 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-07-07 17:53:21.5374 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 2.2330ms
+2023-07-07 17:53:21.5374 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/buttons.colVis.min.js - -
+2023-07-07 17:53:21.5694 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/dataTables.buttons.min.js - -
+2023-07-07 17:53:21.5694 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/buttons.html5.min.js - -
+2023-07-07 17:53:21.5694 INFO Sending file. Request path: '/lib/datatables.net-responsive-bs5/responsive.bootstrap5.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables.net-responsive-bs5\responsive.bootstrap5.min.js'
+2023-07-07 17:53:21.5694 INFO Sending file. Request path: '/lib/datatables.net-bs5/dataTables.bootstrap5.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables.net-bs5\dataTables.bootstrap5.min.js'
+2023-07-07 17:53:21.5694 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables.net-responsive-bs5/responsive.bootstrap5.min.js - - - 200 1427 application/javascript 32.5051ms
+2023-07-07 17:53:21.5694 INFO Sending file. Request path: '/lib/datatables-responsive/dataTables.responsive.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables-responsive\dataTables.responsive.min.js'
+2023-07-07 17:53:21.5694 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables-responsive/dataTables.responsive.min.js - - - 200 14657 application/javascript 32.6942ms
+2023-07-07 17:53:21.5694 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables.net-bs5/dataTables.bootstrap5.min.js - - - 200 2360 application/javascript 29.4712ms
+2023-07-07 17:53:21.5694 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:21.5959 INFO Sending file. Request path: '/lib/datatables/js/jquery.dataTables.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables\js\jquery.dataTables.min.js'
+2023-07-07 17:53:21.5959 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables/js/jquery.dataTables.min.js - - - 200 84647 application/javascript 65.4369ms
+2023-07-07 17:53:21.6379 INFO Sending file. Request path: '/lib/datatables-buttons/js/buttons.colVis.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables-buttons\js\buttons.colVis.min.js'
+2023-07-07 17:53:21.6379 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/buttons.colVis.min.js - - - 200 3342 application/javascript 88.6410ms
+2023-07-07 17:53:21.6379 INFO Sending file. Request path: '/lib/datatables-buttons/js/buttons.html5.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables-buttons\js\buttons.html5.min.js'
+2023-07-07 17:53:21.6379 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/buttons.html5.min.js - - - 200 25213 application/javascript 72.4205ms
+2023-07-07 17:53:21.6379 INFO Sending file. Request path: '/lib/datatables-buttons/js/dataTables.buttons.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables-buttons\js\dataTables.buttons.min.js'
+2023-07-07 17:53:21.6379 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/dataTables.buttons.min.js - - - 200 25560 application/javascript 74.3201ms
+2023-07-07 17:53:21.6484 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/buttons.print.min.js - -
+2023-07-07 17:53:21.7162 INFO Sending file. Request path: '/lib/datatables-buttons/js/buttons.print.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables-buttons\js\buttons.print.min.js'
+2023-07-07 17:53:21.7162 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables-buttons/js/buttons.print.min.js - - - 200 2671 application/javascript 68.3541ms
+2023-07-07 17:53:21.7850 INFO Request starting HTTP/2 GET https://localhost:7080/lib/datatables/lang/pl.json - -
+2023-07-07 17:53:21.7904 INFO Sending file. Request path: '/lib/datatables/lang/pl.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\datatables\lang\pl.json'
+2023-07-07 17:53:21.7904 INFO Request finished HTTP/2 GET https://localhost:7080/lib/datatables/lang/pl.json - - - 200 8293 application/json 5.7628ms
+2023-07-07 17:53:21.8458 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 275.2492ms
+2023-07-07 17:53:34.4281 INFO Request starting HTTP/2 GET https://localhost:7080/ShoppingList/AddShoppingList - -
+2023-07-07 17:53:34.4281 INFO Executing endpoint 'ColoradoBeetle.UI.Controllers.ShoppingListController.AddShoppingList (ColoradoBeetle.UI)'
+2023-07-07 17:53:34.4281 INFO Route matched with {action = "AddShoppingList", controller = "ShoppingList", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddShoppingList() on controller ColoradoBeetle.UI.Controllers.ShoppingListController (ColoradoBeetle.UI).
+2023-07-07 17:53:34.4281 INFO Executing ViewResult, running view AddShoppingList.
+2023-07-07 17:53:34.4990 INFO Executed ViewResult - view AddShoppingList executed in 60.8433ms.
+2023-07-07 17:53:34.4990 INFO Executed action ColoradoBeetle.UI.Controllers.ShoppingListController.AddShoppingList (ColoradoBeetle.UI) in 61.6184ms
+2023-07-07 17:53:34.4990 INFO Executed endpoint 'ColoradoBeetle.UI.Controllers.ShoppingListController.AddShoppingList (ColoradoBeetle.UI)'
+2023-07-07 17:53:34.5087 INFO Request finished HTTP/2 GET https://localhost:7080/ShoppingList/AddShoppingList - - - 200 - text/html;+charset=utf-8 80.5960ms
+2023-07-07 17:53:34.5649 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery-validation/dist/jquery.validate.min.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldrjs/dist/cldr.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldrjs/dist/cldr/event.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldrjs/dist/cldr/supplemental.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/globalize/globalize.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/globalize/globalize/number.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/globalize/globalize/date.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/lib/jquery-validation-globalize-fix/jquery.validate.globalize.js - -
+2023-07-07 17:53:34.5704 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:34.5704 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 0.3512ms
+2023-07-07 17:53:34.5951 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-07-07 17:53:34.5996 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 4.4892ms
+2023-07-07 17:53:34.5996 INFO Sending file. Request path: '/lib/globalize/globalize/number.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\globalize\globalize\number.js'
+2023-07-07 17:53:34.5996 INFO Request finished HTTP/2 GET https://localhost:7080/lib/globalize/globalize/number.js - - - 200 46097 application/javascript 38.8402ms
+2023-07-07 17:53:34.5996 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:34.6167 INFO Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - - - 200 5868 application/javascript 90.4811ms
+2023-07-07 17:53:34.6609 INFO Sending file. Request path: '/lib/globalize/globalize.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\globalize\globalize.js'
+2023-07-07 17:53:34.6609 INFO Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2023-07-07 17:53:34.6609 INFO Sending file. Request path: '/lib/cldrjs/dist/cldr/supplemental.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldrjs\dist\cldr\supplemental.js'
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/globalize/globalize.js - - - 200 10917 application/javascript 87.9814ms
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery-validation/dist/jquery.validate.min.js - - - 200 23261 application/javascript 96.6894ms
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldrjs/dist/cldr/supplemental.js - - - 200 2403 application/javascript 88.5007ms
+2023-07-07 17:53:34.6609 INFO Sending file. Request path: '/lib/cldrjs/dist/cldr.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldrjs\dist\cldr.js'
+2023-07-07 17:53:34.6609 INFO Sending file. Request path: '/lib/cldrjs/dist/cldr/event.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldrjs\dist\cldr\event.js'
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldrjs/dist/cldr.js - - - 200 17817 application/javascript 92.2998ms
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldrjs/dist/cldr/event.js - - - 200 18598 application/javascript 90.3835ms
+2023-07-07 17:53:34.6609 INFO Sending file. Request path: '/lib/globalize/globalize/date.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\globalize\globalize\date.js'
+2023-07-07 17:53:34.6609 INFO Request finished HTTP/2 GET https://localhost:7080/lib/globalize/globalize/date.js - - - 200 75791 application/javascript 101.7351ms
+2023-07-07 17:53:34.6770 INFO Sending file. Request path: '/lib/jquery-validation-globalize-fix/jquery.validate.globalize.js'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\jquery-validation-globalize-fix\jquery.validate.globalize.js'
+2023-07-07 17:53:34.6770 INFO Request finished HTTP/2 GET https://localhost:7080/lib/jquery-validation-globalize-fix/jquery.validate.globalize.js - - - 200 1922 application/javascript 102.6631ms
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/likelySubtags.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/numberingSystems.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/plurals.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/ordinals.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/currencyData.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/timeData.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/weekData.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-dates-modern/main/pl/ca-gregorian.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-dates-modern/main/pl/timeZoneNames.json - -
+2023-07-07 17:53:34.8130 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-numbers-modern/main/pl/numbers.json - -
+2023-07-07 17:53:34.8298 INFO Request starting HTTP/2 GET https://localhost:7080/lib/cldr-numbers-modern/main/pl/currencies.json - -
+2023-07-07 17:53:34.8298 INFO Sending file. Request path: '/lib/cldr-core/supplemental/ordinals.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\ordinals.json'
+2023-07-07 17:53:34.8298 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/ordinals.json - - - 200 17546 application/json 16.5578ms
+2023-07-07 17:53:34.8347 INFO Sending file. Request path: '/lib/cldr-dates-modern/main/pl/ca-gregorian.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-dates-modern\main\pl\ca-gregorian.json'
+2023-07-07 17:53:34.8347 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-dates-modern/main/pl/ca-gregorian.json - - - 200 19025 application/json 19.6147ms
+2023-07-07 17:53:34.8945 INFO Sending file. Request path: '/lib/cldr-numbers-modern/main/pl/numbers.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-numbers-modern\main\pl\numbers.json'
+2023-07-07 17:53:34.8945 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-numbers-modern/main/pl/numbers.json - - - 200 10568 application/json 78.2941ms
+2023-07-07 17:53:34.8962 INFO Sending file. Request path: '/lib/cldr-core/supplemental/timeData.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\timeData.json'
+2023-07-07 17:53:34.8962 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/timeData.json - - - 200 21961 application/json 80.7690ms
+2023-07-07 17:53:34.8962 INFO Sending file. Request path: '/lib/cldr-core/supplemental/numberingSystems.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\numberingSystems.json'
+2023-07-07 17:53:34.8962 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/numberingSystems.json - - - 200 9649 application/json 82.4076ms
+2023-07-07 17:53:34.8962 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 283.5395ms
+2023-07-07 17:53:34.8962 INFO Sending file. Request path: '/lib/cldr-core/supplemental/currencyData.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\currencyData.json'
+2023-07-07 17:53:34.8962 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/currencyData.json - - - 200 70124 application/json 84.1562ms
+2023-07-07 17:53:34.8962 INFO Sending file. Request path: '/lib/cldr-numbers-modern/main/pl/currencies.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-numbers-modern\main\pl\currencies.json'
+2023-07-07 17:53:34.8962 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-numbers-modern/main/pl/currencies.json - - - 200 78149 application/json 71.4961ms
+2023-07-07 17:53:34.8962 INFO Sending file. Request path: '/lib/cldr-dates-modern/main/pl/timeZoneNames.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-dates-modern\main\pl\timeZoneNames.json'
+2023-07-07 17:53:34.8962 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-dates-modern/main/pl/timeZoneNames.json - - - 200 68793 application/json 88.5081ms
+2023-07-07 17:53:34.9141 INFO Sending file. Request path: '/lib/cldr-core/supplemental/weekData.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\weekData.json'
+2023-07-07 17:53:34.9141 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/weekData.json - - - 200 11204 application/json 98.8621ms
+2023-07-07 17:53:34.9141 INFO Sending file. Request path: '/lib/cldr-core/supplemental/plurals.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\plurals.json'
+2023-07-07 17:53:34.9141 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/plurals.json - - - 200 72587 application/json 103.2198ms
+2023-07-07 17:53:34.9307 INFO Sending file. Request path: '/lib/cldr-core/supplemental/likelySubtags.json'. Physical path: 'C:\Users\User\source\repos\ColoradoBeetle\ColoradoBeetle.UI\wwwroot\lib\cldr-core\supplemental\likelySubtags.json'
+2023-07-07 17:53:34.9307 INFO Request finished HTTP/2 GET https://localhost:7080/lib/cldr-core/supplemental/likelySubtags.json - - - 200 228285 application/json 118.2642ms
+2023-07-07 17:53:38.3071 INFO Request starting HTTP/2 POST https://localhost:7080/Identity/Account/Logout?returnUrl=%2FIdentity%2FAccount%2FLogin application/x-www-form-urlencoded 225
+2023-07-07 17:53:38.3071 INFO Executing endpoint '/Account/Logout'
+2023-07-07 17:53:38.3232 INFO Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2023-07-07 17:53:38.3232 INFO Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LogoutModel.OnPost - ModelState is Valid
+2023-07-07 17:53:38.3382 INFO AuthenticationScheme: Identity.Application signed out.
+2023-07-07 17:53:38.3382 INFO AuthenticationScheme: Identity.External signed out.
+2023-07-07 17:53:38.3382 INFO AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2023-07-07 17:53:38.3382 INFO User logged out.
+2023-07-07 17:53:38.3382 INFO Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-07-07 17:53:38.3382 INFO Executing LocalRedirectResult, redirecting to /Identity/Account/Login.
+2023-07-07 17:53:38.3382 INFO Executed page /Account/Logout in 18.5586ms
+2023-07-07 17:53:38.3382 INFO Executed endpoint '/Account/Logout'
+2023-07-07 17:53:38.3382 INFO Request finished HTTP/2 POST https://localhost:7080/Identity/Account/Logout?returnUrl=%2FIdentity%2FAccount%2FLogin application/x-www-form-urlencoded 225 - 302 0 - 35.3482ms
+2023-07-07 17:53:38.3382 INFO Request starting HTTP/2 GET https://localhost:7080/Identity/Account/Login - -
+2023-07-07 17:53:38.3382 INFO Executing endpoint '/Account/Login'
+2023-07-07 17:53:38.3382 INFO Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-07-07 17:53:38.3487 INFO Executing handler method ColoradoBeetle.UI.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is Valid
+2023-07-07 17:53:38.3487 INFO AuthenticationScheme: Identity.External signed out.
+2023-07-07 17:53:38.3487 INFO Executed handler method OnGetAsync, returned result .
+2023-07-07 17:53:38.3487 INFO Executing an implicit handler method - ModelState is Valid
+2023-07-07 17:53:38.3487 INFO Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-07-07 17:53:38.3487 INFO Executed page /Account/Login in 10.3703ms
+2023-07-07 17:53:38.3487 INFO Executed endpoint '/Account/Login'
+2023-07-07 17:53:38.3487 INFO Request finished HTTP/2 GET https://localhost:7080/Identity/Account/Login - - - 200 - text/html;+charset=utf-8 17.1867ms
+2023-07-07 17:53:38.3997 INFO Request starting HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - -
+2023-07-07 17:53:38.3997 INFO Request starting HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - -
+2023-07-07 17:53:38.3997 INFO Request finished HTTP/2 GET https://localhost:7080/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 2.2498ms
+2023-07-07 17:53:38.3997 INFO Request finished HTTP/2 GET https://localhost:7080/GymManager2.UI.styles.css - - - 404 0 - 1.0538ms
+2023-07-07 17:53:38.3997 INFO Request starting HTTP/2 GET https://localhost:7080/_vs/browserLink - -
+2023-07-07 17:53:38.5376 INFO Request finished HTTP/2 GET https://localhost:7080/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 137.4043ms

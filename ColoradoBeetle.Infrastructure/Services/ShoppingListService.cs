@@ -5,6 +5,7 @@ using ColoradoBeetle.Domain.Entities;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.InteropServices;
 
 namespace ColoradoBeetle.Infrastructure.Services; 
 public class ShoppingListService : IShoppingListService{
@@ -53,4 +54,28 @@ public class ShoppingListService : IShoppingListService{
             .Where(x => x.UserId == currentUserId)
             .Select(x => new ShoppingListDto { Id = x.Id, Name = x.Name });
     }
+
+    public async Task<ShoppingList> FindByIdAsync(int shoppingListId) {
+
+        return await _context
+            .ShoppingLists
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Id == shoppingListId);
+
+    }
+
+    public async Task UpdateAsync(ShoppingListDto shoppingListDto) {
+
+        var shoppingList = await _context
+            .ShoppingLists
+            .FirstOrDefaultAsync(x => x.Id == shoppingListDto.Id);
+
+        await ValidateShoppingListName(shoppingListDto.Name);
+
+        shoppingList.Name = shoppingListDto.Name;
+
+        await _context.SaveChangesAsync();
+    }
+
+    
 }

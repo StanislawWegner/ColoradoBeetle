@@ -1,4 +1,6 @@
 ﻿using ColoradoBeetle.Application.ShoppingLists.Commands.AddShopinngList;
+using ColoradoBeetle.Application.ShoppingLists.Commands.EditShoppingList;
+using ColoradoBeetle.Application.ShoppingLists.Queries.GetEditShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingLists;
 using ColoradoBeetle.Infrastructure.Persistence.Migrations;
 using FluentValidation.Results;
@@ -24,11 +26,8 @@ namespace ColoradoBeetle.UI.Controllers {
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddShoppingList(AddShoppingListCommand command) {
 
-            var result = await MediatorSendValidate(new AddShoppingListCommand {
-                Name = command.Name,
-                UserId = UserId
-            });
-
+            var result = await MediatorSendValidate(command);
+                
             if (!result.IsValid) {
                 return View(command);
             }
@@ -38,8 +37,24 @@ namespace ColoradoBeetle.UI.Controllers {
             return RedirectToAction("ShoppingLists");
         }
 
-        
+        public async Task<IActionResult> EditShoppingList(int id) {
 
+            return View(await Mediator.Send(new GetEditShoppingListQuery { Id = id }));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditShoppingList(EditShoppingListCommand command) {
+
+            var result = await MediatorSendValidate(command);
+
+            if(!result.IsValid)
+                return View(command);
+
+            TempData["Success"] = "Nazwa listy została zaktualizowana";
+
+            return RedirectToAction("ShoppingLists");
+        }
 
 
     }
