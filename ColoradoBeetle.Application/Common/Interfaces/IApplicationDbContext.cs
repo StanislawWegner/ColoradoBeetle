@@ -13,6 +13,8 @@ public interface IApplicationDbContext : IDisposable {
     DbSet<Language> Languages { get; set; }
     DbSet<ApplicationUser> Users { get; set; }
     DbSet<ShoppingList> ShoppingLists { get; set; }
+    DbSet<Product> Products { get; set; }
+
 
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);

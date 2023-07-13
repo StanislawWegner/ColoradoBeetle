@@ -1,17 +1,22 @@
 ﻿using ColoradoBeetle.Application.ShoppingLists.Commands.AddShopinngList;
+using ColoradoBeetle.Application.ShoppingLists.Commands.DeleteShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Commands.EditShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetEditShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingLists;
-using ColoradoBeetle.Infrastructure.Persistence.Migrations;
-using FluentValidation.Results;
+using ColoradoBeetle.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ColoradoBeetle.UI.Controllers {
 
     [Authorize]
     public class ShoppingListController : BaseController {
+        private readonly ILogger<ShoppingListController> _logger;
+
+        public ShoppingListController(ILogger<ShoppingListController> logger)
+        {
+            _logger = logger;
+        }
         public async Task<IActionResult> ShoppingLists() {
 
             return View(await Mediator.Send(new GetShoppingListsQuery {UserId = UserId }));
@@ -26,7 +31,8 @@ namespace ColoradoBeetle.UI.Controllers {
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddShoppingList(AddShoppingListCommand command) {
 
-            var result = await MediatorSendValidate(command);
+            var result = await MediatorSendValidate(new AddShoppingListCommand { 
+            Name = command.Name, UserId = UserId});
                 
             if (!result.IsValid) {
                 return View(command);
@@ -54,6 +60,20 @@ namespace ColoradoBeetle.UI.Controllers {
             TempData["Success"] = "Nazwa listy została zaktualizowana";
 
             return RedirectToAction("ShoppingLists");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteShoppingList(int id) {
+
+            try {
+                await Mediator.Send(new DeleteShoppingListCommand { Id = id});
+                return Json( new { success = true });
+            }
+            catch (Exception exception){
+                _logger.LogError(exception, null);
+
+                return Json(new {success = false});
+            }
         }
 
 

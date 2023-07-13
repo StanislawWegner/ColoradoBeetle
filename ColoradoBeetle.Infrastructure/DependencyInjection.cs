@@ -44,6 +44,7 @@ public static class DependencyInjection {
         services.AddHttpContextAccessor();
         services.AddSingleton<ICurrentUserService, CurrentUserService>();
         services.AddScoped<IShoppingListService, ShoppingListService>();
+        services.AddScoped<IProductService, ProductService>();  
 
         return services;
     }

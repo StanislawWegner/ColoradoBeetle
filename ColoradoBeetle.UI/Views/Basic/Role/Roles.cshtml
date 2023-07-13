@@ -39,7 +39,7 @@
                 @foreach (var role in Model) {
                     <tr>
                         <td>
-                            <a class="edit-link" href='/Role/EditRole?id=@role.Id'>@role.Name</a>
+                            @role.Name
                         </td>
                         <td>
                             <a class="btn btn-success btn-sm" role="button" href="/Role/EditRole?id=@role.Id">

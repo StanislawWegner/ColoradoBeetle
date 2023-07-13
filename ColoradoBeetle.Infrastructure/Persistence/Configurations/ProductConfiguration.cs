@@ -8,6 +8,9 @@ class ProductConfiguration : IEntityTypeConfiguration<Product> {
     public void Configure(EntityTypeBuilder<Product> builder) {
         builder.ToTable("Products");
 
+        builder.Property(x => x.Name)
+            .IsRequired();
+
         builder.Property(x => x.ShoppingListId)
             .IsRequired();
 

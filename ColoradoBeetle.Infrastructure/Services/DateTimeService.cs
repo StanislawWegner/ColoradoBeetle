@@ -2,5 +2,5 @@
 
 namespace ColoradoBeetle.Infrastructure.Services;
 public class DateTimeService : IDateTimeService {
-    public DateTime Now => DateTime.UtcNow;
+    public DateTime Now => DateTime.Now;
 }

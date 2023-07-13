@@ -13,7 +13,6 @@
         @Html.AntiForgeryToken()
 
         <div class="card-body">
-
             <div class="form-group">
                 @Html.LabelFor(x => x.Name)
                 @Html.TextBoxFor(x => x.Name, new { @class="form-control"
@@ -21,13 +20,15 @@
                 @Html.ValidationMessageFor(x => x.Name)
             </div>
 
-            <div class="card-footer">
-                <button type="submit" class="btn btn-primary btn-lg">
-                    <i class="fas fa-solid fa-circle-check"></i>Zapisz
-                </button>
-
-            </div>
         </div>
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-solid fa-circle-check"></i>Zapisz
+            </button>
+
+        </div>
+        
     }
 </div>
 

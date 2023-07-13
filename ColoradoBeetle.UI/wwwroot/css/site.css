@@ -34,6 +34,10 @@ a {
     filter: invert(100%);
 }
 
+ul.no-decoration {
+    list-style-type: none;
+}
+
 .privacy-policy-info {
     font-size: 12px;
     position: fixed;

@@ -106,17 +106,6 @@
       ]
     },
     {
-      "library": "datatables.net-responsive-bs5@2.4.1",
-      "destination": "wwwroot/lib/datatables.net-responsive-bs5/"
-    },
-    {
-      "library": "datatables-responsive@2.4.1",
-      "destination": "wwwroot/lib/datatables-responsive/",
-      "files": [
-        "dataTables.responsive.min.js"
-      ]
-    },
-    {
       "library": "datatables-buttons@2.3.6",
       "destination": "wwwroot/lib/datatables-buttons/",
       "files": [
@@ -131,6 +120,23 @@
       "destination": "wwwroot/lib/inputmask/",
       "files": [
         "jquery.inputmask.bundle.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables.net-responsive-bs5@2.4.1",
+      "destination": "wwwroot/lib/datatables.net-responsive-bs5/",
+      "files": [
+        "responsive.bootstrap5.min.js",
+        "responsive.bootstrap5.min.css"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables-responsive@2.4.1",
+      "destination": "wwwroot/lib/datatables-responsive/",
+      "files": [
+        "dataTables.responsive.min.js"
       ]
     }
   ]

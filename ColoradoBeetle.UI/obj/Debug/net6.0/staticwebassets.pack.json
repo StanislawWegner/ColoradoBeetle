@@ -325,14 +325,6 @@
       "PackagePath": "staticwebassets\\lib\\datatables.net-bs5\\dataTables.bootstrap5.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.css",
-      "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.css"
-    },
-    {
-      "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.js",
-      "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.js"
-    },
-    {
       "Id": "C:\\Users\\User\\source\\repos\\ColoradoBeetle\\ColoradoBeetle.UI\\wwwroot\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.min.css",
       "PackagePath": "staticwebassets\\lib\\datatables.net-responsive-bs5\\responsive.bootstrap5.min.css"
     },

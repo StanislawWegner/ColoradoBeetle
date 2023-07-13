@@ -3,9 +3,7 @@ using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingLists;
 using ColoradoBeetle.Domain.Entities;
 using FluentValidation.Results;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.InteropServices;
 
 namespace ColoradoBeetle.Infrastructure.Services; 
 public class ShoppingListService : IShoppingListService{
@@ -25,12 +23,13 @@ public class ShoppingListService : IShoppingListService{
         var newName = !string.IsNullOrWhiteSpace(shoppingListName) 
             ? shoppingListName : _dateTimeService.Now.ToString("F");
 
+
         await _context.ShoppingLists.AddAsync(new ShoppingList {
             Name = newName,
             UserId = currentUserId,
             CreatedDate = _dateTimeService.Now
         });
-        
+
         await _context.SaveChangesAsync();
     }
 
@@ -43,7 +42,7 @@ public class ShoppingListService : IShoppingListService{
         if(shoppingListDb != null) {
             throw new ValidationException(new List<ValidationFailure>
                 { new ValidationFailure ("Name", 
-                    $"Lista o nazwie '{shoppingListName}' już istnieje")});
+                    $"Lista o nazwie '{shoppingListName}' już istnieje.")});
         }
     }
 
@@ -77,5 +76,16 @@ public class ShoppingListService : IShoppingListService{
         await _context.SaveChangesAsync();
     }
 
-    
+    public async Task DeleteAsync(int id) {
+
+        var shoppingListDb = await _context
+            .ShoppingLists
+            .FirstOrDefaultAsync(x => x.Id == id);
+
+        _context
+            .ShoppingLists
+            .Remove(shoppingListDb);
+
+        await _context.SaveChangesAsync();
+    }
 }

@@ -12,6 +12,16 @@
     <partial name="Styles/_DataTablesStyles" />
 }
 
+<partial name="Modals/_ModalConfirm"
+         model="@(new ModalParams
+{
+    Id = "modal-confirm-delete",
+    Title = "Potwierdź proszę",
+    Description = "Czy na pewno chcesz usunąć wybraną listę?"
+})" />
+
+
+
 <div class="card card-primary card-border-top">
     
     <div class="card-body">
@@ -24,25 +34,35 @@
             <thead>
                 <tr>
                     <th>Nazwa listy</th>
-                    <th></th>
+                    <th class="desktop"></th>
                 </tr>
             </thead>
             <tbody>
 
                 @foreach(var shoppingList in Model) {
                     <tr>
-                        <td>@shoppingList.Name</td>
+                        
                         <td>
+                            @shoppingList.Name
+                        </td>
+                        <td>
+                            <a class="btn btn-success btn-sm" role="button"
+                               href='/Product/AddProduct?id=@shoppingList.Id'>
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Dodaj produkt
+                            </a>
                             <a class="btn btn-success btn-sm" role="button" 
                                 href='/ShoppingList/EditShoppingList?id=@shoppingList.Id'>
                                 <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
                             </a>
-
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="deleteShoppingList('@shoppingList.Id', this)">
+                                                                
+                                                                
+                                    <i class="fas fa-solid fa-trash-can"></i>Usuń
+                            </button>
                         </td>
-                        
                     </tr>
                 }
-
             </tbody>
         </table>
     </div>
@@ -54,18 +74,57 @@
     <partial name="Scripts/_DataTablesScripts" />
 
     <script>
+
+        var selectedRow;
+        var selectedShoppingListId = 0;
+        var shoppingLists;
+
         $(document).ready(function () {
-            $('#shoppingLists').DataTable({
+            
+            shoppingLists = $('#shoppingLists').DataTable({
                 paging: true,
                 ordering: true,
                 info: true,
-                responsive: true,
+                responsive: {
+                    details: {
+                        type: 'inline'
+                    }
+                },
                 autoWidth: false,
                 lengthChange: true,
                 language: {
                     url: `/lib/datatables/lang/${'@locale'}.json`
                 },
                 order: [[0, "asc"]]
+            });
+        });
+
+
+        function deleteShoppingList(id, btn) {
+            selectedRow = btn.parentNode.parentNode;
+            selectedShoppingListId = id;
+            $('#modal-confirm-delete').modal('show');
+        }
+
+        $('#modal-confirm-delete-btn').on('click', function (e) {
+            $('#modal-confirm-delete').modal('hide');
+
+            $.ajax({
+                type: "POST",
+                url: "/ShoppingList/DeleteShoppingList",
+                data: {
+                    id: selectedShoppingListId
+                },
+                success: function (data) {
+                    if(data.success){
+                        shoppingLists.rows(selectedRow).remove().draw();
+                        toastr.success("Lista została usunięta.");
+                    }
+                },
+                error: function (data) {
+                    toastr.error('Błąd. Nie udało się usunąć wybranej listy. Spróbuj ponownie lub skontaktuj się z administratorem');
+                },
+                dataType: "json"
             });
         });
     </script>
