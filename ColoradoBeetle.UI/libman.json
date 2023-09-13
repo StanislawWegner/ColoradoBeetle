@@ -1,0 +1,143 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "jsdelivr",
+      "library": "cldrjs@0.5.5",
+      "destination": "wwwroot/lib/cldrjs/",
+      "files": [
+        "dist/cldr.js",
+        "dist/cldr/event.js",
+        "dist/cldr/supplemental.js"
+      ]
+    },
+    {
+      "library": "globalize@1.7.0",
+      "destination": "wwwroot/lib/globalize/",
+      "files": [
+        "globalize/date.js",
+        "globalize.js",
+        "globalize/number.js"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "jquery-validation-globalize-fix@0.1.1",
+      "destination": "wwwroot/lib/jquery-validation-globalize-fix/",
+      "files": [
+        "jquery.validate.globalize.js"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-dates-modern@43.0.0",
+      "destination": "wwwroot/lib/cldr-dates-modern/",
+      "files": [
+        "main/en/ca-gregorian.json",
+        "main/en/timeZoneNames.json",
+        "main/pl/ca-gregorian.json",
+        "main/pl/timeZoneNames.json"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-numbers-modern@43.0.0",
+      "destination": "wwwroot/lib/cldr-numbers-modern/",
+      "files": [
+        "main/en/currencies.json",
+        "main/en/numbers.json",
+        "main/pl/currencies.json",
+        "main/pl/numbers.json"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "jquery.cookie@1.4.1",
+      "destination": "wwwroot/lib/jquery.cookie/",
+      "files": [
+        "jquery.cookie.min.js"
+      ]
+    },
+    {
+      "provider": "jsdelivr",
+      "library": "cldr-core@43.0.0",
+      "destination": "wwwroot/lib/cldr-core/",
+      "files": [
+        "supplemental/currencyData.json"
+      ]
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/",
+      "files": [
+        "toastr.min.js",
+        "toastr.min.css"
+      ]
+    },
+    {
+      "library": "font-awesome@6.4.0",
+      "destination": "wwwroot/lib/font-awesome/",
+      "files": [
+        "css/all.min.css",
+        "webfonts/fa-brands-400.ttf",
+        "webfonts/fa-brands-400.woff2",
+        "webfonts/fa-regular-400.ttf",
+        "webfonts/fa-regular-400.woff2",
+        "webfonts/fa-solid-900.ttf",
+        "webfonts/fa-solid-900.woff2",
+        "webfonts/fa-v4compatibility.ttf",
+        "webfonts/fa-v4compatibility.woff2"
+      ]
+    },
+    {
+      "library": "datatables@1.10.21",
+      "destination": "wwwroot/lib/datatables/",
+      "files": [
+        "js/jquery.dataTables.min.js"
+      ]
+    },
+    {
+      "library": "datatables.net-bs5@1.13.4",
+      "destination": "wwwroot/lib/datatables.net-bs5/",
+      "files": [
+        "dataTables.bootstrap5.min.js",
+        "dataTables.bootstrap5.min.css"
+      ]
+    },
+    {
+      "library": "datatables-buttons@2.3.6",
+      "destination": "wwwroot/lib/datatables-buttons/",
+      "files": [
+        "js/dataTables.buttons.min.js",
+        "js/buttons.print.min.js",
+        "js/buttons.html5.min.js",
+        "js/buttons.colVis.min.js"
+      ]
+    },
+    {
+      "library": "inputmask@4.0.9",
+      "destination": "wwwroot/lib/inputmask/",
+      "files": [
+        "jquery.inputmask.bundle.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables.net-responsive-bs5@2.4.1",
+      "destination": "wwwroot/lib/datatables.net-responsive-bs5/",
+      "files": [
+        "responsive.bootstrap5.min.js",
+        "responsive.bootstrap5.min.css"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "datatables-responsive@2.4.1",
+      "destination": "wwwroot/lib/datatables-responsive/",
+      "files": [
+        "dataTables.responsive.min.js"
+      ]
+    }
+  ]
+}

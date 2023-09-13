@@ -1,0 +1,146 @@
+﻿@using ColoradoBeetle.Application.Products.Queries.GetChildProducts;
+@using ColoradoBeetle.Application.Products.Queries.GetProducts;
+@using System.Globalization;
+
+@model GetChildProductsVm
+
+@{
+    TempData["Title"] = "Kopiuj produkty";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+<h1>Kopiuj z listy: "@Model.ChildShoppingListDto.Name"</h1>
+
+<div class="card card-primary card-border-top">
+    <div class="card-body">
+
+        <a href='/Product/GetProductsInList?id=@Model.ParentShoppingListDto.Id'
+            class="btn btn-info mb-2" role="button"> 
+            <div class="d-flex flex-row">
+                <div>
+                    <i class="fas fa-solid fa-backward-fast"></i>
+                </div>
+                <div id="setName"></div>
+            </div>
+        </a>
+
+        <table id="products" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa produktu</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var product in Model.ProductDtoList) {
+                    <tr>
+                        <td>@product.Id</td>
+
+                        @if (product.IsChecked) {
+                            <td>
+                                <div class="productChecked">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else {
+                            <td>
+                                <div>@product.Name</div>
+                            </td>
+                        }
+
+                        <td>
+                            <button
+                               class="btn btn-success btn-sm" 
+                               onclick="copyProduct('@product.Id', '@Model.ParentShoppingListDto.Id')">
+                                <i class="fas fa-solid fa-copy"></i>Kopiuj
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        var selectedRow;
+        var selectedProductId = 0;
+        var products;
+
+
+        function shortName(model, maxLength) {
+            if (!model) 
+                return '';
+
+            if (model.length <= maxLength) 
+                return model;
+            
+                return model.substring(0, maxLength - 3) + '...';
+        }
+
+        $(document).ready(function () {
+
+            products = $("#products").DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: false,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: 0,
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+
+            $('#setName').html(shortName('@Model.ParentShoppingListDto.Name', 16));
+        });
+
+
+        
+
+        function copyProduct(id, prntId){
+            $.ajax({
+                type: "POST",
+                url: "/Product/CopyOneProduct",
+                data: {
+                    id,
+                    prntId
+                },
+                success: function(data){
+                    if(data.success){
+                        toastr.success("Produkt został skopiowany");
+                    }
+                    else{
+                        toastr.error("Kopiowanie nieudane, spróbuj ponownie później lub skontaktuj się z administratorem.");
+                    }
+                },
+                error: function(data){
+                    toastr.error("Kopiowanie nieudane, spróbuj ponownie później lub skontaktuj się z administratorem.");
+                },
+                dataType: "json"
+
+            });
+        }
+
+        
+    </script>
+}

@@ -1,0 +1,90 @@
+﻿@using ColoradoBeetle.Application.Roles.Queries.GetRoles;
+@using System.Globalization;
+@using ColoradoBeetle.Application.ShoppingLists.Queries.GetChildShoppingLists;
+@using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingLists;
+@model GetChildShoppingListsVm;
+
+@{
+    ViewData["Title"] = "Listy do skopiowania";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles {
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+        <table id="shoppingLists" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                        <th>Nazwa listy</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var childShoppingList in Model.ChildShoppingLists) {
+                    <tr>
+                        <td>@childShoppingList.Id</td>
+                        <td>
+                            @childShoppingList.Name
+                        </td>
+                        <td>
+                            <a class="btn btn-success btn-sm" role="button"
+                               href='/Product/CopyAllProducts?id=@childShoppingList.Id&prntId=@Model.ParentShoppingListId'>
+                                <i class="fas fa-regular fa-folder-open"></i>Wszystkie produkty
+                            </a>
+                            <a class="btn btn-primary btn-sm" role="button"
+                               href='/Product/GetChildProducts?id=@childShoppingList.Id&prntId=@Model.ParentShoppingListId'>
+                                <i class="fas fa-regular fa-file"></i>Wybierz pojedyńczo
+                            </a>
+                           
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        var selectedRow;
+        var selectedShoppingListId = 0;
+        var shoppingLists;
+
+        $(document).ready(function () {
+
+            shoppingLists = $('#shoppingLists').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+    </script>
+}

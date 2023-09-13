@@ -1,0 +1,234 @@
+﻿@using ColoradoBeetle.Application.Products.Queries.GetProducts;
+@using System.Globalization;
+
+@model GetProductsInListVm
+
+@{
+    TempData["Title"] = "Produkty";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles"/>
+}
+
+
+<partial name="Modals/_ModalConfirm"
+         model="@(new ModalParams
+{
+    Id = "modal-confirm-delete",
+    Title = "Potwierdź proszę",
+    Description = "Czy na pewno chcesz usunąć wybrany produkt?"
+})" />
+
+<h1>Lista: "@Model.ShoppingListDto.Name"</h1>
+
+<div class="card card-primary card-border-top">
+    <div class="card-body">
+        <div class="d-flex flex-row">
+            <div>
+                <a href="/Product/AddProduct?id=@Model.ShoppingListDto.Id"
+                   class="btn btn-primary mb-3 me-1" role="button">
+                    <i class="fas fa-solid fa-square-plus"></i>Dodaj produkt
+                </a>
+            </div>
+            <div>
+                <a href="/ShoppingList/ChildShoppingLists?id=@Model.ShoppingListDto.Id"
+                   class="btn btn-success mb-3" role="button">
+                    <i class="fas fa-solid fa-copy"></i>Skopiuj produkty
+                </a>
+            </div>
+        </div>
+
+        <table id="products" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="details-control"></th>
+                    <th>Nazwa produktu</th>
+                    <th>szt</th>
+                    <th class="desktop">Objętość</th>
+                    <th class="desktop">Miara</th>
+                    <th class="desktop">Masa</th>
+                    <th class="desktop">Miara</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach(var product in Model.ProductDtoList) {
+                    <tr>
+                        <td>@product.Id</td>
+                        <td class="details-control"></td>
+
+                        @if (product.IsChecked && product.IsCopied){
+                            <td>
+                                <div id="product@(product.Id)" class="addPointer
+                                        productChecked isCopy"
+                                     onclick="checkProduct('@product.Id')">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsChecked){
+                        <td>
+                            <div id="product@(product.Id)" class="addPointer
+                                        productChecked"
+                                     onclick="checkProduct('@product.Id')">
+                                @product.Name
+                            </div>
+                        </td>
+                        }
+                        else if (product.IsCopied){
+                            <td>
+                                <div id ="product@(product.Id)" class="addPointer 
+                                        isCopy"
+                                     onclick="checkProduct('@product.Id')">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else {
+                            <td>
+                                <div id="product@(product.Id)" class="addPointer"
+                                     onclick="checkProduct('@product.Id')">
+                                @product.Name
+                                </div>
+                            </td>
+                        }
+                        
+                        <td>@product.Quantity</td>
+                        <td>@product.Volume</td>
+                        <td>@product.VolumeUnit</td>
+                        <td>@product.Weight</td>
+                        <td>@product.WeightUnit</td>
+                        <td>
+                            <a href="/Product/EditProduct?id=@product.Id"
+                                class="btn btn-success btn-sm" role="button">
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                            </a>
+                            <button class="btn btn-danger btn-sm"
+                                onclick="deleteProduct('@product.Id', this)">
+                                <i class="fas fa-solid fa-trash-can"></i>Usuń
+                            </button>
+                            
+                        </td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="Scripts/_DataTablesScripts"/>
+
+    <script>
+
+        var selectedRow;
+        var selectedProductId = 0;
+        var products;
+        var check;
+
+        $(document).ready(function (){
+
+            products = $("#products").DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    },
+                    {
+                        "width": "5%",
+                        "targets": 3
+                    }
+                ]
+            });
+
+        });
+
+        function hasClass(id){
+            if($("#product" + id).hasClass('productChecked')){
+                check = false;
+            }
+            else{
+                check = true;
+            }
+        }
+
+        function checkProduct(id) {
+
+            hasClass(id);
+
+            $.ajax({
+                type: "POST",
+                url: "/Product/CheckProduct",
+                data: {
+                    id: id,
+                    check: check
+                },
+                success: function(data){
+                    if(data.success){
+                        if(check === true){
+                            $("#product" + id).addClass('productChecked');
+                        }
+                        else{
+                            $("#product" + id).removeClass('productChecked');
+                        }
+                    }
+                    else{
+                        toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                    }
+                },
+                error: function(data){
+                    toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                },
+                dataType: "json"
+            });
+        }
+
+        function deleteProduct(id, btn) {
+            selectedRow = btn.parentNode.parentNode;
+            selectedProductId = id;
+            $('#modal-confirm-delete').modal('show');
+        }
+
+        $('#modal-confirm-delete-btn').on('click', function (e) {
+            $('#modal-confirm-delete').modal('hide');
+
+            $.ajax({
+                type: "POST",
+                url: "/Product/DeleteProduct",
+                data: {
+                    id: selectedProductId
+                },
+                success: function(data){
+                    if(data.success){
+                        products.rows(selectedRow).remove().draw();
+                        toastr.success("Wybrany produkt został usunięty");
+                    }
+                    else{
+                        toastr.error("Nie udało się usunąć wybranego produktu, skontaktuj się z administratorem.");
+                    }
+                },
+                error: function(data){
+                    toastr.error("Nie udało się usunąć wybranego produktu, skontaktuj się z administratorem.");
+                },
+                dataType: "json"
+            });
+        });
+    </script>
+}
