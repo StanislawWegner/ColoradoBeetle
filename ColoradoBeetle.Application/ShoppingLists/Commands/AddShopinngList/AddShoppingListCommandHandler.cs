@@ -23,7 +23,7 @@ internal class AddShoppingListCommandHandler : IRequestHandler<AddShoppingListCo
         await _shoppingListService.ValidateShoppingListName(request.Name, request.UserId);
 
         var newName = !string.IsNullOrWhiteSpace(request.Name)
-            ? request.Name : _dateTimeService.Now.ToString("F");
+            ? request.Name : _dateTimeService.Now.ToString("dddd, d MMM");
 
 
         await _context.ShoppingLists.AddAsync(new ShoppingList {
