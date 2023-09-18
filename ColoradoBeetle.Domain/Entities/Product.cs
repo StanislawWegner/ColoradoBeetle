@@ -15,6 +15,7 @@ public class Product {
     public WeightUnit? WeightUnit { get; set; }
     public bool IsChecked { get; set; }
     public bool IsCopied { get; set; }
+    public bool OnStock { get; set; } = true;
 
     public int ShoppingListId { get; set; }
     public ShoppingList ShoppingList { get; set; }

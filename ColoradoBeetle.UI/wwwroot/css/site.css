@@ -13,6 +13,7 @@ html {
   min-height: 100%;
 }
 
+
 .main-navbar{
     font-size: 1.25rem;
 }
@@ -137,6 +138,11 @@ a.edit-link {
 
 .isCopy {
     background-color: #ebf3ab;
+}
+
+.outOfStock {
+    color: white;
+    background-color: #846c04
 }
 
 

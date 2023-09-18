@@ -42,7 +42,14 @@
                     <tr>
                         <td>@product.Id</td>
 
-                        @if (product.IsChecked) {
+                        @if (!product.OnStock) {
+                            <td>
+                                <div class="outOfStock">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsChecked) {
                             <td>
                                 <div class="productChecked">
                                     @product.Name

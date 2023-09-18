@@ -15,6 +15,9 @@ class ProductConfiguration : IEntityTypeConfiguration<Product> {
         builder.Property(x => x.ShoppingListId)
             .IsRequired();
 
+        builder.Property(x => x.OnStock)
+            .HasDefaultValue(true);
+
         builder
             .HasOne(x => x.ShoppingList)
             .WithMany(x => x.Products)

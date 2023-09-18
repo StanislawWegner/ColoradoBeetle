@@ -250,6 +250,11 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<bool>("OnStock")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
                     b.Property<int?>("Quantity")
                         .HasColumnType("int");
 

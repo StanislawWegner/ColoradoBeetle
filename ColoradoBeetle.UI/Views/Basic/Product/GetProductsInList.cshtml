@@ -67,37 +67,48 @@
                         <td>@product.Id</td>
                         <td class="details-control"></td>
 
-                        @if (product.IsChecked && product.IsCopied){
+                        @if(!product.OnStock && product.IsCopied) {
                             <td>
-                                <div id="product@(product.Id)" class="addPointer
-                                        productChecked isCopy"
-                                     onclick="checkProduct('@product.Id')">
+                                <div id="product@(product.Id)" class="prod addPointer isCopy 
+                                        outOfStock">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (!product.OnStock) {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer outOfStock">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsChecked && product.IsCopied){
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer
+                                        productChecked isCopy">
                                     @product.Name
                                 </div>
                             </td>
                         }
                         else if (product.IsChecked){
                         <td>
-                            <div id="product@(product.Id)" class="addPointer
-                                        productChecked"
-                                     onclick="checkProduct('@product.Id')">
+                            <div id="product@(product.Id)" class="prod addPointer
+                                        productChecked">
                                 @product.Name
                             </div>
                         </td>
                         }
                         else if (product.IsCopied){
                             <td>
-                                <div id ="product@(product.Id)" class="addPointer 
-                                        isCopy"
-                                     onclick="checkProduct('@product.Id')">
+                                <div id ="product@(product.Id)" class="prod addPointer 
+                                        isCopy">
                                     @product.Name
                                 </div>
                             </td>
                         }
                         else {
                             <td>
-                                <div id="product@(product.Id)" class="addPointer"
-                                     onclick="checkProduct('@product.Id')">
+                                <div id="product@(product.Id)" class="prod addPointer">
                                 @product.Name
                                 </div>
                             </td>
@@ -117,6 +128,10 @@
                                 onclick="deleteProduct('@product.Id', this)">
                                 <i class="fas fa-solid fa-trash-can"></i>Usuń
                             </button>
+                            <button class="btn btn-sm outOfStock"
+                                    onclick="checkIsOnStock('@product.Id')">
+                                <i class="fas fa-solid fa-exclamation"></i>Brak
+                            </button>
                             
                         </td>
                     </tr>
@@ -135,7 +150,6 @@
         var selectedRow;
         var selectedProductId = 0;
         var products;
-        var check;
 
         $(document).ready(function (){
 
@@ -166,50 +180,57 @@
 
         });
 
+
         $('#hideNaviBtn').on('click', function () {
             $('#navi').toggle('fast');
         });
 
 
-        function hasClass(id){
-            if($("#product" + id).hasClass('productChecked')){
-                check = false;
+        $('.prod').on('click', function () {
+
+            var prodId = $(this).attr('id');
+
+            if ($('#' + prodId).hasClass('outOfStock')) {
+                toastr.error("Produkt oznaczono jako 'brak'.")
             }
-            else{
-                check = true;
-            }
-        }
+            else
+            {
 
-        function checkProduct(id) {
+                var id = prodId.match(/[\d\.]+/g);
 
-            hasClass(id);
+                var check = $('#' + prodId).hasClass('productChecked');
 
-            $.ajax({
-                type: "POST",
-                url: "/Product/CheckProduct",
-                data: {
-                    id: id,
-                    check: check
-                },
-                success: function(data){
-                    if(data.success){
-                        if(check === true){
-                            $("#product" + id).addClass('productChecked');
+            
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Product/CheckProduct",
+                    data: {
+                        id: id,
+                        check: !check
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            if (check) {
+                                $('#' + prodId).removeClass('productChecked');
+                            }
+                            else {
+                                $('#' + prodId).addClass('productChecked');
+                            }
                         }
-                        else{
-                            $("#product" + id).removeClass('productChecked');
+                        else {
+                            toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
                         }
-                    }
-                    else{
+                    },
+                    error: function (data) {
                         toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
-                    }
-                },
-                error: function(data){
-                    toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
-                },
-                dataType: "json"
-            });
-        }
+                    },
+                    dataType: "json"
+                });
+            }
+        });
+
+        
 
         function deleteProduct(id, btn) {
             selectedRow = btn.parentNode.parentNode;
@@ -241,5 +262,63 @@
                 dataType: "json"
             });
         });
+
+        function checkIsOnStock(id) {
+
+            var stock = $('#product' + id).hasClass('outOfStock');
+
+            $.ajax({
+                type: 'POST',
+                url: '/Product/CheckStockProduct',
+                data: {
+                    id,
+                    onStock: stock
+                },
+                success: function(data){
+                    if(data.success){
+                        if(stock){
+                            $('#product' + id).removeClass('outOfStock');
+                        }
+                        else{
+                            checkProductOut(id);
+                            $('#product' + id).addClass('outOfStock');
+                        }
+                    }
+                    else{
+                        toastr.error("Nie można oznaczyć poduktu jako 'brak'.");
+                    }
+                },
+                error: function(data){
+                    toastr.error("Nie można oznaczyć poduktu jako 'brak'.");
+                },
+                dataType: "json"
+            });
+        }
+
+        function checkProductOut(id){
+
+            $.ajax({
+                type: 'POST',
+                url: '/Product/CheckProduct',
+                data: {
+                    id,
+                    check: false
+                },
+                success: function(data){
+                    if(data.success){
+                        $('#product' + id).removeClass('productChecked');
+                    }
+                    else{
+                        toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                    }
+                },
+                error: function (){
+                    toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                },
+                dataType: 'json'
+            });
+        } 
     </script>
 }
+
+                     

@@ -1,5 +1,6 @@
 ﻿using ColoradoBeetle.Application.Products.Commands.AddProduct;
 using ColoradoBeetle.Application.Products.Commands.CheckProduct;
+using ColoradoBeetle.Application.Products.Commands.CheckStockProduct;
 using ColoradoBeetle.Application.Products.Commands.CopyAllProducts;
 using ColoradoBeetle.Application.Products.Commands.CopyOneProduct;
 using ColoradoBeetle.Application.Products.Commands.DeleteProduct;
@@ -141,6 +142,21 @@ public class ProductController : BaseController{
         catch (Exception exception){
             _logger.LogError(exception, null);
             return Json(new { success = false });
+        }
+    }
+
+    public async Task<IActionResult> CheckStockProduct(int id, bool onStock) {
+
+        try {
+            await Mediator.Send(new CheckStockProductCommand {
+                Id = id,
+                OnStock = onStock
+            });
+            return Json(new { success = true });
+        }
+        catch (Exception exception){
+            _logger.LogError(exception, null);
+            return Json(new { success = false});
         }
     }
 }

@@ -41,6 +41,7 @@ public class ProductService : IProductService {
                 WeightUnit = x.WeightUnit,
                 IsChecked = x.IsChecked,
                 IsCopied = x.IsCopied,
+                OnStock = x.OnStock
             });
     }
 

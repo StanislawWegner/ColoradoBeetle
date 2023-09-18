@@ -14,6 +14,7 @@ public class ProductDto
     public WeightUnit? WeightUnit { get; set; }
     public bool IsChecked { get; set; }
     public bool IsCopied { get; set; }
+    public bool OnStock { get; set; }
 
 
 
