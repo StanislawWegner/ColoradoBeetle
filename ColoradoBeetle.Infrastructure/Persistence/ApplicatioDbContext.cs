@@ -21,6 +21,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,IApplicat
     public DbSet<File> Files { get; set; }
     public DbSet<Language> Languages { get; set; }
     public DbSet<ShoppingList> ShoppingLists { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<ApplicationUserGroup> ApplicationUserGroups { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

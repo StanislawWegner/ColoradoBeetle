@@ -191,7 +191,7 @@
             var prodId = $(this).attr('id');
 
             if ($('#' + prodId).hasClass('outOfStock')) {
-                toastr.error("Produkt oznaczono jako 'brak'.")
+                toastr.warning("Produkt oznaczono jako 'brak'.")
             }
             else
             {

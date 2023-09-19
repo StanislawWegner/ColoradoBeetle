@@ -146,6 +146,26 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ApplicationUserGroup", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getutcdate()");
+
+                    b.HasKey("UserId", "GroupId");
+
+                    b.HasIndex("GroupId");
+
+                    b.ToTable("ApplicationUserGroups");
+                });
+
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Client", b =>
                 {
                     b.Property<int>("Id")
@@ -189,6 +209,24 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Files", (string)null);
+                });
+
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Group", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Groups", (string)null);
                 });
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Language", b =>
@@ -456,6 +494,9 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -464,6 +505,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
 
                     b.HasIndex("UserId");
 
@@ -630,6 +673,25 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ApplicationUserGroup", b =>
+                {
+                    b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
+                        .WithMany()
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Group");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Client", b =>
                 {
                     b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "User")
@@ -665,11 +727,18 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ShoppingList", b =>
                 {
+                    b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
+                        .WithMany("ShoppingLists")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "User")
                         .WithMany("ShoppingLists")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Group");
 
                     b.Navigation("User");
                 });
@@ -731,6 +800,11 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
                     b.Navigation("Client");
 
+                    b.Navigation("ShoppingLists");
+                });
+
+            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Group", b =>
+                {
                     b.Navigation("ShoppingLists");
                 });
 
