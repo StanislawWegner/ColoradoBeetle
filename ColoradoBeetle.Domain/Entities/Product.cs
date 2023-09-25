@@ -20,4 +20,7 @@ public class Product {
     public int ShoppingListId { get; set; }
     public ShoppingList ShoppingList { get; set; }
 
+    public string UserId { get; set; }
+    public ApplicationUser ApplicationUser { get; set; }
+
 }

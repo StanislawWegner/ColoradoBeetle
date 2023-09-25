@@ -11,10 +11,11 @@ public class CheckProductCommandHandler : IRequestHandler<CheckProductCommand> {
         _productService = productService;
         _context = context;
     }
-    public async Task<Unit> Handle(CheckProductCommand request, 
+
+    public async Task<Unit> Handle(CheckProductCommand request,
         CancellationToken cancellationToken) {
 
-        var productDB = await _productService.FindByIdAsync(request.Id);
+        var productDB = await _productService.FindByIdAsync(request.Id, request.UserId);
 
         productDB.IsChecked = request.IsChecked;
 

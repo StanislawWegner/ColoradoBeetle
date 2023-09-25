@@ -13,11 +13,12 @@ public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand>
         _productService = productService;
         _context = context;
     }
-    public async Task<Unit> Handle(DeleteProductCommand request, 
+
+    public async Task<Unit> Handle(DeleteProductCommand request,
         CancellationToken cancellationToken) {
 
-        var productDb = await _productService.FindByIdAsync(request.Id);
-        
+        var productDb = await _productService.FindByIdAsync(request.Id, request.UserId);
+
         _context.Products.Remove(productDb);
         await _context.SaveChangesAsync();
 

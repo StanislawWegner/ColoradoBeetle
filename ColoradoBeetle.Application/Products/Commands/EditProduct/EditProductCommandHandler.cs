@@ -13,13 +13,18 @@ public class EditProductCommandHandler : IRequestHandler<EditProductCommand> {
         _productService = productService;
         _context = context;
     }
-    public async Task<Unit> Handle(EditProductCommand request, 
+
+    
+    public async Task<Unit> Handle(EditProductCommand request,
         CancellationToken cancellationToken) {
 
-        var productDb = await _productService.FindByIdAsync(request.Id);
+        var productDb = await _productService.FindByIdAsync(request.Id, request.UserId);
 
         if (productDb.Name != request.Name)
-            await _productService.ValidateProductName(request.Name, request.ShoppingListId);
+            await _productService.ValidateProductName(
+                request.Name, 
+                request.ShoppingListId,
+                request.UserId);
 
         productDb.Name = request.Name;
         productDb.Quantity = request.Quantity;

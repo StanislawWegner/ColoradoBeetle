@@ -1,0 +1,137 @@
+﻿@using ColoradoBeetle.Application.Groups.Queries.GetGroups;
+@using System.Globalization;
+@model IEnumerable<GroupDto>
+
+@{
+    ViewData["Title"] = "Grupy";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+<partial name="Modals/_ModalConfirm"
+         model="@(new ModalParams {
+            Id = "modal-confirm-delete",
+            Title = "Potwierdź proszę",
+            Description = "Czy na pewno chcesz usunąć wybraną grupę?"
+})"/>        
+
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+        <a href='/Group/AddGroup' class="btn btn-primary mb-3" role="button">
+            <i class="fas fa-solid fa-circle-plus"></i>Dodaj nową grupę
+        </a>
+
+
+        <table id="groups" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa grupy</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var group in Model) {
+                    <tr>
+                        <td>
+                            @group.Id
+                        </td>
+                        <td>
+                            @group.Name
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" role="button"
+                               href='/Group/UsersInGroup?id=@group.Id'>
+                                <i class="fas fa-solid fa-square-plus"></i>Użytkownicy
+                            </a>
+                            <a class="btn btn-success btn-sm" role="button"
+                               href='/Group/EditGroup?id=@group.Id'>
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                            </a>
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="deleteGroup('@group.Id', this)">
+                                <i class="fas fa-solid fa-trash-can"></i>Usuń
+                            </button>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        var selectedRow;
+        var selectedGroupId;
+        var groups;
+
+        $(document).ready(function () {
+
+            groups = $('#groups').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+
+        function deleteGroup(id, btn){
+            selectedRow = btn.parentNode.parentNode;
+            selectedGroupId = id;
+            $("#modal-confirm-delete").modal('show');
+        }
+
+        $("#modal-confirm-delete-btn").on('click', function () {
+            $("#modal-confirm-delete").modal('hide');
+
+            $.ajax({
+                type: "POST",
+                url: "/Group/DeleteGroup",
+                data: {
+                    id: selectedGroupId
+                },
+                success: function(data){
+                    if(data.success){
+                        groups.rows(selectedRow).remove().draw();
+                        toastr.success("Wybrana grupa została usunięta");
+                    }
+                    else{
+                        toastr.error("Nie można usunąć wybranej grupy");
+                    }
+                },
+                error: function(data){
+                    toastr.error("Nie udało się usunąć wybranej grupy");
+                },
+                dataType: "json"
+
+            });
+        });
+
+    </script>
+}
+

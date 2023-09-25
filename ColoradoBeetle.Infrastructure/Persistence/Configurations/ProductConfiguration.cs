@@ -15,6 +15,9 @@ class ProductConfiguration : IEntityTypeConfiguration<Product> {
         builder.Property(x => x.ShoppingListId)
             .IsRequired();
 
+        builder.Property(x => x.UserId)
+            .IsRequired();
+
         builder.Property(x => x.OnStock)
             .HasDefaultValue(true);
 
@@ -23,5 +26,11 @@ class ProductConfiguration : IEntityTypeConfiguration<Product> {
             .WithMany(x => x.Products)
             .HasForeignKey(x => x.ShoppingListId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder
+            .HasOne(x => x.ApplicationUser)
+            .WithMany(x => x.Products)
+            .HasForeignKey(x => x.UserId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

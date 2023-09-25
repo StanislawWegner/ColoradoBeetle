@@ -20,6 +20,12 @@
         </a>
     </li>
 
+    <li class="nav-item @Url.MakeActiveClass("Group", "UserGroups")">
+        <a asp-controller="Group" asp-action="UserGroups" class="nav-link align-middle px-0 text-white">
+            <i class="fas fa-solid fa-users-between-lines"></i><span class="d-none d-sm-inline">Grupy</span>
+        </a>
+    </li>
+
     <li class="nav-item mb-4 @Url.MakeActiveClass("Client", "Client,EditClient")">
         <a asp-controller="Client" asp-action="Client" class="nav-link align-middle px-0 text-white">
             <i class="fas fa-solid fa-user"></i><span class="d-none d-sm-inline">Moje dane</span>
@@ -27,12 +33,18 @@
     </li>
 
     @if (User.IsInRole(RolesDict.Administrator)) {
+
+        <li class="nav-item @Url.MakeActiveClass("Group", "Groups")">
+            <a asp-controller="Group" asp-action="Groups" class="nav-link align-middle px-0 text-white">
+                <i class="fas fa-solid fa-people-group"></i><span class="d-none d-sm-inline">Grupy</span>
+            </a>
+        </li>
+        
         <li class="nav-item @Url.MakeActiveClass("Client","Clients,AddClient,EditAdminClient")">
             <a asp-controller="Client" asp-action="Clients" class="nav-link align-middle px-0 text-white">
                 <i class="fas fa-solid fa-users"></i><span class="d-none d-sm-inline">Użytkownicy</span>
             </a>
         </li>
-
 
         <li class="nav-item @Url.MakeActiveClass("Role", "Roles,AddRole,EditRole")">
             <a asp-controller="Role" asp-action="Roles" class="nav-link align-middle px-0 text-white">

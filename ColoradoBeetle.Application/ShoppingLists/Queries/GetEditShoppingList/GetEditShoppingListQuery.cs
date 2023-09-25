@@ -5,4 +5,5 @@ using MediatR;
 namespace ColoradoBeetle.Application.ShoppingLists.Queries.GetEditShoppingList; 
 public class GetEditShoppingListQuery : IRequest<EditShoppingListCommand>{
     public int Id { get; set; }
+    public string UserId { get; set; }
 }

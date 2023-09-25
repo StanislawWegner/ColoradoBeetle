@@ -16,10 +16,6 @@ class ShoppingListConfiguration : IEntityTypeConfiguration<ShoppingList> {
            .HasForeignKey(x => x.UserId)
            .OnDelete(DeleteBehavior.Cascade);
 
-        builder
-            .HasOne(x => x.Group)
-            .WithMany(x => x.ShoppingLists)
-            .HasForeignKey(x => x.GroupId)
-            .OnDelete(DeleteBehavior.Cascade);
+        
     }
 }

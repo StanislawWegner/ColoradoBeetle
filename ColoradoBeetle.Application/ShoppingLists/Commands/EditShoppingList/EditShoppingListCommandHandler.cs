@@ -17,7 +17,7 @@ public class EditShoppingListCommandHandler : IRequestHandler<EditShoppingListCo
     public async Task<Unit> Handle(EditShoppingListCommand request, 
         CancellationToken cancellationToken) {
 
-        var shoppngListDb = await _shoppingListService.FindByIdAsync(request.Id);
+        var shoppngListDb = await _shoppingListService.FindByIdAsync(request.Id, request.UserId);
 
         if (shoppngListDb.Name != request.Name)
             await _shoppingListService.ValidateShoppingListName(request.Name, 

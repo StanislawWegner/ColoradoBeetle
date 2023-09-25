@@ -20,7 +20,7 @@ public class CopyAllProductsCommandHandler : IRequestHandler<CopyAllProductsComm
         CancellationToken cancellationToken) {
 
         var childListProducts = _productService
-            .GetProducts(request.ChildShoppingListId);
+            .GetProducts(request.ChildShoppingListId, request.UserId);
             
          var parentListProducts = childListProducts.Select(x => new Product {
             Name = x.Name,
@@ -30,6 +30,7 @@ public class CopyAllProductsCommandHandler : IRequestHandler<CopyAllProductsComm
             Weight = x.Weight,
             WeightUnit = x.WeightUnit,
             ShoppingListId = request.ParentShoppingListId,
+            UserId = request.UserId,
             CreatedDate = _dateTimeService.Now,
             IsChecked = false,
             IsCopied = true

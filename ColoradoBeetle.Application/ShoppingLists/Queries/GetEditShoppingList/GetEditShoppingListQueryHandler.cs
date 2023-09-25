@@ -15,13 +15,13 @@ public class GetEditShoppingListQueryHandler : IRequestHandler<GetEditShoppingLi
     public async Task<EditShoppingListCommand> Handle(GetEditShoppingListQuery request, 
         CancellationToken cancellationToken) {
 
-        var shoppingList = await _shoppingListService.FindByIdAsync(request.Id);
+        var shoppingList = await _shoppingListService.FindByIdAsync(request.Id, request.UserId);
 
-        return new EditShoppingListCommand {
-            
-            Id = shoppingList.Id,
-            Name = shoppingList.Name,
-            UserId = shoppingList.UserId
-        };
+            return new EditShoppingListCommand {
+
+                Id = shoppingList.Id,
+                Name = shoppingList.Name,
+                UserId = shoppingList.UserId
+            };
     }
 }

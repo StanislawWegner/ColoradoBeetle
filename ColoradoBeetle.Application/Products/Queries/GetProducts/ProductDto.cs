@@ -15,6 +15,7 @@ public class ProductDto
     public bool IsChecked { get; set; }
     public bool IsCopied { get; set; }
     public bool OnStock { get; set; }
+    public string UserId { get; set; }
 
 
 

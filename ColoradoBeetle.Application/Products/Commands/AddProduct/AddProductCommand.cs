@@ -29,6 +29,6 @@ public class AddProductCommand : IRequest{
     [DisplayName("Wybierz")]
     public WeightUnit? WeightUnit { get; set; }
 
-
     public int ShoppingListId { get; set; }
+    public string UserId { get; set; }
 }

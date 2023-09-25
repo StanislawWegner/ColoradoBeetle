@@ -16,10 +16,11 @@ public class CopyOneProductCommandHandler : IRequestHandler<CopyOneProductComman
         _dateTimeService = dateTimeService;
         _context = context;
     }
-    public async Task<Unit> Handle(CopyOneProductCommand request, 
+
+    public async Task<Unit> Handle(CopyOneProductCommand request,
         CancellationToken cancellationToken) {
 
-        var productDb = await _productService.FindByIdAsync(request.Id);
+        var productDb = await _productService.FindByIdAsync(request.Id, request.UserId);
 
         var newProduct = new Product {
             Name = productDb.Name,
@@ -29,6 +30,7 @@ public class CopyOneProductCommandHandler : IRequestHandler<CopyOneProductComman
             Weight = productDb.Weight,
             WeightUnit = productDb.WeightUnit,
             ShoppingListId = request.ParentShoppingListId,
+            UserId = request.UserId,
             CreatedDate = _dateTimeService.Now,
             IsChecked = false,
             IsCopied = true

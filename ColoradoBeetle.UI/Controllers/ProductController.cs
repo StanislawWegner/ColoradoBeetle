@@ -24,14 +24,17 @@ public class ProductController : BaseController{
     public async Task<IActionResult> GetProductsInList(int id) {
         
         return View(await Mediator.Send(
-            new GetProductsInListQuery { ShoppingListId = id }));
+            new GetProductsInListQuery { ShoppingListId = id, UserId = UserId }));
     }
 
 
 
     public IActionResult AddProduct(int id) 
     {
-        return View(new AddProductCommand { ShoppingListId = id});
+        return View(new AddProductCommand
+        {   ShoppingListId = id,
+            UserId = UserId
+        });
     }
 
 
@@ -52,7 +55,10 @@ public class ProductController : BaseController{
     }
 
     public async Task<IActionResult> EditProduct(int id) {
-        return View(await Mediator.Send(new GetEditProductQuery { Id = id}));
+        return View(await Mediator.Send(new GetEditProductQuery
+        { Id = id,
+          UserId = UserId
+        }));
     }
 
     [HttpPost]
@@ -74,7 +80,11 @@ public class ProductController : BaseController{
     public async Task<IActionResult> DeleteProduct(int id) {
 
         try {
-            await Mediator.Send(new DeleteProductCommand { Id = id});
+            await Mediator.Send(new DeleteProductCommand
+            { Id = id,
+              UserId = UserId});
+
+
             return Json( new {success = true});
         }
         catch (Exception exception){
@@ -88,7 +98,8 @@ public class ProductController : BaseController{
         try {
             await Mediator.Send(new CopyAllProductsCommand {
                 ChildShoppingListId = id,
-                ParentShoppingListId = prntId
+                ParentShoppingListId = prntId,
+                UserId = UserId
             });
 
             TempData["Success"] = "Wszystkie produkty zostały skopiowane";
@@ -110,7 +121,8 @@ public class ProductController : BaseController{
 
         return View(await Mediator.Send(new GetChildProductsQuery {
             ChildShoppingListId = id,
-            ParentShoppingListId = prntId
+            ParentShoppingListId = prntId,
+            UserId = UserId
         }));
     }
 
@@ -119,7 +131,8 @@ public class ProductController : BaseController{
         try {
             await Mediator.Send(new CopyOneProductCommand {
                 Id = id,
-                ParentShoppingListId = prntId
+                ParentShoppingListId = prntId,
+                UserId = UserId
             });
 
             return Json(new {success = true});
@@ -135,7 +148,8 @@ public class ProductController : BaseController{
         try {
             await Mediator.Send(new CheckProductCommand { 
                 Id = id,
-                IsChecked = check
+                IsChecked = check,
+                UserId = UserId
             });
             return Json(new { success = true });
         }
@@ -150,7 +164,8 @@ public class ProductController : BaseController{
         try {
             await Mediator.Send(new CheckStockProductCommand {
                 Id = id,
-                OnStock = onStock
+                OnStock = onStock,
+                UserId = UserId
             });
             return Json(new { success = true });
         }

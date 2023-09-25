@@ -14,7 +14,7 @@ public class GetEditProductQueryHandler : IRequestHandler<GetEditProductQuery,
     public async Task<EditProductCommand> Handle(GetEditProductQuery request,
         CancellationToken cancellationToken) {
 
-        var productDb = await _productService.FindByIdAsync(request.Id);
+        var productDb = await _productService.FindByIdAsync(request.Id, request.UserId);
 
         return new EditProductCommand { 
             Id = productDb.Id,
@@ -22,7 +22,8 @@ public class GetEditProductQueryHandler : IRequestHandler<GetEditProductQuery,
             Quantity = productDb.Quantity,
             Volume = productDb.Volume,
             VolumeUnit = productDb.VolumeUnit,
-            ShoppingListId = productDb.ShoppingListId
+            ShoppingListId = productDb.ShoppingListId,
+            UserId = request.UserId,
         };
     }
 }

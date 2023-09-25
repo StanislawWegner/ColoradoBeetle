@@ -16,7 +16,7 @@ public class DeleteShoppingListCommandHandler : IRequestHandler<DeleteShoppingLi
     public async Task<Unit> Handle(DeleteShoppingListCommand request, 
         CancellationToken cancellationToken) {
 
-        var shoppingListDb = await _shoppingListService.FindByIdAsync(request.Id);
+        var shoppingListDb = await _shoppingListService.FindByIdAsync(request.Id, request.UserId);
 
         _context.ShoppingLists.Remove(shoppingListDb);
 

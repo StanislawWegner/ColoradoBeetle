@@ -37,10 +37,16 @@ public class ShoppingListService : IShoppingListService{
 
     }
 
-    public async Task<ShoppingList> FindByIdAsync(int shoppingListId) {
-
+    public async Task<ShoppingList> FindByIdAsync(int shoppingListId, string currentUserId) {
+        
         return await _context
-            .ShoppingLists
-            .FirstOrDefaultAsync(x => x.Id == shoppingListId);
+           .ShoppingLists
+           .FirstOrDefaultAsync(x => x.Id == shoppingListId && x.UserId == currentUserId);
     }
+
+    
+
+    
+
+    
 }

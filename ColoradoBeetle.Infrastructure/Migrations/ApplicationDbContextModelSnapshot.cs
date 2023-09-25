@@ -299,6 +299,10 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Property<int>("ShoppingListId")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("Volume")
                         .HasColumnType("int");
 
@@ -314,6 +318,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ShoppingListId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Products", (string)null);
                 });
@@ -494,9 +500,6 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("GroupId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -505,8 +508,6 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("GroupId");
 
                     b.HasIndex("UserId");
 
@@ -711,6 +712,14 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "ApplicationUser")
+                        .WithMany("Products")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+
                     b.Navigation("ShoppingList");
                 });
 
@@ -727,18 +736,11 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.ShoppingList", b =>
                 {
-                    b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
-                        .WithMany("ShoppingLists")
-                        .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "User")
                         .WithMany("ShoppingLists")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Group");
 
                     b.Navigation("User");
                 });
@@ -800,11 +802,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
                     b.Navigation("Client");
 
-                    b.Navigation("ShoppingLists");
-                });
+                    b.Navigation("Products");
 
-            modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Group", b =>
-                {
                     b.Navigation("ShoppingLists");
                 });
 

@@ -21,7 +21,10 @@ public class AddProductCommandHandler : IRequestHandler<AddProductCommand> {
     public async Task<Unit> Handle(AddProductCommand request,
     CancellationToken cancellationToken) {
 
-        await _productService.ValidateProductName(request.Name, request.ShoppingListId);
+        await _productService.ValidateProductName(
+            request.Name, 
+            request.ShoppingListId,
+            request.UserId);
 
         var newProduct = new Product {
             Name = request.Name,
@@ -31,6 +34,7 @@ public class AddProductCommandHandler : IRequestHandler<AddProductCommand> {
             Weight = request.Weight,
             WeightUnit = request.WeightUnit,
             ShoppingListId = request.ShoppingListId,
+            UserId = request.UserId,
             CreatedDate = _dateTimeService.Now
             
         };

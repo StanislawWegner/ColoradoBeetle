@@ -1,11 +1,9 @@
-﻿using ColoradoBeetle.Application.Products.Commands.CopyAllProducts;
-using ColoradoBeetle.Application.ShoppingLists.Commands.AddShopinngList;
+﻿    using ColoradoBeetle.Application.ShoppingLists.Commands.AddShopinngList;
 using ColoradoBeetle.Application.ShoppingLists.Commands.DeleteShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Commands.EditShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetEditShoppingList;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingListForCopy;
 using ColoradoBeetle.Application.ShoppingLists.Queries.GetShoppingLists;
-using ColoradoBeetle.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -47,7 +45,8 @@ public class ShoppingListController : BaseController {
 
     public async Task<IActionResult> EditShoppingList(int id) {
 
-        return View(await Mediator.Send(new GetEditShoppingListQuery { Id = id }));
+        return View(await Mediator.Send(
+            new GetEditShoppingListQuery { Id = id, UserId = UserId }));
     }
 
     [HttpPost]
@@ -68,7 +67,12 @@ public class ShoppingListController : BaseController {
     public async Task<IActionResult> DeleteShoppingList(int id) {
 
         try {
-            await Mediator.Send(new DeleteShoppingListCommand { Id = id});
+            await Mediator.Send(new DeleteShoppingListCommand
+            {
+                Id = id,
+                UserId = UserId
+            });
+
             return Json( new { success = true });
         }
         catch (Exception exception){
@@ -87,6 +91,8 @@ public class ShoppingListController : BaseController {
     }
 
     
+
+
 
 }
 

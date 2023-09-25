@@ -1,0 +1,91 @@
+﻿@using ColoradoBeetle.Application.Clients.Queries.GetClient;
+@using System.Globalization;
+
+
+@model IEnumerable<ClientDto>
+
+@{
+    TempData["Title"] = "Członkowie grupy";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+        <table id="groupUsers" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa użytkownika</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var user in Model) {
+                    <tr>
+                        <td>
+                            @user.Id
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" role="button"
+                               href='/Group/GetUsersInGroup?id=@user.Id'>
+                                <i class="fas fa-solid fa-square-plus"></i>Użytkownicy
+                            </a>
+                            <a class="btn btn-success btn-sm" role="button"
+                               href='/Group/EditGroup?id=@user.Id'>
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                            </a>
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="deleteGroup('@user.Id', this)">
+                                <i class="fas fa-solid fa-trash-can"></i>Usuń
+                            </button>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            $('#groupUsers').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+
+    </script>
+}

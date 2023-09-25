@@ -12,5 +12,6 @@ public class ApplicationUser : IdentityUser{
     public Client Client { get; set; }
     public ICollection<ShoppingList> ShoppingLists { get; set; } = new HashSet<ShoppingList>();
     public ICollection<Group> Groups { get; set; } = new HashSet<Group>();
+    public ICollection<Product> Products { get; set; } = new HashSet<Product>();
 
 }

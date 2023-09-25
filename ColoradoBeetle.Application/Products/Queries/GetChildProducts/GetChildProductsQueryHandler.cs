@@ -15,16 +15,19 @@ public class GetChildProductsQueryHandler : IRequestHandler<GetChildProductsQuer
         _productService = productService;
         _shoppingListService = shoppingListService;
     }
-    public async Task<GetChildProductsVm> Handle(GetChildProductsQuery request, 
+
+
+    public async Task<GetChildProductsVm> Handle(GetChildProductsQuery request,
         CancellationToken cancellationToken) {
 
-        var products = _productService.GetProductsInListDtos(request.ChildShoppingListId);
+        var products = _productService.GetProductsInListDtos(request.ChildShoppingListId,
+            request.UserId);
 
         var childShoppingListDto = (await _shoppingListService
-            .FindByIdAsync(request.ChildShoppingListId)).ToDto();
+            .FindByIdAsync(request.ChildShoppingListId, request.UserId)).ToDto();
 
         var parentShoppingListDto = (await _shoppingListService
-            .FindByIdAsync(request.ParentShoppingListId)).ToDto();
+            .FindByIdAsync(request.ParentShoppingListId, request.UserId)).ToDto();
 
 
         return new GetChildProductsVm {

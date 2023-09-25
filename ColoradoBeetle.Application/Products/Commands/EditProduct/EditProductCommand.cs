@@ -33,6 +33,7 @@ namespace ColoradoBeetle.Application.Products.Commands.EditProduct
         public WeightUnit? WeightUnit { get; set; }
 
         public int ShoppingListId { get; set; }
+        public string UserId { get; set; }
 
     }
 }

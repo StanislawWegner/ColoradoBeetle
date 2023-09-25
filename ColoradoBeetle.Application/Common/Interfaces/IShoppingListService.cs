@@ -6,7 +6,7 @@ using MediatR;
 namespace ColoradoBeetle.Application.Common.Interfaces; 
 public interface IShoppingListService {
     IEnumerable<ShoppingListDto> GetShoppingListsDtos(string currentUserId);
-    Task<ShoppingList> FindByIdAsync(int shoppingListId);
+    Task<ShoppingList> FindByIdAsync(int shoppingListId, string currentUserId);
     Task ValidateShoppingListName(string shoppingListName, string currentUserId);
 
 }

@@ -12,10 +12,11 @@ public class CheckStockProductCommandHandler : IRequestHandler<CheckStockProduct
         _productService = productService;
         _context = context;
     }
+
     public async Task<Unit> Handle(CheckStockProductCommand request,
         CancellationToken cancellationToken) {
 
-        var productDb = await _productService.FindByIdAsync(request.Id);
+        var productDb = await _productService.FindByIdAsync(request.Id, request.UserId);
 
         productDb.OnStock = request.OnStock;
 

@@ -19,10 +19,11 @@ public class GetProductsInListQueryHandler : IRequestHandler<GetProductsInListQu
     public async Task<GetProductsInListVm> Handle(GetProductsInListQuery request, 
         CancellationToken cancellationToken) {
 
-        var productsInList = _productService.GetProductsInListDtos(request.ShoppingListId);
+        var productsInList = _productService
+            .GetProductsInListDtos(request.ShoppingListId, request.UserId);
 
         var shoppingListDto = (await _shoppingListService
-            .FindByIdAsync(request.ShoppingListId))
+            .FindByIdAsync(request.ShoppingListId, request.UserId))
             .ToDto();
 
         return new GetProductsInListVm {
