@@ -1,8 +1,8 @@
-﻿@using ColoradoBeetle.Application.Clients.Queries.GetClient;
-@using System.Globalization;
+﻿@using System.Globalization;
+@using ColoradoBeetle.Application.Groups.Queries.GetUsersInGroup;
 
 
-@model IEnumerable<ClientDto>
+@model UsersInGroupVm
 
 @{
     TempData["Title"] = "Członkowie grupy";
@@ -13,9 +13,24 @@
     <partial name="Styles/_DataTablesStyles" />
 }
 
+
+<partial name="Modals/_ModalConfirm"
+         model="@(new ModalParams
+{
+    Id = "modal-confirm-delete",
+    Title = "Potwierdź proszę",
+    Description = "Czy na pewno chcesz usunąć wybranego użytkownika?"
+})" />
+
+<h1>Grupa: "@Model.GroupDto.Name"</h1>
+
 <div class="card card-primary card-border-top">
 
     <div class="card-body">
+
+        <a href='/Group/GetUsersDtos?groupId=@Model.GroupDto.Id' class="btn btn-primary mb-3" role="button">
+            <i class="fas fa-solid fa-circle-plus"></i>Dodaj użytkownika
+        </a>
 
         <table id="groupUsers" class="table table-bordered">
             <thead>
@@ -27,7 +42,7 @@
             </thead>
             <tbody>
 
-                @foreach (var user in Model) {
+                @foreach (var user in Model.UsersDtos) {
                     <tr>
                         <td>
                             @user.Id
@@ -36,17 +51,9 @@
                             @user.Email
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm" role="button"
-                               href='/Group/GetUsersInGroup?id=@user.Id'>
-                                <i class="fas fa-solid fa-square-plus"></i>Użytkownicy
-                            </a>
-                            <a class="btn btn-success btn-sm" role="button"
-                               href='/Group/EditGroup?id=@user.Id'>
-                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
-                            </a>
                             <button class="btn btn-danger btn-sm"
-                                    onclick="deleteGroup('@user.Id', this)">
-                                <i class="fas fa-solid fa-trash-can"></i>Usuń
+                                    onclick="removeUser('@user.Id', this)">
+                                <i class="fas fa-solid fa-trash-can"></i>Usuń użytkownika
                             </button>
                         </td>
 
@@ -63,10 +70,13 @@
 
     <script>
 
+        var selectedRow;
+        var selectedUserId;
+        var groupUsers;
 
         $(document).ready(function () {
 
-            $('#groupUsers').DataTable({
+            groupUsers = $('#groupUsers').DataTable({
                 paging: true,
                 ordering: true,
                 info: true,
@@ -84,6 +94,38 @@
                         visible: false,
                         searchable: false
                     }]
+            });
+        });
+
+        function removeUser(id, btn) {
+            selectedRow = btn.parentNode.parentNode;
+            selectedUserId = id;
+            $('#modal-confirm-delete').modal('show');
+        }
+
+        $('#modal-confirm-delete-btn').on('click', function (e) {
+            $('#modal-confirm-delete').modal('hide');
+
+            $.ajax({
+                type: "POST",
+                url: "/Group/RemoveUser",
+                data: {
+                    id: selectedUserId,
+                    groupId: @Model.GroupDto.Id
+                },
+                success: function (data) {
+                    if (data.success) {
+                        groupUsers.rows(selectedRow).remove().draw();
+                        toastr.success("Wybrany użytkownik został usunięty");
+                    }
+                    else {
+                        toastr.error("Nie udało się usunąć wybranego użytkownika, skontaktuj się z administratorem.");
+                    }
+                },
+                error: function (data) {
+                    toastr.error("Nie udało się usunąć wybranego użytkownika, skontaktuj się z administratorem.");
+                },
+                dataType: "json"
             });
         });
 

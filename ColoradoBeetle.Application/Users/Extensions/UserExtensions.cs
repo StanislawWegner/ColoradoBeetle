@@ -1,5 +1,6 @@
 ﻿using ColoradoBeetle.Application.Clients.Commands.EditClient;
 using ColoradoBeetle.Application.Clients.Queries.GetClient;
+using ColoradoBeetle.Application.Groups.Queries.GetUsersInGroup;
 using ColoradoBeetle.Domain.Entities;
 
 namespace ColoradoBeetle.Application.Users.Extensions; 
@@ -37,6 +38,18 @@ public static class UserExtensions {
             Email = user.Email,
             FirstName = user.FirstName,
             LastName = user.LastName,
+        };
+    }
+
+    public static ApplicationUserDto ToAppUserDto(this ApplicationUser user) {
+
+        if (user == null) return null;
+
+        return new ApplicationUserDto {
+            Id = user.Id,
+            Email = user.Email,
+            FirstName = user.FirstName,
+            LastName = user.LastName
         };
     }
 }

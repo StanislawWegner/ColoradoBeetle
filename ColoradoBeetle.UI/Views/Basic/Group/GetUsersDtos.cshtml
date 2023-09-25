@@ -1,0 +1,87 @@
+﻿@using System.Globalization;
+@using ColoradoBeetle.Application.Groups.Queries.GetUsersInGroup;
+
+
+@model UsersInGroupVm
+
+@{
+    TempData["Title"] = "Dodawanie użytkowników";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+<h1>Grupa: "@Model.GroupDto.Name"</h1>
+
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+
+        <table id="users" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa użytkownika</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var user in Model.UsersDtos) {
+                    <tr>
+                        <td>
+                            @user.Id
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                        <td>
+                            <a class="btn btn-success btn-sm" role="button"
+                               href='/Group/AddUserToGroup?id=@user.Id&groupId=@Model.GroupDto.Id'>
+                                <i class="fas fa-solid fa-square-plus"></i>Dodaj użytkownika
+                            </a>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            $('#users').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+
+    </script>
+}
