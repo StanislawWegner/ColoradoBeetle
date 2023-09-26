@@ -1,0 +1,86 @@
+﻿@using System.Globalization;
+@using ColoradoBeetle.Application.Groups.Queries.GetGroups;
+
+
+@model IEnumerable<GroupDto>
+
+@{
+    TempData["Title"] = "Grupy użytkownika";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+
+<h1>Moje grupy</h1>
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+        <table id="userGroups" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa grupy</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var group in Model) {
+                    <tr>
+                        <td>
+                            @group.Id
+                        </td>
+                        <td>
+                            @group.Name
+                        </td>
+                        <td>
+                            <a href="/UserGroups/GroupMembers?id=@group.Id" class="btn btn-success btn-sm"
+                               role="button">
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Członkowie grupy
+                            </a>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#userGroups').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+
+
+    </script>
+}

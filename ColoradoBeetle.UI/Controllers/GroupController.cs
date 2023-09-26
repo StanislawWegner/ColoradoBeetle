@@ -6,10 +6,8 @@ using ColoradoBeetle.Application.Groups.Commands.EditGroup;
 using ColoradoBeetle.Application.Groups.Commands.RemoveUserFromGroup;
 using ColoradoBeetle.Application.Groups.Queries.GetEditGroup;
 using ColoradoBeetle.Application.Groups.Queries.GetGroups;
-using ColoradoBeetle.Application.Groups.Queries.GetUserGroups;
 using ColoradoBeetle.Application.Groups.Queries.GetUsersDtos;
 using ColoradoBeetle.Application.Groups.Queries.GetUsersInGroup;
-using ColoradoBeetle.Application.Products.Commands.CopyAllProducts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -86,7 +84,7 @@ namespace ColoradoBeetle.UI.Controllers {
 
         public async Task<IActionResult> GetUsersDtos(int groupId) {
 
-            return View(await Mediator.Send(new GetUserDtosQuery {
+            return View(await Mediator.Send(new GetUsersToAddDtosQuery {
                 GroupId = groupId
             }));
         }
@@ -129,9 +127,8 @@ namespace ColoradoBeetle.UI.Controllers {
                 return Json( new {success = false });
             }
         }
-        public async Task<IActionResult> UserGroups() {
-            return View(await Mediator.Send(new GetUserGroupQuery { UserId = UserId }));
-        }
+
+        
 
     }
 }

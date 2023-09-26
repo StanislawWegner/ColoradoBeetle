@@ -1,0 +1,78 @@
+﻿@using System.Globalization;
+@using ColoradoBeetle.Application.UserGroups.Queries.GetGroupMembers;
+
+@model GroupMemberVm
+
+@{
+    TempData["Title"] = "Członkowie grupy";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+
+<h1>Członkowie grupy: "@Model.GroupDto.Name"</h1>
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+        <table id="groupMembers" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa grupy</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var member in Model.ApplicationUserDtos) {
+                    <tr>
+                        <td>
+                            @member.Id
+                        </td>
+                        <td>
+                            @member.Email
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#groupMembers').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+
+
+    </script>
+}
