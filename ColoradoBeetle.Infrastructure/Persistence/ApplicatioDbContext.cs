@@ -23,6 +23,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>,IApplicat
     public DbSet<ShoppingList> ShoppingLists { get; set; }
     public DbSet<Group> Groups { get; set; }
     public DbSet<ApplicationUserGroup> ApplicationUserGroups { get; set; }
+    public DbSet<GroupShopList> GroupShopLists { get; set; }
+    public DbSet<GroupProduct> GroupProducts { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {

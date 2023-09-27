@@ -1,0 +1,37 @@
+﻿@using ColoradoBeetle.Application.GroupShopLists.Command.AddGroupShopList;
+
+@model AddGroupShopListCommand
+
+@{
+    ViewData["Title"] = "Dodawanie nowej listy";
+}
+
+<div class="card card-primary card-border-top">
+
+    @using (Html.BeginForm("AddGroupShopList, GroupShopList")) {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.GroupId)
+
+        <div class="card-body">
+            <div class="form-group">
+                @Html.LabelFor(x => x.Name)
+                @Html.TextBoxFor(x => x.Name, new { @class="form-control"
+            , placeholder="Nazwa listy zakupów"})
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+
+        </div>
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-solid fa-circle-check"></i>Zapisz
+            </button>
+
+        </div>
+
+    }
+</div>
+
+@section Scripts{
+    <partial name="Scripts/_ValidationScriptsPartial" />
+}

@@ -22,7 +22,6 @@
         <table id="groupMembers" class="table table-bordered">
             <thead>
                 <tr>
-                    <th></th>
                     <th>Nazwa grupy</th>
                 </tr>
             </thead>
@@ -31,12 +30,8 @@
                 @foreach (var member in Model.ApplicationUserDtos) {
                     <tr>
                         <td>
-                            @member.Id
-                        </td>
-                        <td>
                             @member.Email
                         </td>
-
                     </tr>
                 }
             </tbody>
@@ -63,13 +58,7 @@
                 language: {
                     url: `/lib/datatables/lang/${'@locale'}.json`
                 },
-                order: [[0, "desc"]],
-                columnDefs: [
-                    {
-                        targets: [0],
-                        visible: false,
-                        searchable: false
-                    }]
+                order: [[0, "asc"]]
             });
         });
 

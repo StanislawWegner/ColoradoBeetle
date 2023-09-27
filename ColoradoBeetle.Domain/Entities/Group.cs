@@ -6,5 +6,8 @@ public class Group {
     public ICollection<ApplicationUser> ApplicationUsers { get; set; } 
         = new HashSet<ApplicationUser>();
 
-    
+    public ICollection<GroupShopList> GroupShopLists { get; set; }
+        = new HashSet<GroupShopList>();
+
+
 }

@@ -16,6 +16,8 @@ public interface IApplicationDbContext : IDisposable {
     DbSet<Product> Products { get; set; }
     DbSet<Group> Groups { get; set; }
     DbSet<ApplicationUserGroup> ApplicationUserGroups { get; set; }
+    DbSet<GroupShopList> GroupShopLists { get; set; }
+    DbSet<GroupProduct> GroupProducts { get; set; }
 
 
 

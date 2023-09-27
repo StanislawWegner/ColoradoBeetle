@@ -1,0 +1,102 @@
+﻿@using System.Globalization;
+@using ColoradoBeetle.Application.GroupShopLists.Queries.GetGroupShopLists;
+
+
+@model GroupShopListsVm
+
+@{
+    TempData["Title"] = "Listy zakupów";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+
+<h1>"Listy zakupów"</h1>
+
+<div class="card card-primary card-border-top">
+
+    <div class="card-body">
+
+        <a href='/GroupShopList/AddGroupShopList?id=@Model.GroupDto.Id' class="btn btn-primary mb-3" role="button">
+            <i class="fas fa-solid fa-circle-plus"></i>Dodaj nową listę
+        </a>
+
+        <table id="groupShopLists" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa grupy</th>
+                    <th>Utworzył</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var shopList in Model.GroupShopListsDtos) {
+                    <tr>
+                        <td>
+                            @shopList.CreatedDate
+                        </td>
+                        <td>
+                            @shopList.Name
+                        </td>
+                        <td>
+                            @shopList.UserEmail
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" role="button"
+                               href='/Product/GetProductsInList?id=@shopList.Id'>
+                                <i class="fas fa-solid fa-square-plus"></i>Produkty
+                            </a>
+                            <a class="btn btn-success btn-sm" role="button"
+                               href='/ShoppingList/EditShoppingList?id=@shopList.Id'>
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                            </a>
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="deleteShoppingList('@shopList.Id', this)">
+                                <i class="fas fa-solid fa-trash-can"></i>Usuń
+                            </button>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#groupShopLists').DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+        });
+
+
+    </script>
+}
