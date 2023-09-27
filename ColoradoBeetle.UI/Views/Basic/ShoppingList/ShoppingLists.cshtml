@@ -126,6 +126,9 @@
                         shoppingLists.rows(selectedRow).remove().draw();
                         toastr.success("Lista została usunięta.");
                     }
+                    else{
+                        toastr.error('Błąd. Nie udało się usunąć wybranej listy. Spróbuj ponownie lub skontaktuj się z administratorem');
+                    }
                 },
                 error: function (data) {
                     toastr.error('Błąd. Nie udało się usunąć wybranej listy. Spróbuj ponownie lub skontaktuj się z administratorem');

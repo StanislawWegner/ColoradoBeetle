@@ -13,6 +13,14 @@
     <partial name="Styles/_DataTablesStyles" />
 }
 
+<partial name="Modals/_ModalConfirm"
+         model="@(new ModalParams
+{
+    Id = "modal-confirm-delete",
+    Title = "Potwierdź proszę",
+    Description = "Czy na pewno chcesz usunąć wybraną listę?"
+})" />
+
 
 <h1>"Listy zakupów"</h1>
 
@@ -28,8 +36,8 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>Nazwa grupy</th>
-                    <th>Utworzył</th>
+                    <th>Lista zakupów</th>
+                    <th>Utworzył/Zmodyfikował</th>
                     <th class="desktop"></th>
                 </tr>
             </thead>
@@ -52,7 +60,7 @@
                                 <i class="fas fa-solid fa-square-plus"></i>Produkty
                             </a>
                             <a class="btn btn-success btn-sm" role="button"
-                               href='/ShoppingList/EditShoppingList?id=@shopList.Id'>
+                               href='/GroupShopList/EditGroupShopList?id=@shopList.Id'>
                                 <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
                             </a>
                             <button class="btn btn-danger btn-sm"
@@ -74,6 +82,10 @@
 
     <script>
 
+        var selectedRow;
+        var selectedGroupShopListId = 0;
+        var shoppingLists;
+
         $(document).ready(function () {
 
             $('#groupShopLists').DataTable({
@@ -94,6 +106,38 @@
                         visible: false,
                         searchable: false
                     }]
+            });
+        });
+
+        function deleteShoppingList(id, btn) {
+            selectedRow = btn.parentNode.parentNode;
+            selectedGroupShopListId = id;
+            $('#modal-confirm-delete').modal('show');
+        }
+
+        $('#modal-confirm-delete-btn').on('click', function (e) {
+            $('#modal-confirm-delete').modal('hide');
+
+            $.ajax({
+                type: "POST",
+                url: "/GroupShopList/DeleteGroupShopList",
+                data: {
+                    id: selectedGroupShopListId
+                },
+                success: function (data) {
+                    if (data.success) {
+                        shoppingLists.rows(selectedRow).remove().draw();
+                        toastr.success("Lista została usunięta.");
+                    }
+                    else{
+                        toastr.error('Błąd. Nie udało się usunąć wybranej listy. Spróbuj ponownie lub skontaktuj się z administratorem');
+                    }
+                },
+                error: function (data) {
+                    toastr.error('Błąd. Nie udało się usunąć wybranej listy. Spróbuj ponownie lub skontaktuj się z administratorem');
+
+                },
+                dataType: "json"
             });
         });
 

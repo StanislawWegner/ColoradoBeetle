@@ -24,16 +24,6 @@ public class GetGroupShopListsQueryHandler : IRequestHandler<GetGroupShopListsQu
             .AsNoTracking()
             .FirstOrDefaultAsync(x => x.Id == request.GroupId);
 
-        //var groupShopListDtos = groupDb.GroupShopLists.Select(x => x.ToDto());
-
-        //var groupShopList = groupDb.GroupShopLists.ToList();
-
-        //var groupShopListsIds = groupShopList.Select(x => x.Id);
-
-        //var usersIDs = groupShopList.Select(x => x.UserId);
-
-        //var users = _context.Users.Where(x => usersIDs.Contains(x.Id));
-
         var groupShopListsDtos = _context.GroupShopLists
             .Include(x => x.ApplicationUser)
             .Where(x => x.GroupId == request.GroupId)

@@ -1,5 +1,6 @@
 ﻿using ColoradoBeetle.Application.Common.Exceptions;
 using ColoradoBeetle.Application.Common.Interfaces;
+using ColoradoBeetle.Domain.Entities;
 using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +10,12 @@ public class GroupShopListService : IGroupShopListService {
 
     public GroupShopListService(IApplicationDbContext context) {
         _context = context;
+    }
+
+    public async Task<GroupShopList> FindGroupShopListById(int id) { 
+
+        return await _context.GroupShopLists
+            .FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async Task ValidateGroupShopListName(string shopListName, int groupId) {
