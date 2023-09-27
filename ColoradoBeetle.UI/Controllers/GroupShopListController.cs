@@ -1,4 +1,5 @@
 ﻿using ColoradoBeetle.Application.GroupShopLists.Command.AddGroupShopList;
+using ColoradoBeetle.Application.GroupShopLists.Command.DeleteGroupShopList;
 using ColoradoBeetle.Application.GroupShopLists.Command.EditGroupShopList;
 using ColoradoBeetle.Application.GroupShopLists.Queries.GetEditGroupShopList;
 using ColoradoBeetle.Application.GroupShopLists.Queries.GetGroupShopList;
@@ -9,6 +10,12 @@ namespace ColoradoBeetle.UI.Controllers {
     
     [Authorize]
     public class GroupShopListController : BaseController {
+        private readonly ILogger<GroupShopListController> _logger;
+
+        public GroupShopListController(ILogger<GroupShopListController> logger)
+        {
+            _logger = logger;
+        }
         public async Task<IActionResult> GroupShopLists(int id) {
 
             return View(await Mediator.Send(new GetGroupShopListsQuery {
@@ -65,9 +72,16 @@ namespace ColoradoBeetle.UI.Controllers {
         [HttpPost]
         public async Task<IActionResult> DeleteGroupShopList(int id) {
             try {
-                Mediator.Send(new DeleteGroupShopListCommand {
-
+                await Mediator.Send(new DeleteGroupShopListCommand {
+                    Id = id,
+                    UserId = UserId
                 });
+
+                return Json(new { success = true });
+            }
+            catch (Exception exception){
+                _logger.LogError(exception, null);
+                return Json( new { success = false });
             }
         }
     }

@@ -84,11 +84,11 @@
 
         var selectedRow;
         var selectedGroupShopListId = 0;
-        var shoppingLists;
+        var groupShopLists;
 
         $(document).ready(function () {
 
-            $('#groupShopLists').DataTable({
+            groupShopLists = $('#groupShopLists').DataTable({
                 paging: true,
                 ordering: true,
                 info: true,
@@ -122,11 +122,11 @@
                 type: "POST",
                 url: "/GroupShopList/DeleteGroupShopList",
                 data: {
-                    id: selectedGroupShopListId
+                    id: selectedGroupShopListId,
                 },
                 success: function (data) {
                     if (data.success) {
-                        shoppingLists.rows(selectedRow).remove().draw();
+                        groupShopLists.rows(selectedRow).remove().draw();
                         toastr.success("Lista została usunięta.");
                     }
                     else{

@@ -29,9 +29,9 @@ public class GetEditGroupShopListQueryHandler : IRequestHandler<GetEditGroupShop
             .FirstOrDefaultAsync(x => x.Id == groupShopList.GroupId);
 
         var isUserInGroup = groupDb.ApplicationUsers
-            .FirstOrDefault(x => x.Id == request.UserId);
+            .Any(x => x.Id == request.UserId);
 
-        if(isUserInGroup != null) {
+        if(isUserInGroup) {
             return new EditGroupShopListCommand {
                 Id = request.Id,
                 GroupId = groupShopList.GroupId,
