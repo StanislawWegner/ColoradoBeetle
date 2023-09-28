@@ -1,0 +1,324 @@
+﻿@using System.Globalization;
+@using ColoradoBeetle.Application.GroupProducts.Queries;
+
+@model GroupProductVm
+
+@{
+    TempData["Title"] = "Produkty";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+
+<partial name="Modals/_ModalConfirm"
+         model="@(new ModalParams
+{
+    Id = "modal-confirm-delete",
+    Title = "Potwierdź proszę",
+    Description = "Czy na pewno chcesz usunąć wybrany produkt?"
+})" />
+
+<h1>Lista: "@Model.GroupShopListDto.Name"</h1>
+
+<div class="card card-primary card-border-top">
+    <div class="card-body">
+        <div class="d-flex flex-row">
+            <div>
+                <a href="/GroupProduct/AddGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
+                   class="btn btn-primary mb-3 me-1" role="button">
+                    <i class="fas fa-solid fa-square-plus"></i>Dodaj produkt
+                </a>
+            </div>
+            <div>
+                <a href="/ShoppingList/ChildShoppingLists?id=@Model.GroupShopListDto.Id"
+                   class="btn btn-success mb-3 me-1" role="button">
+                    <i class="fas fa-solid fa-copy"></i>Skopiuj produkty
+                </a>
+            </div>
+            <div>
+                <button class="btn btn-info mb-3" id="hideNaviBtn">
+                    <i class="fas fa-solid fa-eye-slash"></i>+/- Menu
+                </button>
+            </div>
+        </div>
+
+        <table id="groupProducts" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="details-control"></th>
+                    <th>Nazwa produktu</th>
+                    <th>szt</th>
+                    <th class="desktop">Objętość</th>
+                    <th class="desktop">Miara</th>
+                    <th class="desktop">Masa</th>
+                    <th class="desktop">Miara</th>
+                    <th class="desktop">Dodał</th>
+                    <th class="desktop"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var product in Model.GroupProductsDtos) {
+                    <tr>
+                        <td>@product.CreatedDate</td>
+                        <td class="details-control"></td>
+
+                        @if (!product.OnStock && product.IsCopied) {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer isCopy
+                                        outOfStock">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (!product.OnStock) {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer outOfStock">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsChecked && product.IsCopied) {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer
+                                        productChecked isCopy">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsChecked) {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer
+                                        productChecked">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsCopied) {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer
+                                        isCopy">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else {
+                            <td>
+                                <div id="product@(product.Id)" class="prod addPointer">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+
+                        <td>@product.Quantity</td>
+                        <td>@product.Volume</td>
+                        <td>@product.VolumeUnit</td>
+                        <td>@product.Weight</td>
+                        <td>@product.WeightUnit</td>
+                        <td>@product.UserEmail</td>
+                        <td>
+                            <a href="/Product/EditProduct?id=@product.Id"
+                               class="btn btn-success btn-sm" role="button">
+                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                            </a>
+                            <button class="btn btn-danger btn-sm"
+                                    onclick="deleteProduct('@product.Id', this)">
+                                <i class="fas fa-solid fa-trash-can"></i>Usuń
+                            </button>
+                            <button class="btn btn-sm outOfStock"
+                                    onclick="checkIsOnStock('@product.Id')">
+                                <i class="fas fa-solid fa-exclamation"></i>Brak
+                            </button>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        var selectedRow;
+        var selectedProductId = 0;
+        var groupProducts;
+
+        $(document).ready(function () {
+
+            groupProducts = $("#groupProducts").DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: true,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: [0],
+                        visible: false,
+                        searchable: false
+                    },
+                    {
+                        "width": "5%",
+                        "targets": 3
+                    }
+                ]
+            });
+
+        });
+
+
+        $('#hideNaviBtn').on('click', function () {
+            $('#navi').toggle('fast');
+        });
+
+
+        $('.prod').on('click', function () {
+
+            var prodId = $(this).attr('id');
+
+            if ($('#' + prodId).hasClass('outOfStock')) {
+                toastr.warning("Produkt oznaczono jako 'brak'.")
+            }
+            else {
+
+                var id = prodId.match(/[\d\.]+/g);
+
+                var check = $('#' + prodId).hasClass('productChecked');
+
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Product/CheckProduct",
+                    data: {
+                        id: id,
+                        check: !check
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            if (check) {
+                                $('#' + prodId).removeClass('productChecked');
+                            }
+                            else {
+                                $('#' + prodId).addClass('productChecked');
+                            }
+                        }
+                        else {
+                            toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                        }
+                    },
+                    error: function (data) {
+                        toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                    },
+                    dataType: "json"
+                });
+            }
+        });
+
+
+
+        function deleteProduct(id, btn) {
+            selectedRow = btn.parentNode.parentNode;
+            selectedProductId = id;
+            $('#modal-confirm-delete').modal('show');
+        }
+
+        $('#modal-confirm-delete-btn').on('click', function (e) {
+            $('#modal-confirm-delete').modal('hide');
+
+            $.ajax({
+                type: "POST",
+                url: "/Product/DeleteProduct",
+                data: {
+                    id: selectedProductId
+                },
+                success: function (data) {
+                    if (data.success) {
+                        groupProducts.rows(selectedRow).remove().draw();
+                        toastr.success("Wybrany produkt został usunięty");
+                    }
+                    else {
+                        toastr.error("Nie udało się usunąć wybranego produktu, skontaktuj się z administratorem.");
+                    }
+                },
+                error: function (data) {
+                    toastr.error("Nie udało się usunąć wybranego produktu, skontaktuj się z administratorem.");
+                },
+                dataType: "json"
+            });
+        });
+
+        function checkIsOnStock(id) {
+
+            var stock = $('#product' + id).hasClass('outOfStock');
+
+            $.ajax({
+                type: 'POST',
+                url: '/Product/CheckStockProduct',
+                data: {
+                    id,
+                    onStock: stock
+                },
+                success: function (data) {
+                    if (data.success) {
+                        if (stock) {
+                            $('#product' + id).removeClass('outOfStock');
+                        }
+                        else {
+                            checkProductOut(id);
+                            $('#product' + id).addClass('outOfStock');
+                        }
+                    }
+                    else {
+                        toastr.error("Nie można oznaczyć poduktu jako 'brak'.");
+                    }
+                },
+                error: function (data) {
+                    toastr.error("Nie można oznaczyć poduktu jako 'brak'.");
+                },
+                dataType: "json"
+            });
+        }
+
+        function checkProductOut(id) {
+
+            $.ajax({
+                type: 'POST',
+                url: '/Product/CheckProduct',
+                data: {
+                    id,
+                    check: false
+                },
+                success: function (data) {
+                    if (data.success) {
+                        $('#product' + id).removeClass('productChecked');
+                    }
+                    else {
+                        toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                    }
+                },
+                error: function () {
+                    toastr.error("Nie można zaznaczyć wybranego produktu, spróbuj ponownie lub skontaktuj się z administartorem");
+                },
+                dataType: 'json'
+            });
+        }
+    </script>
+}
+

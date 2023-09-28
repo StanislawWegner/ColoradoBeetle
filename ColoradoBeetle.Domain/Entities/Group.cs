@@ -9,5 +9,8 @@ public class Group {
     public ICollection<GroupShopList> GroupShopLists { get; set; }
         = new HashSet<GroupShopList>();
 
+    public ICollection<GroupProduct> GroupProducts { get; set; }
+        = new HashSet<GroupProduct>();
+
 
 }

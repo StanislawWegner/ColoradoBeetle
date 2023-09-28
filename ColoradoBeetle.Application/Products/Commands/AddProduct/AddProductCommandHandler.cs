@@ -21,6 +21,7 @@ public class AddProductCommandHandler : IRequestHandler<AddProductCommand> {
     public async Task<Unit> Handle(AddProductCommand request,
     CancellationToken cancellationToken) {
 
+
         await _productService.ValidateProductName(
             request.Name, 
             request.ShoppingListId,

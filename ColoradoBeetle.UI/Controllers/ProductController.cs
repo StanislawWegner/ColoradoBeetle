@@ -126,6 +126,7 @@ public class ProductController : BaseController{
         }));
     }
 
+    [HttpPost]
     public async Task<IActionResult> CopyOneProduct(int id, int prntId) {
 
         try {
@@ -143,6 +144,7 @@ public class ProductController : BaseController{
         }
     }
 
+    [HttpPost]
     public async Task<IActionResult> CheckProduct(int id, bool check) {
 
         try {
@@ -159,6 +161,7 @@ public class ProductController : BaseController{
         }
     }
 
+    [HttpPost]
     public async Task<IActionResult> CheckStockProduct(int id, bool onStock) {
 
         try {

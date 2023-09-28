@@ -21,6 +21,9 @@ public class GroupProductConfiguration : IEntityTypeConfiguration<GroupProduct> 
         builder.Property(x => x.UserId)
             .IsRequired();
 
+        builder.Property(x => x.GroupId)
+            .IsRequired();
+
         builder.HasOne(x => x.GroupShopList)
             .WithMany(x => x.GroupProducts)
             .HasForeignKey(x => x.GroupShopListId)
@@ -31,7 +34,10 @@ public class GroupProductConfiguration : IEntityTypeConfiguration<GroupProduct> 
             .HasForeignKey(x => x.UserId)
             .OnDelete(DeleteBehavior.NoAction);
 
-
+        builder.HasOne(x => x.Group)
+            .WithMany(x => x.GroupProducts)
+            .HasForeignKey(x => x.GroupId)
+            .OnDelete(DeleteBehavior.NoAction);
 
     }
 }

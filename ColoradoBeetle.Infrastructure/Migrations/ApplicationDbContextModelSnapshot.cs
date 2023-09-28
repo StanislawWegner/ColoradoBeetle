@@ -240,6 +240,9 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("GroupId")
+                        .HasColumnType("int");
+
                     b.Property<int>("GroupShopListId")
                         .HasColumnType("int");
 
@@ -279,6 +282,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
 
                     b.HasIndex("GroupShopListId");
 
@@ -796,6 +801,12 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.GroupProduct", b =>
                 {
+                    b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
+                        .WithMany("GroupProducts")
+                        .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("ColoradoBeetle.Domain.Entities.GroupShopList", "GroupShopList")
                         .WithMany("GroupProducts")
                         .HasForeignKey("GroupShopListId")
@@ -809,6 +820,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("ApplicatioUser");
+
+                    b.Navigation("Group");
 
                     b.Navigation("GroupShopList");
                 });
@@ -941,6 +954,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.Group", b =>
                 {
+                    b.Navigation("GroupProducts");
+
                     b.Navigation("GroupShopLists");
                 });
 

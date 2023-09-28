@@ -1,6 +1,7 @@
 ﻿using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Domain.Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace ColoradoBeetle.Application.GroupShopLists.Command.AddGroupShopList;
 public class AddGroupShopListCommandHandler : IRequestHandler<AddGroupShopListCommand> {
@@ -19,17 +20,24 @@ public class AddGroupShopListCommandHandler : IRequestHandler<AddGroupShopListCo
     public async Task<Unit> Handle(AddGroupShopListCommand request,
         CancellationToken cancellationToken) {
 
-        await _groupShopListService.ValidateGroupShopListName(request.Name, request.GroupId);
+        if (await _groupShopListService.IsUserInGroup(request.GroupId, request.UserId)) {
+            
+            await _groupShopListService.ValidateGroupShopListName(request.Name, 
+                request.GroupId);
 
-        await _context.GroupShopLists.AddAsync( new GroupShopList {
-            Name = request.Name,
-            UserId = request.UserId,
-            GroupId = request.GroupId,
-            CreatedDate = _dateTimeService.Now
-        });
+            await _context.GroupShopLists.AddAsync(new GroupShopList {
+                Name = request.Name,
+                UserId = request.UserId,
+                GroupId = request.GroupId,
+                CreatedDate = _dateTimeService.Now
+            });
 
-        await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
-        return Unit.Value;
+            return Unit.Value;
+        }
+        else {
+            throw new NotImplementedException();
+        }
     }
 }
