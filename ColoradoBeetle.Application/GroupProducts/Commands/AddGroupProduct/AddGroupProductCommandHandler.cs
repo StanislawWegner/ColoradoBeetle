@@ -23,7 +23,7 @@ public class AddGroupProductCommandHandler : IRequestHandler<AddGroupProductComm
 
         if(await _groupProductService.IsUserInGroup(request.GroupId, request.UserId)) {
 
-            await _groupProductService.ValidateGroupShopListName(request.Name,
+            await _groupProductService.ValidateGroupProductName(request.Name,
                     request.GroupShopListId);
 
 

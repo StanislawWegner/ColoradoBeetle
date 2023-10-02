@@ -25,6 +25,7 @@ public static class DependencyInjection {
 
         services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
 
+
         var connectionString = encryptionService
             .Decrypt(configuration.GetConnectionString("DefaultConnection"));
 

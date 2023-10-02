@@ -12,7 +12,7 @@ public class GroupProductService : IGroupProductService {
     {
         _context = context;
     }
-    public async Task ValidateGroupShopListName(string groupProductName, int groupShopListId) {
+    public async Task ValidateGroupProductName(string groupProductName, int groupShopListId) {
 
         var groupProductDb = await _context.GroupProducts
             .AsNoTracking()

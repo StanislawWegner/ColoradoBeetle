@@ -40,7 +40,7 @@ public class GetEditGroupShopListQueryHandler : IRequestHandler<GetEditGroupShop
             };
         }
         else {
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

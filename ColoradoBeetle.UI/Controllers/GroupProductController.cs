@@ -1,4 +1,6 @@
 ﻿using ColoradoBeetle.Application.GroupProducts.Commands.AddGroupProduct;
+using ColoradoBeetle.Application.GroupProducts.Commands.EditGroupProduct;
+using ColoradoBeetle.Application.GroupProducts.Queries.GetEditGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetGroupProducts;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -38,6 +40,31 @@ namespace ColoradoBeetle.UI.Controllers {
 
             return RedirectToAction("GroupProducts", "GroupProduct",
                 new { id = command.GroupShopListId, groupId = command.GroupId });
+        }
+
+        public async Task<IActionResult> EditGroupProduct(int id, int groupId) {
+            return View(await Mediator.Send(new GetEditGroupProductQuery {
+                Id = id,
+                GroupId = groupId,
+                UserId = UserId
+            }));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditGroupProduct(EditGroupProductCommand command) {
+
+            var result  = await MediatorSendValidate(command);
+
+            if (!result.IsValid)
+                return View(command);
+
+            TempData["Success"] = "Produkt został zaktualizowany";
+
+            return RedirectToAction("GroupProducts", "GroupProduct",
+                new { id = command.Id, groupId = command.GroupId });
+
+
         }
     }
 }

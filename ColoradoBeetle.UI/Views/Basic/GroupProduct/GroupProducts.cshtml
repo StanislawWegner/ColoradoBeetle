@@ -56,7 +56,7 @@
                     <th class="desktop">Miara</th>
                     <th class="desktop">Masa</th>
                     <th class="desktop">Miara</th>
-                    <th class="desktop">Dodał</th>
+                    <th class="desktop">Dodał/Edytował</th>
                     <th class="desktop"></th>
                 </tr>
             </thead>
@@ -121,7 +121,7 @@
                         <td>@product.WeightUnit</td>
                         <td>@product.UserEmail</td>
                         <td>
-                            <a href="/Product/EditProduct?id=@product.Id"
+                            <a href="/GroupProduct/EditGroupProduct?id=@product.Id&groupId=@Model.GroupId"
                                class="btn btn-success btn-sm" role="button">
                                 <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
                             </a>
