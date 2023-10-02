@@ -19,19 +19,17 @@ public class DeleteGroupShopListCommandHandler : IRequestHandler<DeleteGroupShop
 
         var groupShopListDb = await _groupShopListService.FindGroupShopListById(request.Id);
 
-        var groupDb = await _context.Groups
-            .Include(x => x.ApplicationUsers)
-            .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == groupShopListDb.GroupId);
-
-        var isUserInGroup = groupDb.ApplicationUsers.Any(x => x.Id == request.UserId);
+        var isUserInGroup = await _groupShopListService.IsUserInGroup(groupShopListDb.GroupId,
+            request.UserId);
 
         if (isUserInGroup) {
             _context.GroupShopLists.Remove(groupShopListDb);
 
             await _context.SaveChangesAsync();
+            return Unit.Value;
         }
-
-        return Unit.Value;
+        else {
+            throw new NotImplementedException();
+        }
     }
 }

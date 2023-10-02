@@ -1,15 +1,23 @@
 ﻿using ColoradoBeetle.Application.GroupProducts.Commands.AddGroupProduct;
+using ColoradoBeetle.Application.GroupProducts.Commands.DeleteGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.EditGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetEditGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetGroupProducts;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace ColoradoBeetle.UI.Controllers {
 
     [Authorize]
     public class GroupProductController : BaseController {
+        private readonly ILogger<GroupProductController> _logger;
+
+        public GroupProductController(ILogger<GroupProductController> logger)
+        {
+            _logger = logger;
+        }
         public async Task<IActionResult> GroupProducts(int id, int groupId) {
             return View(await Mediator.Send(new GetGroupProductsQuery
             {
@@ -62,9 +70,25 @@ namespace ColoradoBeetle.UI.Controllers {
             TempData["Success"] = "Produkt został zaktualizowany";
 
             return RedirectToAction("GroupProducts", "GroupProduct",
-                new { id = command.Id, groupId = command.GroupId });
+                new { id = command.GroupShopListId, groupId = command.GroupId });
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> DeleteGroupProduct(int id) {
 
+            try {
+                await Mediator.Send(new DeleteGroupProductCommand {
+                    Id = id,
+                    UserId = UserId,
+                });
+
+                return Json( new { success = true });
+            }
+            catch (Exception exception){
+                _logger.LogError(exception, null);
+
+                return Json( new { success = false });
+            }
         }
     }
 }

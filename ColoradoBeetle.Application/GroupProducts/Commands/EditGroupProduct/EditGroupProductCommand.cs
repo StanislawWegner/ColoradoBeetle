@@ -32,5 +32,6 @@ public class EditGroupProductCommand : IRequest{
 
     public string UserId { get; set; }
     public int GroupId { get; set; }
+    public int GroupShopListId { get; set; }
 
 }

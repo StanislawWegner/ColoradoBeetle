@@ -1,6 +1,8 @@
 ﻿using ColoradoBeetle.Application.Common.Exceptions;
 using ColoradoBeetle.Application.Common.Interfaces;
+using ColoradoBeetle.Domain.Entities;
 using FluentValidation.Results;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Asn1.Ocsp;
 
@@ -30,8 +32,15 @@ public class GroupProductService : IGroupProductService {
         
         var groupDb = await _context.Groups
             .Include(x => x.ApplicationUsers)
+            .AsNoTracking()
             .FirstOrDefaultAsync(x => x.Id == groupId);
 
        return groupDb.ApplicationUsers.Any(x => x.Id == userId);
+    }
+
+    public async Task<GroupProduct> FindGroupProductById(int id) {
+        
+        return await _context.GroupProducts
+            .FirstOrDefaultAsync(x => x.Id == id);
     }
 }

@@ -6,6 +6,9 @@ public static class GroupShopListExtensions {
 
     public static GroupShopListDto ToDto(this GroupShopList groupShopList) {
 
+        if(groupShopList == null)
+            return null;
+
         return new GroupShopListDto {
             Id = groupShopList.Id,
             Name = groupShopList.Name,

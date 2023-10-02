@@ -38,7 +38,8 @@ public class GetEditGroupProductQueryHandler : IRequestHandler<GetEditGroupProdu
                 Weight = groupProductDb.Weight,
                 WeightUnit = groupProductDb.WeightUnit,
                 GroupId = groupProductDb.GroupId,
-                UserId = request.UserId
+                UserId = request.UserId,
+                GroupShopListId = groupProductDb.GroupShopListId
             };
         }
         else {
