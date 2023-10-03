@@ -1,6 +1,7 @@
 ﻿using ColoradoBeetle.Application.GroupShopLists.Command.AddGroupShopList;
 using ColoradoBeetle.Application.GroupShopLists.Command.DeleteGroupShopList;
 using ColoradoBeetle.Application.GroupShopLists.Command.EditGroupShopList;
+using ColoradoBeetle.Application.GroupShopLists.Queries.GetChildGroupShopLists;
 using ColoradoBeetle.Application.GroupShopLists.Queries.GetEditGroupShopList;
 using ColoradoBeetle.Application.GroupShopLists.Queries.GetGroupShopList;
 using Microsoft.AspNetCore.Authorization;
@@ -83,6 +84,15 @@ namespace ColoradoBeetle.UI.Controllers {
                 _logger.LogError(exception, null);
                 return Json( new { success = false });
             }
+        }
+
+        public async Task<IActionResult> ChildGroupShopLists(int prntId, int groupId) {
+            
+            return View(await Mediator.Send(new GetChildGroupShopListsCommand {
+                PrntId = prntId,
+                GroupId = groupId,
+                UserId = UserId
+            }));
         }
     }
 }
