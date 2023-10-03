@@ -17,7 +17,7 @@ public class DeleteGroupShopListCommandHandler : IRequestHandler<DeleteGroupShop
     public async Task<Unit> Handle(DeleteGroupShopListCommand request,
         CancellationToken cancellationToken) {
 
-        var groupShopListDb = await _groupShopListService.FindGroupShopListById(request.Id);
+        var groupShopListDb = await _groupShopListService.FindGroupShopListByIdAsync(request.Id);
 
         var isUserInGroup = await _groupShopListService.IsUserInGroup(groupShopListDb.GroupId,
             request.UserId);

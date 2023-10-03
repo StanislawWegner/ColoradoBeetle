@@ -1,9 +1,13 @@
 ﻿using ColoradoBeetle.Application.GroupProducts.Commands.AddGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.CopyAllGroupProducts;
+using ColoradoBeetle.Application.GroupProducts.Commands.CopyOneGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.DeleteGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.EditGroupProduct;
+using ColoradoBeetle.Application.GroupProducts.Queries.GetChildGroupProducts;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetEditGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetGroupProducts;
+using ColoradoBeetle.Application.Products.Commands.CopyOneProduct;
+using ColoradoBeetle.Application.Products.Queries.GetChildProducts;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -115,6 +119,34 @@ public class GroupProductController : BaseController {
             return RedirectToAction("GroupProducts", "GroupProduct",
                 new { id = prntId, groupId });
 
+        }
+    }
+
+    public async Task<IActionResult> ChildGroupProducts(int id, int prntId, int groupId) {
+
+        return View(await Mediator.Send(new GetChildGroupProductsQuery {
+            ChildId = id,
+            PrntId = prntId,
+            UserId = UserId,
+            GroupId = groupId
+        }));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> CopyOneGroupProduct(int id, int prntId) {
+
+        try {
+            await Mediator.Send(new CopyOneGroupProductCommand {
+                Id = id,
+                PrntId = prntId,
+                UserId = UserId
+            });
+
+            return Json(new { success = true });
+        }
+        catch (Exception exception) {
+            _logger.LogError(exception, null);
+            return Json(new { success = false });
         }
     }
 }

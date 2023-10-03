@@ -17,7 +17,7 @@ public class EditGroupProductCommandHandler : IRequestHandler<EditGroupProductCo
         CancellationToken cancellationToken) {
 
         var isUserInGroup = await _groupProductService
-            .IsUserInGroup(request.GroupId, request.UserId);
+            .IsUserInGroupAsync(request.GroupId, request.UserId);
 
 
         if (isUserInGroup) {

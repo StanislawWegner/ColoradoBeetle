@@ -3,6 +3,6 @@
 namespace ColoradoBeetle.Application.Common.Interfaces; 
 public interface IGroupProductService {
     Task ValidateGroupProductName(string groupProductName, int groupShopListId);
-    Task<bool> IsUserInGroup(int groupId, string userId);
-    Task<GroupProduct> FindGroupProductById(int id);
+    Task<bool> IsUserInGroupAsync(int groupId, string userId);
+    Task<GroupProduct> FindGroupProductByIdAsync(int id);
 }

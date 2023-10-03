@@ -17,9 +17,9 @@ public class DeleteGroupProductCommandHandler : IRequestHandler<DeleteGroupProdu
     public async Task<Unit> Handle(DeleteGroupProductCommand request,
         CancellationToken cancellationToken) {
 
-        var groupProductDb = await _groupProductService.FindGroupProductById(request.Id);
+        var groupProductDb = await _groupProductService.FindGroupProductByIdAsync(request.Id);
 
-        var isUserInGroup = await _groupProductService.IsUserInGroup(groupProductDb.GroupId,
+        var isUserInGroup = await _groupProductService.IsUserInGroupAsync(groupProductDb.GroupId,
             request.UserId);
 
         if (isUserInGroup) {

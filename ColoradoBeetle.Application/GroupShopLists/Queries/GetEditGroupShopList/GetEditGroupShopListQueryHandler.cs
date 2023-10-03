@@ -21,7 +21,7 @@ public class GetEditGroupShopListQueryHandler : IRequestHandler<GetEditGroupShop
         CancellationToken cancellationToken) {
 
         var groupShopList = await _groupShopListService
-            .FindGroupShopListById(request.Id);
+            .FindGroupShopListByIdAsync(request.Id);
 
         var groupDb = await _context.Groups
             .Include(x => x.ApplicationUsers)

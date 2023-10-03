@@ -1,0 +1,155 @@
+﻿@using ColoradoBeetle.Application.GroupProducts.Queries.GetChildGroupProducts;
+@using System.Globalization;
+
+@model GetChildGroupProductsVm
+
+@{
+    TempData["Title"] = "Kopiuj produkty";
+    var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+@section Styles{
+    <partial name="Styles/_DataTablesStyles" />
+}
+
+<h1>Kopiuj z listy: "@Model.ChildGroupShopListDto.Name"</h1>
+
+<div class="card card-primary card-border-top">
+    <div class="card-body">
+
+        <a href='/GroupProduct/GroupProducts?id=@Model.PrntGroupShopListDto.Id&groupId=@Model.GroupId'
+           class="btn btn-info mb-2" role="button">
+            <div class="d-flex flex-row">
+                <div>
+                    <i class="fas fa-solid fa-backward-fast"></i>
+                </div>
+                <div id="setName"></div>
+            </div>
+        </a>
+
+        <table id="groupProducts" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nazwa produktu</th>
+                    <th></th>
+                    <th>Dodał/Edytował</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var product in Model.GroupProductDtos) {
+                    <tr>
+                        <td>@product.CreatedDate</td>
+
+                        @if (!product.OnStock) {
+                            <td>
+                                <div class="outOfStock">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else if (product.IsChecked) {
+                            <td>
+                                <div class="productChecked">
+                                    @product.Name
+                                </div>
+                            </td>
+                        }
+                        else {
+                            <td>
+                                <div>@product.Name</div>
+                            </td>
+                        }
+
+                        <td>
+                            <button class="btn btn-success btn-sm"
+                                    onclick="copyProduct('@product.Id', '@Model.PrntGroupShopListDto.Id')">
+                                <i class="fas fa-solid fa-copy"></i>Kopiuj
+                            </button>
+                        </td>
+                        <td>
+                            @product.UserEmail
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="Scripts/_DataTablesScripts" />
+
+    <script>
+
+        var selectedRow;
+        var selectedProductId = 0;
+        var groupProducts;
+
+
+        function shortName(model, maxLength) {
+            if (!model)
+                return '';
+
+            if (model.length <= maxLength)
+                return model;
+
+            return model.substring(0, maxLength - 3) + '...';
+        }
+
+        $(document).ready(function () {
+
+            groupProducts = $("#groupProducts").DataTable({
+                paging: true,
+                ordering: true,
+                info: true,
+                responsive: false,
+                autoWidth: false,
+                lengthChange: true,
+                lengthMenu: [25, 50, 75, 100],
+                language: {
+                    url: `/lib/datatables/lang/${'@locale'}.json`
+                },
+                order: [[0, "desc"]],
+                columnDefs: [
+                    {
+                        targets: 0,
+                        visible: false,
+                        searchable: false
+                    }]
+            });
+
+            $('#setName').html(shortName('@Model.PrntGroupShopListDto.Name', 16));
+        });
+
+
+
+
+        function copyProduct(id, prntId) {
+            $.ajax({
+                type: "POST",
+                url: "/GroupProduct/CopyOneGroupProduct",
+                data: {
+                    id,
+                    prntId
+                },
+                success: function (data) {
+                    if (data.success) {
+                        toastr.success("Produkt został skopiowany");
+                    }
+                    else {
+                        toastr.error("Kopiowanie nieudane, spróbuj ponownie później lub skontaktuj się z administratorem.");
+                    }
+                },
+                error: function (data) {
+                    toastr.error("Kopiowanie nieudane, spróbuj ponownie później lub skontaktuj się z administratorem.");
+                },
+                dataType: "json"
+
+            });
+        }
+
+
+    </script>
+}

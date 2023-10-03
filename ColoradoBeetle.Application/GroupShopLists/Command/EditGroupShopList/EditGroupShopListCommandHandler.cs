@@ -15,7 +15,7 @@ public class EditGroupShopListCommandHandler : IRequestHandler<EditGroupShopList
     public async Task<Unit> Handle(EditGroupShopListCommand request, 
         CancellationToken cancellationToken) {
 
-        var groupShopListDb = await _groupShopListService.FindGroupShopListById(request.Id);
+        var groupShopListDb = await _groupShopListService.FindGroupShopListByIdAsync(request.Id);
 
         if(groupShopListDb.Name != request.Name) {
             await _groupShopListService

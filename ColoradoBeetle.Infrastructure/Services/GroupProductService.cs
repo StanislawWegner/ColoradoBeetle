@@ -28,7 +28,7 @@ public class GroupProductService : IGroupProductService {
             }
     }
 
-    public async Task<bool> IsUserInGroup(int groupId, string userId) {
+    public async Task<bool> IsUserInGroupAsync(int groupId, string userId) {
         
         var groupDb = await _context.Groups
             .Include(x => x.ApplicationUsers)
@@ -38,7 +38,7 @@ public class GroupProductService : IGroupProductService {
        return groupDb.ApplicationUsers.Any(x => x.Id == userId);
     }
 
-    public async Task<GroupProduct> FindGroupProductById(int id) {
+    public async Task<GroupProduct> FindGroupProductByIdAsync(int id) {
         
         return await _context.GroupProducts
             .FirstOrDefaultAsync(x => x.Id == id);

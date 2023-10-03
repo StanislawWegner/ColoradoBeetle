@@ -21,7 +21,7 @@ public class AddGroupProductCommandHandler : IRequestHandler<AddGroupProductComm
     public async Task<Unit> Handle(AddGroupProductCommand request,
         CancellationToken cancellationToken) {
 
-        if(await _groupProductService.IsUserInGroup(request.GroupId, request.UserId)) {
+        if(await _groupProductService.IsUserInGroupAsync(request.GroupId, request.UserId)) {
 
             await _groupProductService.ValidateGroupProductName(request.Name,
                     request.GroupShopListId);

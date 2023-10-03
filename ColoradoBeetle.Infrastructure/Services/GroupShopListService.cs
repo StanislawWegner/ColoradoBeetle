@@ -13,7 +13,7 @@ public class GroupShopListService : IGroupShopListService {
         _context = context;
     }
 
-    public async Task<GroupShopList> FindGroupShopListById(int id) { 
+    public async Task<GroupShopList> FindGroupShopListByIdAsync(int id) { 
 
         return await _context.GroupShopLists
             .FirstOrDefaultAsync(x => x.Id == id);
