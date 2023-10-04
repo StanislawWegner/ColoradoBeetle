@@ -34,14 +34,20 @@
                             @childGroupShopList.Name
                         </td>
                         <td>
-                            <a class="btn btn-success btn-sm" role="button"
-                               href='/GroupProduct/CopyAllGroupProducts?childId=@childGroupShopList.Id&prntId=@Model.PrntId&groupId=@Model.GroupId'>
-                                <i class="fas fa-regular fa-folder-open"></i>Wszystkie produkty
-                            </a>
-                            <a class="btn btn-primary btn-sm" role="button"
-                               href='/GroupProduct/ChildGroupProducts?id=@childGroupShopList.Id&prntId=@Model.PrntId&groupId=@Model.GroupId'>
-                                <i class="fas fa-regular fa-file"></i>Wybierz pojedyńczo
-                            </a>
+                            <div class="d-flex flex-row">
+                                <div class="m-1">
+                                    <a class="btn btn-success btn-sm" role="button"
+                                       href='/GroupProduct/CopyAllGroupProducts?childId=@childGroupShopList.Id&prntId=@Model.PrntId&groupId=@Model.GroupId'>
+                                        <i class="fas fa-regular fa-folder-open"></i>Wszystkie produkty
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <a class="btn btn-primary btn-sm" role="button"
+                                       href='/GroupProduct/ChildGroupProducts?id=@childGroupShopList.Id&prntId=@Model.PrntId&groupId=@Model.GroupId'>
+                                        <i class="fas fa-regular fa-file"></i>Wybierz pojedyńczo
+                                    </a>
+                                </div>
+                            </div>
                         </td>
                         <td>
                             @childGroupShopList.UserEmail

@@ -64,7 +64,7 @@
 
                 @foreach(var product in Model.ProductDtoList) {
                     <tr>
-                        <td>@product.Id</td>
+                        <td>@product.CreatedDate</td>
                         <td class="details-control"></td>
 
                         @if(!product.OnStock && product.IsCopied) {
@@ -120,19 +120,26 @@
                         <td>@product.Weight</td>
                         <td>@product.WeightUnit</td>
                         <td>
-                            <a href="/Product/EditProduct?id=@product.Id"
-                                class="btn btn-success btn-sm" role="button">
-                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
-                            </a>
-                            <button class="btn btn-danger btn-sm"
-                                onclick="deleteProduct('@product.Id', this)">
-                                <i class="fas fa-solid fa-trash-can"></i>Usuń
-                            </button>
-                            <button class="btn btn-sm outOfStock"
-                                    onclick="checkIsOnStock('@product.Id')">
-                                <i class="fas fa-solid fa-exclamation"></i>Brak
-                            </button>
-                            
+                            <div class="d-flex flex-row">
+                                <div class="m-1">
+                                    <a href="/Product/EditProduct?id=@product.Id"
+                                       class="btn btn-success btn-sm" role="button">
+                                        <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <button class="btn btn-danger btn-sm"
+                                            onclick="deleteProduct('@product.Id', this)">
+                                        <i class="fas fa-solid fa-trash-can"></i>Usuń
+                                    </button>
+                                </div>
+                                <div class="m-1"> 
+                                    <button class="btn btn-sm outOfStock"
+                                            onclick="checkIsOnStock('@product.Id')">
+                                        <i class="fas fa-solid fa-exclamation"></i>Brak
+                                    </button>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 }
@@ -233,7 +240,7 @@
         
 
         function deleteProduct(id, btn) {
-            selectedRow = btn.parentNode.parentNode;
+            selectedRow = btn.parentNode.parentNode.parentNode.parentNode;
             selectedProductId = id;
             $('#modal-confirm-delete').modal('show');
         }

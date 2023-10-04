@@ -1,4 +1,5 @@
 ﻿using ColoradoBeetle.Application.GroupProducts.Commands.AddGroupProduct;
+using ColoradoBeetle.Application.GroupProducts.Commands.CheckGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.CopyAllGroupProducts;
 using ColoradoBeetle.Application.GroupProducts.Commands.CopyOneGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.DeleteGroupProduct;
@@ -6,6 +7,7 @@ using ColoradoBeetle.Application.GroupProducts.Commands.EditGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetChildGroupProducts;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetEditGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Queries.GetGroupProducts;
+using ColoradoBeetle.Application.Products.Commands.CheckProduct;
 using ColoradoBeetle.Application.Products.Commands.CopyOneProduct;
 using ColoradoBeetle.Application.Products.Queries.GetChildProducts;
 using MediatR;
@@ -142,6 +144,23 @@ public class GroupProductController : BaseController {
                 UserId = UserId
             });
 
+            return Json(new { success = true });
+        }
+        catch (Exception exception) {
+            _logger.LogError(exception, null);
+            return Json(new { success = false });
+        }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> CheckGroupProduct(int id, bool check) {
+
+        try {
+            await Mediator.Send(new CheckGroupProductCommand {
+                Id = id,
+                IsChecked = check,
+                UserId = UserId
+            });
             return Json(new { success = true });
         }
         catch (Exception exception) {

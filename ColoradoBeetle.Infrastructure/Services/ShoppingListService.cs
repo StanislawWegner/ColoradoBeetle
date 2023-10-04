@@ -33,7 +33,10 @@ public class ShoppingListService : IShoppingListService{
         return _context.ShoppingLists
             .AsNoTracking()
             .Where(x => x.UserId == currentUserId)
-            .Select(x => new ShoppingListDto { Id = x.Id, Name = x.Name });
+            .Select(x => new ShoppingListDto { Id = x.Id, 
+                Name = x.Name,
+                CreatedDate = x.CreatedDate
+            });
 
     }
 

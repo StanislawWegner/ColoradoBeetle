@@ -44,24 +44,32 @@
                 @foreach(var shoppingList in Model) {
                     <tr>
                         <td>
-                            @shoppingList.Id
+                            @shoppingList.CreatedDate
                         </td>
                         <td>
                             @shoppingList.Name
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm" role="button"
-                               href='/Product/GetProductsInList?id=@shoppingList.Id'>
-                                <i class="fas fa-solid fa-square-plus"></i>Produkty
-                            </a>
-                            <a class="btn btn-success btn-sm" role="button" 
-                                href='/ShoppingList/EditShoppingList?id=@shoppingList.Id'>
-                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
-                            </a>
-                            <button class="btn btn-danger btn-sm"
-                                    onclick="deleteShoppingList('@shoppingList.Id', this)">
-                                    <i class="fas fa-solid fa-trash-can"></i>Usuń
-                            </button>
+                            <div class="d-flex flex-row">
+                                <div class="m-1">
+                                    <a class="btn btn-primary btn-sm" role="button"
+                                       href='/Product/GetProductsInList?id=@shoppingList.Id'>
+                                        <i class="fas fa-solid fa-square-plus"></i>Produkty
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <a class="btn btn-success btn-sm" role="button"
+                                       href='/ShoppingList/EditShoppingList?id=@shoppingList.Id'>
+                                        <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <button class="btn btn-danger btn-sm"
+                                            onclick="deleteShoppingList('@shoppingList.Id', this)">
+                                        <i class="fas fa-solid fa-trash-can"></i>Usuń
+                                    </button>
+                                </div>
+                            </div>
                         </td>
                        
                     </tr>
@@ -107,7 +115,7 @@
 
 
         function deleteShoppingList(id, btn) {
-            selectedRow = btn.parentNode.parentNode;
+            selectedRow = btn.parentNode.parentNode.parentNode.parentNode;
             selectedShoppingListId = id;
             $('#modal-confirm-delete').modal('show');
         }

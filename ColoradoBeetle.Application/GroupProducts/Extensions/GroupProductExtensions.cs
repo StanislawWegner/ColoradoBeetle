@@ -1,5 +1,6 @@
 ﻿using ColoradoBeetle.Application.GroupProducts.Queries;
 using ColoradoBeetle.Application.Products.Queries.GetProducts;
+using ColoradoBeetle.Application.Users.Extensions;
 using ColoradoBeetle.Domain.Entities;
 
 namespace ColoradoBeetle.Application.GroupProducts.Extensions; 
@@ -21,7 +22,7 @@ public static class GroupProductExtensions {
             IsChecked = groupProduct.IsChecked,
             IsCopied = groupProduct.IsCopied,
             OnStock = groupProduct.OnStock,
-            UserEmail = groupProduct.ApplicatioUser?.Email
+            UserEmail = groupProduct.ApplicatioUser?.Email?.ToShortEmail()
         };
     }
 }

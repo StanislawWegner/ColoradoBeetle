@@ -12,6 +12,7 @@ public static class ProductExtension {
         return new ProductDto {
             Id = product.Id,
             Name = product.Name,
+            CreatedDate = product.CreatedDate,
             Quantity = product.Quantity,
             Volume = product.Volume,
             VolumeUnit = product.VolumeUnit,

@@ -55,20 +55,27 @@
                             @shopList.UserEmail
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm" role="button"
-                               href='/GroupProduct/GroupProducts?id=@shopList.Id&groupId=@Model.GroupDto.Id'>
-                                <i class="fas fa-solid fa-square-plus"></i>Produkty
-                            </a>
-                            <a class="btn btn-success btn-sm" role="button"
-                               href='/GroupShopList/EditGroupShopList?id=@shopList.Id'>
-                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
-                            </a>
-                            <button class="btn btn-danger btn-sm"
-                                    onclick="deleteShoppingList('@shopList.Id', this)">
-                                <i class="fas fa-solid fa-trash-can"></i>Usuń
-                            </button>
+                            <div class="d-flex flex-row">
+                                <div class="m-1">
+                                    <a class="btn btn-primary btn-sm" role="button"
+                                       href='/GroupProduct/GroupProducts?id=@shopList.Id&groupId=@Model.GroupDto.Id'>
+                                        <i class="fas fa-solid fa-square-plus"></i>Produkty
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <a class="btn btn-success btn-sm" role="button"
+                                       href='/GroupShopList/EditGroupShopList?id=@shopList.Id'>
+                                        <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <button class="btn btn-danger btn-sm"
+                                            onclick="deleteShoppingList('@shopList.Id', this)">
+                                        <i class="fas fa-solid fa-trash-can"></i>Usuń
+                                    </button>
+                                </div>
+                            </div>
                         </td>
-
                     </tr>
                 }
             </tbody>
@@ -110,7 +117,7 @@
         });
 
         function deleteShoppingList(id, btn) {
-            selectedRow = btn.parentNode.parentNode;
+            selectedRow = btn.parentNode.parentNode.parentNode.parentNode;
             selectedGroupShopListId = id;
             $('#modal-confirm-delete').modal('show');
         }

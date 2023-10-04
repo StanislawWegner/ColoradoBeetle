@@ -40,7 +40,7 @@
 
                 @foreach (var product in Model.ProductDtoList) {
                     <tr>
-                        <td>@product.Id</td>
+                        <td>@product.CreatedDate</td>
 
                         @if (!product.OnStock) {
                             <td>

@@ -104,7 +104,7 @@
                 paging: true,
                 ordering: true,
                 info: true,
-                responsive: false,
+                responsive: true,
                 autoWidth: false,
                 lengthChange: true,
                 lengthMenu: [25, 50, 75, 100],
@@ -117,7 +117,8 @@
                         targets: 0,
                         visible: false,
                         searchable: false
-                    }]
+                    },
+                ]
             });
 
             $('#setName').html(shortName('@Model.PrntGroupShopListDto.Name', 16));

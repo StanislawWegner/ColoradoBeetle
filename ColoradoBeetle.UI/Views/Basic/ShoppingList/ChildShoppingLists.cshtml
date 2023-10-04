@@ -35,17 +35,21 @@
                             @childShoppingList.Name
                         </td>
                         <td>
-                            <a class="btn btn-success btn-sm" role="button"
-                               href='/Product/CopyAllProducts?id=@childShoppingList.Id&prntId=@Model.ParentShoppingListId'>
-                                <i class="fas fa-regular fa-folder-open"></i>Wszystkie produkty
-                            </a>
-                            <a class="btn btn-primary btn-sm" role="button"
-                               href='/Product/GetChildProducts?id=@childShoppingList.Id&prntId=@Model.ParentShoppingListId'>
-                                <i class="fas fa-regular fa-file"></i>Wybierz pojedyńczo
-                            </a>
-                           
+                            <div class="d-flex flex-row">
+                                <div class="m-1">
+                                    <a class="btn btn-success btn-sm" role="button"
+                                       href='/Product/CopyAllProducts?id=@childShoppingList.Id&prntId=@Model.ParentShoppingListId'>
+                                        <i class="fas fa-regular fa-folder-open"></i>Wszystkie produkty
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <a class="btn btn-primary btn-sm" role="button"
+                                       href='/Product/GetChildProducts?id=@childShoppingList.Id&prntId=@Model.ParentShoppingListId'>
+                                        <i class="fas fa-regular fa-file"></i>Wybierz pojedyńczo
+                                    </a>
+                                </div>
+                            </div>
                         </td>
-
                     </tr>
                 }
             </tbody>

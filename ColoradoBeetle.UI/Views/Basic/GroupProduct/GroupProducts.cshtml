@@ -121,21 +121,27 @@
                         <td>@product.WeightUnit</td>
                         <td>@product.UserEmail</td>
                         <td>
-                            <a href="/GroupProduct/EditGroupProduct?id=@product.Id&groupId=@Model.GroupId"
-                               class="btn btn-success btn-sm" role="button">
-                                <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
-                            </a>
-                            <button class="btn btn-danger btn-sm"
-                                    onclick="deleteProduct('@product.Id', this)">
-                                <i class="fas fa-solid fa-trash-can"></i>Usuń
-                            </button>
-                            <button class="btn btn-sm outOfStock"
-                                    onclick="checkIsOnStock('@product.Id')">
-                                <i class="fas fa-solid fa-exclamation"></i>Brak
-                            </button>
-
+                            <div class="d-flex flex-row">
+                                <div class="m-1">
+                                    <a href="/GroupProduct/EditGroupProduct?id=@product.Id&groupId=@Model.GroupId"
+                                       class="btn btn-success btn-sm" role="button">
+                                        <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
+                                    </a>
+                                </div>
+                                <div class="m-1">
+                                    <button class="btn btn-danger btn-sm"
+                                            onclick="deleteProduct('@product.Id', this)">
+                                        <i class="fas fa-solid fa-trash-can"></i>Usuń
+                                    </button>
+                                </div>
+                                <div class="m-1">
+                                    <button class="btn btn-sm outOfStock"
+                                            onclick="checkIsOnStock('@product.Id')">
+                                        <i class="fas fa-solid fa-exclamation"></i>Brak
+                                    </button>
+                                </div>
+                            </div>
                         </td>
-
                     </tr>
                 }
 
@@ -205,7 +211,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "/Product/CheckProduct",
+                    url: "/GroupProduct/CheckGroupProduct",
                     data: {
                         id: id,
                         check: !check
@@ -234,7 +240,7 @@
 
 
         function deleteProduct(id, btn) {
-            selectedRow = btn.parentNode.parentNode;
+            selectedRow = btn.parentNode.parentNode.parentNode.parentNode;
             selectedProductId = id;
             $('#modal-confirm-delete').modal('show');
         }

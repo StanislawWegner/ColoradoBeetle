@@ -2,6 +2,7 @@
 using ColoradoBeetle.Application.Clients.Queries.GetClient;
 using ColoradoBeetle.Application.Groups.Queries.GetUsersInGroup;
 using ColoradoBeetle.Domain.Entities;
+using System.Text.RegularExpressions;
 
 namespace ColoradoBeetle.Application.Users.Extensions; 
 public static class UserExtensions {
@@ -51,5 +52,10 @@ public static class UserExtensions {
             FirstName = user.FirstName,
             LastName = user.LastName
         };
+    }
+
+    public static string ToShortEmail(this string email) {
+
+        return email.Split('@')[0];
     }
 }
