@@ -80,23 +80,13 @@
 
 @section Scripts{
     <partial name="Scripts/_DataTablesScripts" />
+    <partial name="Scripts/_StringExtensions" />
 
     <script>
 
         var selectedRow;
         var selectedProductId = 0;
         var groupProducts;
-
-
-        function shortName(model, maxLength) {
-            if (!model)
-                return '';
-
-            if (model.length <= maxLength)
-                return model;
-
-            return model.substring(0, maxLength - 3) + '...';
-        }
 
         $(document).ready(function () {
 
@@ -125,8 +115,6 @@
         });
 
 
-
-
         function copyProduct(id, prntId) {
             $.ajax({
                 type: "POST",
@@ -150,7 +138,5 @@
 
             });
         }
-
-
     </script>
 }

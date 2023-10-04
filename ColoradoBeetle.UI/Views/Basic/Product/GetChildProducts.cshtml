@@ -78,23 +78,13 @@
 
 @section Scripts{
     <partial name="Scripts/_DataTablesScripts" />
+    <partial name="Scripts/_StringExtensions" />
 
     <script>
 
         var selectedRow;
         var selectedProductId = 0;
         var products;
-
-
-        function shortName(model, maxLength) {
-            if (!model) 
-                return '';
-
-            if (model.length <= maxLength) 
-                return model;
-            
-                return model.substring(0, maxLength - 3) + '...';
-        }
 
         $(document).ready(function () {
 

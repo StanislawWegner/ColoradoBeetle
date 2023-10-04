@@ -1,0 +1,11 @@
+﻿<script>
+    function shortName(model, maxLength) {
+        if (!model)
+            return '';
+
+        if (model.length <= maxLength)
+            return model;
+
+        return model.substring(0, maxLength - 3) + '...';
+    }
+</script>
