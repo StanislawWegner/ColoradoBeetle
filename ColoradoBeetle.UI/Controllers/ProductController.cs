@@ -1,4 +1,5 @@
-﻿using ColoradoBeetle.Application.Products.Commands.AddProduct;
+﻿using ColoradoBeetle.Application.Products.Commands.AddMultiProducts;
+using ColoradoBeetle.Application.Products.Commands.AddProduct;
 using ColoradoBeetle.Application.Products.Commands.CheckProduct;
 using ColoradoBeetle.Application.Products.Commands.CheckStockProduct;
 using ColoradoBeetle.Application.Products.Commands.CopyAllProducts;
@@ -176,5 +177,29 @@ public class ProductController : BaseController{
             _logger.LogError(exception, null);
             return Json(new { success = false});
         }
+    }
+
+    public IActionResult AddMultiProduct(int id) {
+        return View(new AddMultiProductCommand {
+            ShoppingListId = id,
+            UserId = UserId
+        });
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AddMultiProduct(AddMultiProductCommand command) {
+       
+        var result = await MediatorSendValidate(command);
+
+        if (!result.IsValid) {
+            return View(command);
+        }
+
+        TempData["Success"] = "Produkty zostały dodane.";
+
+        return RedirectToAction("GetProductsInList", "Product",
+            new { id = command.ShoppingListId });
+
     }
 }

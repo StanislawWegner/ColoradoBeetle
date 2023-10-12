@@ -266,7 +266,6 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("Volume")
@@ -312,7 +311,6 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -804,7 +802,6 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
                         .WithMany("GroupProducts")
                         .HasForeignKey("GroupId")
-                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ColoradoBeetle.Domain.Entities.GroupShopList", "GroupShopList")
@@ -815,9 +812,7 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
                     b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "ApplicatioUser")
                         .WithMany("GroupProducts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("ApplicatioUser");
 
@@ -836,9 +831,7 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
                     b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "ApplicationUser")
                         .WithMany("GroupShopLists")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("ApplicationUser");
 

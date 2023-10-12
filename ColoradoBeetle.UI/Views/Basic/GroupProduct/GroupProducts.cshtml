@@ -33,6 +33,12 @@
                 </a>
             </div>
             <div>
+                <a href="/Product/AddMultiGroupProduct?id=@Model.GroupShopListDto.Id"
+                   class="btn btn-warning m-1" role="button">
+                    <i class="fas fa-solid fa-square-plus"></i>Dodaj wiele
+                </a>
+            </div>
+            <div>
                 <a href="/GroupShopList/ChildGroupShopLists?prntId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
                    class="btn btn-success mb-3 me-1" role="button">
                     <i class="fas fa-solid fa-copy"></i>Skopiuj produkty

@@ -1,0 +1,36 @@
+﻿@using ColoradoBeetle.Application.Products.Commands.AddMultiProducts;
+@using ColoradoBeetle.Domain.Enums;
+
+@model AddMultiProductCommand
+
+@{
+    ViewData["Tile"] = "Dodawanie wielu produktów";
+}
+
+<div class="card card-primary card-border-top">
+
+    @using (Html.BeginForm("AddMultiProduct", "Product")) {
+
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(x => x.ShoppingListId)
+        @Html.HiddenFor(x => x.UserId)
+
+        <div class="card-body">
+            <div class="form-group mt-3">
+                @Html.TextAreaFor(x => x.MultiProductsNames, new {@class="form-control", placeholder="Po każdym produkcie naciśnij 'enter'."
+            , @rows=10})
+                @Html.ValidationMessageFor(x => x.MultiProductsNames)
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fas fa-solid fa-circle-check"></i>Zapisz
+            </button>
+        </div>
+    }
+</div>
+
+@section Scripts{
+    <partial name="Scripts/_ValidationScriptsPartial" />
+}

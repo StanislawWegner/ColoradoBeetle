@@ -15,9 +15,6 @@ public class GroupShopListConfiguration : IEntityTypeConfiguration<GroupShopList
         builder.Property(x => x.GroupId)
             .IsRequired();
 
-        builder.Property(x => x.UserId)
-            .IsRequired();
-
         builder.HasOne(x => x.Group)
             .WithMany(x => x.GroupShopLists)
             .HasForeignKey(x => x.GroupId)
@@ -26,7 +23,7 @@ public class GroupShopListConfiguration : IEntityTypeConfiguration<GroupShopList
         builder.HasOne(x => x.ApplicationUser)
             .WithMany(x => x.GroupShopLists)
             .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.NoAction);
+            .OnDelete(DeleteBehavior.ClientSetNull);
 
 
 
