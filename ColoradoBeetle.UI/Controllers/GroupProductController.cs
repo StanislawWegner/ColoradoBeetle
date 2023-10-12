@@ -1,4 +1,5 @@
 ﻿using ColoradoBeetle.Application.GroupProducts.Commands.AddGroupProduct;
+using ColoradoBeetle.Application.GroupProducts.Commands.AddMultiGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.CheckGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.CheckStockGroupProduct;
 using ColoradoBeetle.Application.GroupProducts.Commands.CopyAllGroupProducts;
@@ -186,5 +187,28 @@ public class GroupProductController : BaseController {
             _logger.LogError(exception, null);
             return Json(new { success = false });
         }
+    }
+
+    public IActionResult AddMultiGroupProduct(int shopListId, int groupId) {
+        return View(new AddMultiGroupProductCommand {
+            GroupShopListId = shopListId,
+            GroupId = groupId,
+            UserId = UserId
+        });
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AddMultiGroupProduct(AddMultiGroupProductCommand command) {
+
+        var result = await MediatorSendValidate(command);
+
+        if (!result.IsValid)
+            return View(command);
+
+        TempData["Success"] = "Produkty zostały dodane";
+
+        return RedirectToAction("GroupProducts", "GroupProduct",
+            new { id = command.GroupShopListId, groupId = command.GroupId });
     }
 }

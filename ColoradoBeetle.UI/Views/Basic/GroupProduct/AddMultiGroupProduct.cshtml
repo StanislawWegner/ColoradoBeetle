@@ -1,7 +1,7 @@
-﻿@using ColoradoBeetle.Application.Products.Commands.AddMultiProducts;
+﻿@using ColoradoBeetle.Application.GroupProducts.Commands.AddMultiGroupProduct;
 @using ColoradoBeetle.Domain.Enums;
 
-@model AddMultiProductCommand
+@model AddMultiGroupProductCommand
 
 @{
     ViewData["Tile"] = "Dodawanie wielu produktów";
@@ -9,18 +9,19 @@
 
 <div class="card card-primary card-border-top">
 
-    @using (Html.BeginForm("AddMultiProduct", "Product")) {
+    @using (Html.BeginForm("AddMultiGroupProduct", "GroupProduct")) {
 
         @Html.AntiForgeryToken()
-        @Html.HiddenFor(x => x.ShoppingListId)
+        @Html.HiddenFor(x => x.GroupId)
+        @Html.HiddenFor(x => x.GroupShopListId)
         @Html.HiddenFor(x => x.UserId)
 
         <div class="card-body">
             <div class="form-group mt-3">
-                @Html.LabelFor(x => x.MultiProductsNames)
-                @Html.TextAreaFor(x => x.MultiProductsNames, new {@class="form-control", placeholder="Po każdym produkcie naciśnij 'enter'."
+                @Html.LabelFor(x => x.MultiGroupProductNames)
+                @Html.TextAreaFor(x => x.MultiGroupProductNames, new {@class="form-control", placeholder="Po każdym produkcie naciśnij 'enter'."
             , @rows=10})
-                @Html.ValidationMessageFor(x => x.MultiProductsNames)
+                @Html.ValidationMessageFor(x => x.MultiGroupProductNames)
             </div>
         </div>
 

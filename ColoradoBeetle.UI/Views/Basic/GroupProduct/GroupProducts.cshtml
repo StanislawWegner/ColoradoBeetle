@@ -25,27 +25,27 @@
 
 <div class="card card-primary card-border-top">
     <div class="card-body">
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-wrap">
             <div>
                 <a href="/GroupProduct/AddGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
-                   class="btn btn-primary mb-3 me-1" role="button">
+                   class="btn btn-primary m-1" role="button">
                     <i class="fas fa-solid fa-square-plus"></i>Dodaj produkt
                 </a>
             </div>
             <div>
-                <a href="/Product/AddMultiGroupProduct?id=@Model.GroupShopListDto.Id"
+                <a href="/GroupProduct/AddMultiGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
                    class="btn btn-warning m-1" role="button">
                     <i class="fas fa-solid fa-square-plus"></i>Dodaj wiele
                 </a>
             </div>
             <div>
                 <a href="/GroupShopList/ChildGroupShopLists?prntId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
-                   class="btn btn-success mb-3 me-1" role="button">
+                   class="btn btn-success m-1" role="button">
                     <i class="fas fa-solid fa-copy"></i>Skopiuj produkty
                 </a>
             </div>
             <div>
-                <button class="btn btn-info mb-3" id="hideNaviBtn">
+                <button class="btn btn-info m-1" id="hideNaviBtn">
                     <i class="fas fa-solid fa-eye-slash"></i>+/- Menu
                 </button>
             </div>
