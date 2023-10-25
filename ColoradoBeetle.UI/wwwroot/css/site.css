@@ -73,6 +73,10 @@ i.fas{
     margin-bottom: 1rem;
 }
 
+.input-border-danger{
+    border: 3px solid #ff3333;
+}
+
 @media screen and (min-width: 640px) {
     .card-body {
         padding: 2rem;
@@ -137,13 +141,16 @@ a.edit-link {
 }
 
 .isCopy {
+    color: black;
     background-color: #ebf3ab;
 }
 
 .outOfStock {
     color: white;
-    background-color: #846c04
+    background-color: #846c04;
 }
+
+
 
 
 
@@ -161,6 +168,30 @@ th.details-control {
     margin-right: 0px;
     align-items: center;
 }
+
+.btn-isClicked{
+    background-color: red;
+}
+
+.wallaper{
+    position: relative;
+    width: 100%;
+}
+
+.wallaper-bg {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    max-height: 300px;
+}
+
+.wallaper-img{
+    position: absolute;
+    height: 100%;
+    opacity: 0.5;
+}
+
+
 
 
 

@@ -1,0 +1,73 @@
+﻿@page
+@model LogoutModel
+@{
+    ViewData["Title"] = "Wyloguj";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Colorado Beetle</title>
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GymManager.UI.styles.css" asp-append-version="true" />
+    <style>
+        Html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="center-div-parent-container">
+        <div class="center-div-container">
+            <div class="card card-border-top">
+                <h3 class="card-header bg-transparent mt-3 pb-3 text-center">@ViewBag.Title</h3>
+                <div class="card-body">
+                    
+                        @if (User.Identity?.IsAuthenticated ?? false) {
+                            <div class="alert alert-success text-center" role="alert">
+                                <form class="d-flex justify-content-center" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/Identity/Account/Login" method="post">
+                                    <button type="submit" class="nav-link btn text-dark p-0">Kliknij aby wylogować</button>
+                                </form>
+                            </div>
+                            <div class="alert alert-primary text-center alain-items-center" role="alert">
+                                <a asp-controller="Home" asp-action="Index">
+                                  <p class="text-dark m-0">Powrót do strony głównej</p>
+                                </a>
+                            </div>
+                        }
+                        else {
+                            <p>Zostałeś poprawnie wylogowany.</p>
+                        }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

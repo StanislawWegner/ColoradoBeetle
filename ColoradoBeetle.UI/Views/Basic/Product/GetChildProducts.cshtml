@@ -44,21 +44,21 @@
 
                         @if (!product.OnStock) {
                             <td>
-                                <div class="outOfStock">
+                                <div id="product@(product.Id)" class="outOfStock">
                                     @product.Name
                                 </div>
                             </td>
                         }
                         else if (product.IsChecked) {
                             <td>
-                                <div class="productChecked">
+                                <div id="product@(product.Id)" class="productChecked">
                                     @product.Name
                                 </div>
                             </td>
                         }
                         else {
                             <td>
-                                <div>@product.Name</div>
+                                <div id="product@(product.Id)">@product.Name</div>
                             </td>
                         }
 
@@ -124,6 +124,12 @@
                 },
                 success: function(data){
                     if(data.success){
+                        //$('#product' + id).addClass('isCopy');
+                        $('#product' + id).css({
+                            'background-color': '#ebf3ab',
+                            'text-decoration': 'none',
+                            'color': 'black'
+                        });
                         toastr.success("Produkt został skopiowany");
                     }
                     else{

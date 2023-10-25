@@ -163,8 +163,8 @@
                 info: true,
                 responsive: true,
                 autoWidth: false,
-                lengthChange: true,
-                lengthMenu: [25, 50, 75, 100],
+                lengthChange: true, 
+                lengthMenu: [50, 75, 100],
                 language: {
                     url: `/lib/datatables/lang/${'@locale'}.json`
                 },
@@ -269,7 +269,8 @@
 
         function checkIsOnStock(id) {
 
-            var stock = $('#product' + id).hasClass('outOfStock');
+            var product = $('#product' + id);
+            var stock = product.hasClass('outOfStock');
 
             $.ajax({
                 type: 'POST',
@@ -281,11 +282,11 @@
                 success: function(data){
                     if(data.success){
                         if(stock){
-                            $('#product' + id).removeClass('outOfStock');
+                            product.removeClass('outOfStock');
                         }
                         else{
                             checkProductOut(id);
-                            $('#product' + id).addClass('outOfStock');
+                            product.addClass('outOfStock');
                         }
                     }
                     else{

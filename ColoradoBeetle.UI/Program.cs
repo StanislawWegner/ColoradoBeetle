@@ -5,6 +5,9 @@ using ColoradoBeetle.Infrastructure;
 using ColoradoBeetle.UI.Extensions;
 using GymManager2.UI.Middlewares;
 using NLog.Web;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using ColoradoBeetle.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
