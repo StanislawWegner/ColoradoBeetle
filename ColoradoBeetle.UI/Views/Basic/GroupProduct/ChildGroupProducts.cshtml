@@ -125,7 +125,12 @@
                 },
                 success: function (data) {
                     if (data.success) {
-                        $('#product' + id).addClass('isCopy');
+                        $('#product' + id).css({
+                            'background-color': '#ebf3ab',
+                            'text-decoration': 'none',
+                            'color': 'black'
+                        });
+                        toastr
                         toastr.success("Produkt został skopiowany");
                     }
                     else {

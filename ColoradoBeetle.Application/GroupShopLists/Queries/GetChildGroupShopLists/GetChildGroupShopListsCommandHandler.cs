@@ -27,7 +27,7 @@ public class GetChildGroupShopListsCommandHandler : IRequestHandler<GetChildGrou
             var childGroupShopListsDtos = _context.GroupShopLists
             .Include(x => x.ApplicationUser)
             .AsNoTracking()
-            .Where(x => x.Id != request.PrntId)
+            .Where(x => x.GroupId == request.GroupId && x.Id != request.PrntId)
             .Select(x => x.ToDto());
 
             return new ChildGroupShopListsVm {
