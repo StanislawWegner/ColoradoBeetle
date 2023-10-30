@@ -1,5 +1,6 @@
 ﻿using ColoradoBeetle.Application.Common.Interfaces;
 using ColoradoBeetle.Application.GroupProducts.Extensions;
+using ColoradoBeetle.Application.Groups.Extenions;
 using ColoradoBeetle.Application.GroupShopLists.Extensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -40,7 +41,7 @@ public class GetGroupProductsQueryHandler : IRequestHandler<GetGroupProductsQuer
             return new GroupProductVm {
                 GroupProductsDtos = groupProductsDtos,
                 GroupShopListDto = groupShopListDto,
-                GroupId = groupDb.Id
+                GroupDto = groupDb.ToDto()
             };
         }
         else {

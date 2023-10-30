@@ -4,7 +4,7 @@
 @model GetChildGroupProductsVm
 
 @{
-    TempData["Title"] = "Kopiuj produkty";
+    ViewData["Title"] = "Kopiuj produkty";
     var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 
@@ -14,7 +14,7 @@
 
 <h1>Kopiuj z listy: "@Model.ChildGroupShopListDto.Name"</h1>
 
-<div class="card card-primary card-border-top">
+<div class="card card-primary card-border-top groupUser-bg">
     <div class="card-body">
 
         <a href='/GroupProduct/GroupProducts?id=@Model.PrntGroupShopListDto.Id&groupId=@Model.GroupId'
@@ -27,7 +27,7 @@
             </div>
         </a>
 
-        <table id="groupProducts" class="table table-bordered">
+        <table id="groupProducts" class="table table-bordered bg-white">
             <thead>
                 <tr>
                     <th></th>

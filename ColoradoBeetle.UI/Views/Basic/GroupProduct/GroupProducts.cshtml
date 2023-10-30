@@ -4,7 +4,7 @@
 @model GroupProductVm
 
 @{
-    TempData["Title"] = "Produkty";
+    ViewData["Title"] = "Produkty";
     var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 
@@ -21,25 +21,30 @@
     Description = "Czy na pewno chcesz usunąć wybrany produkt?"
 })" />
 
-<h1>Lista: "@Model.GroupShopListDto.Name"</h1>
+<div>
+    <h1>Lista: "@Model.GroupShopListDto.Name"</h1>
+</div>
+<div>
+    <h2>Grupa: "@Model.GroupDto.Name"</h2>
+</div>
 
 <div class="card card-primary card-border-top">
-    <div class="card-body">
+    <div class="card-body groupUser-bg">
         <div class="d-flex flex-wrap">
             <div>
-                <a href="/GroupProduct/AddGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
+                <a href="/GroupProduct/AddGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupDto.Id"
                    class="btn btn-primary m-1" role="button">
                     <i class="fas fa-solid fa-square-plus"></i>Dodaj produkt
                 </a>
             </div>
             <div>
-                <a href="/GroupProduct/AddMultiGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
+                <a href="/GroupProduct/AddMultiGroupProduct?shopListId=@Model.GroupShopListDto.Id&groupId=@Model.GroupDto.Id"
                    class="btn btn-warning m-1" role="button">
                     <i class="fas fa-solid fa-square-plus"></i>Dodaj wiele
                 </a>
             </div>
             <div>
-                <a href="/GroupShopList/ChildGroupShopLists?prntId=@Model.GroupShopListDto.Id&groupId=@Model.GroupId"
+                <a href="/GroupShopList/ChildGroupShopLists?prntId=@Model.GroupShopListDto.Id&groupId=@Model.GroupDto.Id"
                    class="btn btn-success m-1" role="button">
                     <i class="fas fa-solid fa-copy"></i>Skopiuj produkty
                 </a>
@@ -51,7 +56,7 @@
             </div>
         </div>
 
-        <table id="groupProducts" class="table table-bordered">
+        <table id="groupProducts" class="table table-bordered bg-white">
             <thead>
                 <tr>
                     <th></th>
@@ -129,7 +134,7 @@
                         <td>
                             <div class="d-flex flex-row">
                                 <div class="m-1">
-                                    <a href="/GroupProduct/EditGroupProduct?id=@product.Id&groupId=@Model.GroupId"
+                                    <a href="/GroupProduct/EditGroupProduct?id=@product.Id&groupId=@Model.GroupDto.Id"
                                        class="btn btn-success btn-sm" role="button">
                                         <i class="fas fa-solid fa-magnifying-glass"></i>Edytuj
                                     </a>

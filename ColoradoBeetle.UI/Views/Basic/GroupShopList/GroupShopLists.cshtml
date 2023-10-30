@@ -5,7 +5,7 @@
 @model GroupShopListsVm
 
 @{
-    TempData["Title"] = "Listy zakupów";
+    ViewData["Title"] = "Listy zakupów";
     var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 
@@ -26,13 +26,13 @@
 
 <div class="card card-primary card-border-top">
 
-    <div class="card-body">
+    <div class="card-body groupUser-bg">
 
         <a href='/GroupShopList/AddGroupShopList?id=@Model.GroupDto.Id' class="btn btn-primary mb-3" role="button">
             <i class="fas fa-solid fa-circle-plus"></i>Dodaj nową listę
         </a>
 
-        <table id="groupShopLists" class="table table-bordered">
+        <table id="groupShopLists" class="table table-bordered bg-white">
             <thead>
                 <tr>
                     <th></th>

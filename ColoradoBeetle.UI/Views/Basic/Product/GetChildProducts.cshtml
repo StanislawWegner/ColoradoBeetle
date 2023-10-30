@@ -5,7 +5,7 @@
 @model GetChildProductsVm
 
 @{
-    TempData["Title"] = "Kopiuj produkty";
+    ViewData["Title"] = "Kopiuj produkty";
     var locale = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 
@@ -16,7 +16,7 @@
 <h1>Kopiuj z listy: "@Model.ChildShoppingListDto.Name"</h1>
 
 <div class="card card-primary card-border-top">
-    <div class="card-body">
+    <div class="card-body privateUser-bg">
 
         <a href='/Product/GetProductsInList?id=@Model.ParentShoppingListDto.Id'
             class="btn btn-info mb-2" role="button"> 
@@ -28,7 +28,7 @@
             </div>
         </a>
 
-        <table id="products" class="table table-bordered">
+        <table id="products" class="table table-bordered bg-white">
             <thead>
                 <tr>
                     <th></th>
