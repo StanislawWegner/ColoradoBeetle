@@ -21,9 +21,20 @@ mark them as purchased or unavailable in the store.
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Visual Studio 2022
+- ASP.NET Mvc 6.0
+- Entity Framework Core 6.0.23
+- AspNetCore.Identity 6.0.23
+- AspNetCore.ReCaptcha 1.7.0
+- NLog 5.1.4
+- MailKit 3.1.1
+- FluentValidation.DependencyInjectionExtensions 11.5.2
+- MediatR.Extensions.Microsoft.DependencyInjection 10.0.1
+- jQuery 3.5.1
+- Bootstrap 5.1.0
+- DataTables 1.10.21
+- Toastr 2.1.4
+- Font-awesome 6.4.0
 
 
 ## Features
