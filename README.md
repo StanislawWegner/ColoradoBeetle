@@ -12,7 +12,7 @@
 
 
 ## General Information
-This is a simple app designed to make creating shopping lists easier without unnecessary additional features. 
+This is a simple app designed to make creating shopping lists and products. 
   The application was developed as part of learning the ASP.Net MVC framework. 
 In addition to creating and deleting lists or products, it can copy them between lists, 
 mark them as purchased or unavailable in the store. 
