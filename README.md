@@ -1,6 +1,6 @@
 # ColoradoBeetle
 > A web application for managing shopping lists and products, accessible at
-> coloradobeetle.pl [_here_](https://coloradobeetle.pl). <!-- If you have the project hosted somewhere, include the link here. -->
+> https://coloradobeetle.pl [_here_](https://coloradobeetle.pl). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
