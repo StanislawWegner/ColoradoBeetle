@@ -44,7 +44,7 @@ Still in progress, new features will be added in the future.
 
 
 ## Acknowledgements
-- This project was based on [this tutorial](https://szkolaaspdotnet.pl/).
+- The application's architecture is based on a project created as part of the ASP.NET Core MVC and WebApi course available at https://modestprogrammer.pl.
 
 
 
