@@ -17,11 +17,12 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+This is a simple app designed to make creating shopping lists easier without unnecessary additional features. 
+  The application was developed as part of learning the ASP.Net MVC framework. 
+In addition to creating and deleting lists or products, it can copy them between lists, 
+mark them as purchased or unavailable in the store. 
+  An administrator can create user groups, and within these groups, 
+  users can collaborate on shopping lists and edit them together.
 
 
 ## Technologies Used
