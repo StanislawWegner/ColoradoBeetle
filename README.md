@@ -44,7 +44,7 @@ Still in progress, new features will be added in the future.
 
 
 ## Acknowledgements
-- The application's architecture is based on a project created as part of the ASP.NET Core MVC and WebApi course available at https://modestprogrammer.pl.
+- The application's architecture is based on a project created as part of the ASP.NET Core MVC and WebApi course available at https://www.modestprogrammer.pl.
 
 
 
