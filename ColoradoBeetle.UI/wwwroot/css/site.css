@@ -194,11 +194,13 @@ th.details-control {
 .privateUser-bg {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(171,255,110,1) 100%);
+    box-shadow: 0px 0px 10px;
 }
 
 .groupUser-bg {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(68,141,255,1) 76%);
+    box-shadow: 0px 0px 10px;
 }
 
 .table-bordered{
