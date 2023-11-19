@@ -36,5 +36,9 @@ public class GroupProductConfiguration : IEntityTypeConfiguration<GroupProduct> 
             .HasForeignKey(x => x.GroupId)
             .OnDelete(DeleteBehavior.NoAction);
 
+        builder.HasOne(x => x.EditedByUser)
+            .WithMany(x => x.EditedGroupProducts)
+            .HasForeignKey(x => x.EditedByUserId)
+            .OnDelete(DeleteBehavior.ClientSetNull);
     }
 }

@@ -35,7 +35,8 @@
                 <tr>
                     <th></th>
                     <th>Lista zakupów</th>
-                    <th>Utworzył/Zmodyfikował</th>
+                    <th>Utworzył</th>
+                    <th>Zmodyfikował</th>
                     <th class="desktop"></th>
                 </tr>
             </thead>
@@ -51,6 +52,9 @@
                         </td>
                         <td>
                             @shopList.UserEmail
+                        </td>
+                        <td>
+                            @shopList.EditedByUserEmail
                         </td>
                         <td>
                             <div class="d-flex flex-row">

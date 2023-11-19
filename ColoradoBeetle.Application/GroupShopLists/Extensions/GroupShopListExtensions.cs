@@ -14,7 +14,8 @@ public static class GroupShopListExtensions {
             Id = groupShopList.Id,
             Name = groupShopList.Name,
             CreatedDate = groupShopList.CreatedDate,
-            UserEmail = groupShopList.ApplicationUser?.Email?.ToShortEmail()
+            UserEmail = groupShopList.ApplicationUser?.Email?.ToShortEmail(),
+            EditedByUserEmail = groupShopList.EditedByUser?.Email?.ToShortEmail(),
         };
     }
 }

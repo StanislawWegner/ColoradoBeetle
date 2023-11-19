@@ -25,7 +25,9 @@ public class GroupShopListConfiguration : IEntityTypeConfiguration<GroupShopList
             .HasForeignKey(x => x.UserId)
             .OnDelete(DeleteBehavior.ClientSetNull);
 
-
-
+        builder.HasOne(x => x.EditedByUser)
+            .WithMany(x => x.EditedGroupShopLists)
+            .HasForeignKey(x => x.EditedByUserId)
+            .OnDelete(DeleteBehavior.ClientSetNull);
     }
 }

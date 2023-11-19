@@ -33,7 +33,8 @@
                     <th></th>
                     <th>Nazwa produktu</th>
                     <th></th>
-                    <th>Dodał/Edytował</th>
+                    <th>Dodał</th>
+                    <th>Edytował</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,6 +71,9 @@
                         </td>
                         <td>
                             @product.UserEmail
+                        </td>
+                        <td>
+                            @product.EditedByUserEmail
                         </td>
                     </tr>
                 }

@@ -13,7 +13,12 @@ public class ApplicationUser : IdentityUser{
     public ICollection<ShoppingList> ShoppingLists { get; set; } = new HashSet<ShoppingList>();
     public ICollection<Group> Groups { get; set; } = new HashSet<Group>();
     public ICollection<Product> Products { get; set; } = new HashSet<Product>();
-    public ICollection<GroupShopList> GroupShopLists { get; set; } = new HashSet<GroupShopList>();
+    public ICollection<GroupShopList> GroupShopLists { get; set; } 
+        = new HashSet<GroupShopList>();
+    public ICollection<GroupShopList> EditedGroupShopLists { get; set; }
+        = new HashSet<GroupShopList>();
     public ICollection<GroupProduct> GroupProducts { get; set; } = new HashSet<GroupProduct>();
+    public ICollection<GroupProduct> EditedGroupProducts { get; set; }
+        = new HashSet<GroupProduct>();
 
 }

@@ -17,7 +17,7 @@ namespace ColoradoBeetle.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.18")
+                .HasAnnotation("ProductVersion", "6.0.23")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -240,6 +240,9 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("EditedByUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
 
@@ -282,6 +285,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EditedByUserId");
+
                     b.HasIndex("GroupId");
 
                     b.HasIndex("GroupShopListId");
@@ -302,6 +307,9 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("EditedByUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int>("GroupId")
                         .HasColumnType("int");
 
@@ -314,6 +322,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EditedByUserId");
 
                     b.HasIndex("GroupId");
 
@@ -799,9 +809,14 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.GroupProduct", b =>
                 {
+                    b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "EditedByUser")
+                        .WithMany("EditedGroupProducts")
+                        .HasForeignKey("EditedByUserId");
+
                     b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
                         .WithMany("GroupProducts")
                         .HasForeignKey("GroupId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ColoradoBeetle.Domain.Entities.GroupShopList", "GroupShopList")
@@ -816,6 +831,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
                     b.Navigation("ApplicatioUser");
 
+                    b.Navigation("EditedByUser");
+
                     b.Navigation("Group");
 
                     b.Navigation("GroupShopList");
@@ -823,6 +840,10 @@ namespace ColoradoBeetle.Infrastructure.Migrations
 
             modelBuilder.Entity("ColoradoBeetle.Domain.Entities.GroupShopList", b =>
                 {
+                    b.HasOne("ColoradoBeetle.Domain.Entities.ApplicationUser", "EditedByUser")
+                        .WithMany("EditedGroupShopLists")
+                        .HasForeignKey("EditedByUserId");
+
                     b.HasOne("ColoradoBeetle.Domain.Entities.Group", "Group")
                         .WithMany("GroupShopLists")
                         .HasForeignKey("GroupId")
@@ -834,6 +855,8 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                         .HasForeignKey("UserId");
 
                     b.Navigation("ApplicationUser");
+
+                    b.Navigation("EditedByUser");
 
                     b.Navigation("Group");
                 });
@@ -935,6 +958,10 @@ namespace ColoradoBeetle.Infrastructure.Migrations
                     b.Navigation("Address");
 
                     b.Navigation("Client");
+
+                    b.Navigation("EditedGroupProducts");
+
+                    b.Navigation("EditedGroupShopLists");
 
                     b.Navigation("GroupProducts");
 

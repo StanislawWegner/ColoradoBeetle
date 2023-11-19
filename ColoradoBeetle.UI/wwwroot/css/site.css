@@ -194,13 +194,13 @@ th.details-control {
 .privateUser-bg {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(171,255,110,1) 100%);
-    box-shadow: 0px 0px 10px;
+    box-shadow: 0px 0px 20px;
 }
 
 .groupUser-bg {
     background: rgb(34,193,195);
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(68,141,255,1) 76%);
-    box-shadow: 0px 0px 10px;
+    box-shadow: 0px 0px 20px;
 }
 
 .table-bordered{
@@ -212,7 +212,21 @@ th.details-control {
     background-color: white;
 }
 
+button:active{
+    transform: scale(.95);
+}
 
+.btn {
+    box-shadow: 2px 2px 3px black;
+}
+
+.btn:focus {
+    box-shadow: inset 0px 0px 10px black, 2px 2px 3px black;
+}
+
+.btn-noShadow{
+    box-shadow: none;
+}
 
 
 

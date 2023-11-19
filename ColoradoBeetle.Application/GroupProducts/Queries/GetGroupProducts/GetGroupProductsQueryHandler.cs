@@ -29,6 +29,7 @@ public class GetGroupProductsQueryHandler : IRequestHandler<GetGroupProductsQuer
 
             var groupProductsDtos = _context.GroupProducts
             .Include(x => x.ApplicatioUser)
+            .Include(x => x.EditedByUser)
             .AsNoTracking()
             .Where(x => x.GroupShopListId == request.GroupShopListId)
             .Select(x => x.ToDto());

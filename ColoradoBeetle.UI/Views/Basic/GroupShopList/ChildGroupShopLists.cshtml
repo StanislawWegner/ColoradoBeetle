@@ -22,7 +22,8 @@
                     <th></th>
                     <th>Nazwa listy</th>
                     <th class="desktop"></th>
-                    <th class="desktop">Utworzył/Edytował</th>
+                    <th class="desktop">Utworzył</th>
+                    <th class="desktop">Zmodyfikował</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,6 +52,9 @@
                         </td>
                         <td>
                             @childGroupShopList.UserEmail
+                        </td>
+                        <td>
+                            @childGroupShopList.EditedByUserEmail
                         </td>
                     </tr>
                 }

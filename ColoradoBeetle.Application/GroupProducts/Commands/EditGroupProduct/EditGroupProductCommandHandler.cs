@@ -35,7 +35,7 @@ public class EditGroupProductCommandHandler : IRequestHandler<EditGroupProductCo
             groupProductDb.VolumeUnit = request.VolumeUnit;
             groupProductDb.Weight = request.Weight;
             groupProductDb.WeightUnit = request.WeightUnit;
-            groupProductDb.UserId = request.UserId;
+            groupProductDb.EditedByUserId = request.UserId;
 
             await _context.SaveChangesAsync();
 

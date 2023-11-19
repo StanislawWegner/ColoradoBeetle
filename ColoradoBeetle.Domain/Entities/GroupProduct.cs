@@ -21,6 +21,9 @@ public class GroupProduct {
     public ApplicationUser ApplicatioUser { get; set; }
     public string UserId { get; set; }
 
+    public ApplicationUser EditedByUser { get; set; }
+    public string EditedByUserId { get; set; }
+
     public Group Group { get; set; }
     public int GroupId { get; set; }
 }

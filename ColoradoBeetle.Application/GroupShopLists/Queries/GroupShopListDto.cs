@@ -4,4 +4,5 @@ public class GroupShopListDto {
     public string Name { get; set; }
     public DateTime CreatedDate { get; set; }
     public string UserEmail { get; set; }
+    public string EditedByUserEmail { get; set; }
 }

@@ -33,7 +33,7 @@
                         @if (User.Identity?.IsAuthenticated ?? false) {
                             <div class="alert alert-success text-center" role="alert">
                                 <form class="d-flex justify-content-center" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/Identity/Account/Login" method="post">
-                                    <button type="submit" class="nav-link btn text-dark p-0">Kliknij aby wylogować</button>
+                                    <button type="submit" class="nav-link btn btn-noShadow text-dark p-0">Kliknij aby wylogować</button>
                                 </form>
                             </div>
                             <div class="alert alert-primary text-center alain-items-center" role="alert">

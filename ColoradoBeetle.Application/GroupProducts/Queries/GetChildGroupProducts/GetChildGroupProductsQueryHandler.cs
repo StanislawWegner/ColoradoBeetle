@@ -37,6 +37,7 @@ public class GetChildGroupProductsQueryHandler : IRequestHandler<GetChildGroupPr
 
             var groupProductsDtos = _context.GroupProducts
                 .Include(x => x.ApplicatioUser)
+                .Include(x => x.EditedByUser)
                 .AsNoTracking()
                 .Where(x => x.GroupShopListId == request.ChildId)
                 .Select(x => x.ToDto());

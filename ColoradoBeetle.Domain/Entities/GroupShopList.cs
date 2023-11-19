@@ -10,6 +10,9 @@ public class GroupShopList {
     public ApplicationUser ApplicationUser { get; set; }
     public string UserId { get; set; }
 
+    public ApplicationUser EditedByUser { get; set; }
+    public string EditedByUserId { get; set; }
+
     public ICollection<GroupProduct> GroupProducts { get; set; } 
         = new HashSet<GroupProduct>();
 

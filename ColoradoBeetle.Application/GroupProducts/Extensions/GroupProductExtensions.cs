@@ -22,7 +22,8 @@ public static class GroupProductExtensions {
             IsChecked = groupProduct.IsChecked,
             IsCopied = groupProduct.IsCopied,
             OnStock = groupProduct.OnStock,
-            UserEmail = groupProduct.ApplicatioUser?.Email?.ToShortEmail()
+            UserEmail = groupProduct.ApplicatioUser?.Email?.ToShortEmail(),
+            EditedByUserEmail = groupProduct.EditedByUser?.Email.ToShortEmail()
         };
     }
 }

@@ -15,6 +15,7 @@ public class GroupProductDto {
     public bool OnStock { get; set; }
 
     public string UserEmail { get; set; }
+    public string EditedByUserEmail { get; set; }
 
 
 }
