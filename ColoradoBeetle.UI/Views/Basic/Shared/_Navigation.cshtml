@@ -26,11 +26,17 @@
         </a>
     </li>
 
-    <li class="nav-item mb-3 @Url.MakeActiveClass("Client", "Client,EditClient")">
+    <li class="nav-item @Url.MakeActiveClass("Client", "Client,EditClient")">
         <a asp-controller="Client" asp-action="Client" class="nav-link align-middle px-0 text-white">
             <i class="fas fa-solid fa-user"></i><span class="d-none d-sm-inline">Moje dane</span>
         </a>
     </li>
+    <li class="nav-item mb-3">
+        <a href="https://snake.coloradobeetle.pl" class="nav-link align-middle px-0 text-white" target="_blank">
+            <i class="fas fa-solid fa-gamepad"></i><span class="d-none d-sm-inline">Snake</span>
+        </a>
+    </li>
+
 
     <li class="nav-item">
         <a asp-controller="Home" asp-action="Contact" class="nav-link align-middle px-0 text-white">
@@ -43,6 +49,7 @@
             <i class="fas fa-solid fa-right-from-bracket"></i><span class="d-none d-sm-inline">Wyloguj</span>
         </a>
     </li>
+    
     
 
     @if (User.IsInRole(RolesDict.Administrator)) {
